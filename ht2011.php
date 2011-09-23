@@ -147,18 +147,20 @@ $parts = array(
     'Etapp 8' => array('R 8', 'TP 8', 'FP 8', 'Tid M'),
 
     'Stil',
+    
+    'Plock totalt inklusive stjälp' => 
+    array('*sum*',
+	  'TP 1', 'TP 2', 'TP 3', 'TP 4', 'TP 5', 'TP 6', 'TP 7', 'TP 8',
+	  'FP 1', 'FP 2', 'FP 3', 'FP 4', 'FP 5', 'FP 6', 'FP 7', 'FP 8',
+	  'ÖppPlk', 'StjPlk'),
 
-    'Plock totalt inklusive stjälp' => array('*sum*',
-			    'TP 1', 'TP 2', 'TP 3', 'TP 4', 'TP 5', 'TP 6', 'TP 7', 'TP 8',
-			    'FP 1', 'FP 2', 'FP 3', 'FP 4', 'FP 5', 'FP 6', 'FP 7', 'FP 8',
-			    'ÖppPlk', 'StjPlk'),
-
-    'Pyssel totalt inklusive stjälp' => array('*sum*', 
-        'P MUS', 'P BRO', 'P MAR', 'P TAT', 'P HZZ', 'P TUP', 
-        'P ALF', 'P PRO', 'P RUS', 'P DOD', 'P HOP', 
-        'P GRI', 'P TPS', 
-        'P STR', 'P FRI', 'P MAS', 'P DIA', 'P TTM', 'P PYT', 
-        'ÖppPyss', 'P BRU', 'P BOT', 'P TRA', 'P SLO', 'P SAT'),
+    'Pyssel totalt inklusive stjälp' => 
+    array('*sum*', 
+	  'P MUS', 'P BRO', 'P MAR', 'P TAT', 'P HZZ', 'P TUP', 
+	  'P ALF', 'P PRO', 'P RUS', 'P DOD', 'P HOP', 
+	  'P GRI', 'P TPS', 
+	  'P STR', 'P FRI', 'P MAS', 'P DIA', 'P TTM', 'P PYT', 
+	  'ÖppPyss', 'P BRU', 'P BOT', 'P TRA', 'P SLO', 'P SAT'),
 
     'Rebusar och stjälprebusar totalt' => 
     array('*sum*',
@@ -170,26 +172,26 @@ $parts = array(
     'Totalt' => array('*sum*', 'Totalt efter stjälppyssel', 'Etapp 8', 'Stil')
     );
 
-$maxPoints = array(
-        'P MUS' => 40, 'P BRO' => 20, 'P MAR' => 14, 'P TAT' => 25, 'P HZZ' => 19, 
+$maxPoints = 
+  array('P MUS' => 40, 'P BRO' => 20, 'P MAR' => 14, 'P TAT' => 25, 'P HZZ' => 19, 
         'P TUP' => 12, 'P ALF' => 15, 'P PRO' => 15, 'P RUS' => 14, 'P DOD' => 14, 
         'P HOP' => 18, 'P GRI' => 14, 'P TPS' => 13, 'P STR' => 18, 'P FRI' => 14, 
         'P MAS' => 14, 'P DIA' => 19, 'P TTM' => 25, 'P PYT' => 15, 'P BRU' => -17, 
         'P BOT' => -14, 'P TRA' => -18, 'P SLO' => -10, 'P SAT' => -20);
 
-$info = array('P TTM' => '<red>0.5 per fel', 'P GRI' => '<red>2 per fel',
-	      'P BRU' => '<red>-1 per rätt',
-	      'P BOT' => '<red>-1 per rätt',
-	      'P TRA' => '<red>-1 per rätt',
-	      'P SLO' => '<red>-1 per rätt',
-	      'P SAT' => '<red>-0.5 per rätt',
-              'P .*' => '1 per fel',
-              'ÖppReb' => '4 per medlem = <4p>', 'ÖppPlk' => '4 per medlem = <4p>', 'ÖppPyss' => '4 per medlem = <4p>',
-              'StjPlk' => '-10 per plock',
-	      'Tid .' => '1 per minut, 2 efter 17:30',
-	      'R [0-9]+' => '25 klippt hjälp, 45 klippt nöd, felaktiga kontrollbokstäver 25',
-	      'S [0-9]+' => '-10 korrekt motiverad lösning',
-	      'FP [0-9]+' => '10 missat plock, 20 falskt plock',
-	      'TP [0-9]+' => '5 missat plock, 10 falskt plock');
-
+$info = 
+  array('P TTM' => '<red>0.5 per fel', 'P GRI' => '<red>2 per fel',
+	'P BRU' => '<red>-1 per rätt',
+	'P BOT' => '<red>-1 per rätt',
+	'P TRA' => '<red>-1 per rätt',
+	'P SLO' => '<red>-1 per rätt',
+	'P SAT' => '<red>-0.5 per rätt',
+	'P .*' => '1 per fel',
+	'ÖppReb' => '4 per medlem = <4p>', 'ÖppPlk' => '4 per medlem = <4p>', 'ÖppPyss' => '4 per medlem = <4p>',
+	'StjPlk' => '-10 per plock',
+	'Tid .' => '1 per minut, 2 efter 17:30',
+	'R [0-9]+' => '25 klippt hjälp, 45 klippt nöd, felaktiga kontrollbokstäver 25',
+	'S [0-9]+' => '-10 korrekt motiverad lösning',
+	'FP [0-9]+' => '10 missat plock, 20 falskt plock',
+	'TP [0-9]+' => '5 missat plock, 10 falskt plock');
 ?>
