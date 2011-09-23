@@ -2,13 +2,6 @@
 
 require_once 'slide.php';
 
-define('SQLITE_DB', DATAROOT . 'ht2011/db');
-define('REBUS_PATH', DATAROOT . 'ht2011/');
-define('PICTURE_URL', 'ht2011/');
-define('PICTURE_PATH', DATAROOT . 'ht2011/');
-
-define('SHORT_NAME', 'ht11');
-
 $teams = array(
                // Name => (number, number of members)
 	       'Puh - Det mörka hotet' => array(1, 6),

@@ -1,5 +1,25 @@
 <?php
 
+require_once 'rebus.php';
+
+function checkPic(&$name)
+{
+    $pic = PICTURE_PATH . $name;
+    if (is_readable($pic . ".jpg")) {
+	$name = PICTURE_URL . $name . ".jpg";
+	return 1;
+    }
+    if (is_readable($pic . ".gif")) {
+	$name = PICTURE_URL . $name . ".gif";
+	return 1;
+    }
+    if (is_readable($pic . ".png")) {
+	$name = PICTURE_URL . $name . ".png";
+	return 1;
+    }
+    return 0;
+}
+
 function getEventNumber($event) 
 {
     $i = 0;

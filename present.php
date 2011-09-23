@@ -1,4 +1,5 @@
 <?php
+
 require_once 'rebus.php';
 require_once 'present_setup.php';
 
@@ -11,7 +12,7 @@ $dec = $nr <= 0 ? "nr=0" : "nr=".($nr - 1);
 $action = $actions[$nr];
 $lines = $action->getLines();
 
-if ($GLOBALS['static'] == 0 && $check == 0) {
+if (array_key_exists('static', $GLOBALS) == 0 && $check == 0) {
    file_put_contents("current", $nr);
 }
 

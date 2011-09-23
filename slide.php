@@ -30,13 +30,7 @@ class PictureSlide extends Slide
     var $picture;
 
     function PictureSlide($t, $p) {
-        $pic = PICTURE_PATH . $p;
-    	if (is_readable($pic)) {
-	  $p = PICTURE_URL . $p;
-        }
-    	if (is_readable($pic . ".jpg")) {
-	  $p = PICTURE_URL . $p . ".jpg";
-        }
+        checkPic($p);
 	$this->title = $t;
 	$this->picture = $p;
     }
@@ -159,7 +153,7 @@ class SolutionSlide extends Slide
 
     function SolutionSlide($type, $nr) {
     	$f = $type . $nr;
-	$this->file = file(REBUS_PATH . $f . '.txt');
+	$this->file = file(DATAROOT . '/' . SHORT_NAME . '/' . $f . '.txt');
 	if ($type == 'R') {
 	    $this->title = "Rebus " . $nr;
 	}

@@ -2,6 +2,8 @@
 
 require_once "rebus.php";
 
+define('SQLITE_DB', DATAROOT . '/' . SHORT_NAME . '/db');
+
 function setTestData()
 {
     for ($event = 0; $event <= count($GLOBALS['events']) - 1; ++$event) {

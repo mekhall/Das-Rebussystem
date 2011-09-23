@@ -1,8 +1,10 @@
 <?php
 
-require_once 'slide.php';
+define('DATAROOT', dirname(__FILE__));
 
-define('DATAROOT', '/var/www/rebus/');
+define('SHORT_NAME', 'ht2011');
+define('PICTURE_URL', SHORT_NAME . '/');
+define('PICTURE_PATH', DATAROOT . '/' . SHORT_NAME . '/');
 
 require_once 'ht2011.php';
 
