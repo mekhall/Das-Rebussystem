@@ -1,0 +1,13 @@
+\rebus LLIAETEKLÄKGNI \av Hallon
+\op i
+EKLÄKGILLIAETNI
+\op <->
+INTEAILLIGKÄLKE
+\op a->b
+INTE BILLIG KÄLKE
+\op !
+DYR BOB
+\op b->a
+DYRAOB
+\op <->
+\ort BOARYD

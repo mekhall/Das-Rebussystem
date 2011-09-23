@@ -1,0 +1,15 @@
+\rebus NAN97 \av Hallon
+\op <->
+79NAN
+\op ! per. sys.
+GULDNAN
+\op n->m
+GULDMAN
+\op !
+MIDAS
+\op m->n
+NIDAS
+\op i
+DNAS
+\op <->
+\ort SAND

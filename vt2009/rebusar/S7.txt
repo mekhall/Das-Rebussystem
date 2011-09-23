@@ -1,0 +1,7 @@
+\rebus RUNLA \upphovsman JF
+\op L->K
+Runka
+\op !
+Skaka
+\op K->L
+\ort SLAKA

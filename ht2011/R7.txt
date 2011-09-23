@@ -1,0 +1,9 @@
+\rebus SSIRÄLA \av Koma
+\op i
+RÄSSLA
+\op Ä->A
+RASSLA
+\op !
+SKRAMLA
+\op A->Ä
+\ort SKRÄMLA

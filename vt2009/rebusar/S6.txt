@@ -1,0 +1,7 @@
+\rebus LAMALÖVTRÄ \upphovsman BP
+\op +I
+Lama i lövträ
+\op !
+Ek-Dalai
+\op -i
+\ort EKDALA

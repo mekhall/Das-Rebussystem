@@ -1,0 +1,7 @@
+\rebus CONSTRICTORRYDDA \av Koma
+\op y->a
+CONSTRICTORRADDA
+\op !
+BOARAD
+\op a->y
+\ort BOARYD

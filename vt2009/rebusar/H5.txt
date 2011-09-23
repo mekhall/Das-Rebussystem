@@ -1,0 +1,9 @@
+\rebus BESPISANDUTAD \upphovsman MS
+\op i
+SANDBESPUTAD
+\op +R
+Sandbesprutad
+\op !
+Blästrad
+\op -R
+\ort BLÄSTAD

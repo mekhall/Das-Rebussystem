@@ -1,0 +1,7 @@
+\rebus KNASTARP \av Koma
+\op +r
+KNASTRAR P
+\op !
+SPRAKAR P
+\op -r
+\ort SPAKARP

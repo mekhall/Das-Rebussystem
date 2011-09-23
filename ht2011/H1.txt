@@ -1,0 +1,9 @@
+\rebus KALISTERKÖRPARE \av Hallon
+\op -a, -r
+KLISTERKÖPARE
+\op !
+LIMKUND
+\op i
+MKLUND
+\op +a, +r
+\ort MARKLUND

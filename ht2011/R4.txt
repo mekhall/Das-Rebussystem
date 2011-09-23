@@ -1,0 +1,11 @@
+\rebus SMIRPREPUS \av Hallon
+\op <->
+SUPERPRIMS
+\op s->a, +t
+SUPERPRIMAT
+\op !
+PRAKTAPA
+\op a->s, -t
+PRAKAPS
+\op <->
+\ort SPAKARP

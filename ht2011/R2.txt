@@ -1,0 +1,11 @@
+\rebus REBBAB \av Hallon
+\op <->
+BABBER
+\op r->l
+BABBEL
+\op !
+PLADDER
+\op l->r
+PRADDER
+\op <->
+\ort REDDARP

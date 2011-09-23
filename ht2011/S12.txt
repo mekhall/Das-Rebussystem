@@ -1,0 +1,11 @@
+\rebus LANUNJABUD \av JJW
+\op i
+UNJABILANUD
+\op +p, -u
+PUNJABILAND
+\op !
+PAKISTAN
+\op -p, +u
+AUKISTAN
+\op ! per. sys.
+\ort GULDKISTAN

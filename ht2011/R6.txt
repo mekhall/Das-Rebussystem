@@ -1,0 +1,9 @@
+\rebus FÖRITRÖMANDESKAF \av Hallon
+\op i
+TRÖMFÖRANDESKAF
+\op k->l, +s
+STRÖMFÖRANDESLAF
+\op !
+ELSÄNG
+\op l->k, -s
+\ort EKÄNG

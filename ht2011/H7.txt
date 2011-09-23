@@ -1,0 +1,7 @@
+\rebus FÅGELLOTARE \av Koma
+\op l->m
+FÅGELMOTARE
+\op !
+SKRÄMMA
+\op m->l
+\ort SKRÄMLA

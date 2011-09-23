@@ -1,0 +1,13 @@
+\rebus NETAKSULISTUMANIP \av Hallon
+\op <->
+PINAMUTSILUSKATEN
+\op i
+NAMUTSILUSKAPTEN
+\op -m, -s
+NAUTILUSKAPTEN
+\op !
+NEMO
+\op +m, +s
+NEMMOS
+\op <->
+\ort SOMMEN

@@ -1,0 +1,9 @@
+\rebus MPEIGURN \av Koma
+\op i
+GUMPERN
+\op g->j
+JUMPERN
+\op !
+TRÖJAN
+\op j->g
+\ort TRÖGAN

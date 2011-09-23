@@ -1,0 +1,11 @@
+\rebus ELTRA \upphovsman BP vt02
+\op <->
+ARTLE
+\op T->S
+Arsle
+\op !
+Anus
+\op S->T
+ANUT
+\op <->
+\ort TUNA

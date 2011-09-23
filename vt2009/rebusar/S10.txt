@@ -1,0 +1,13 @@
+\rebus LPDR \upphovsman FP
+\op i
+PiLDR
+\op i
+LiPIDR
+\op +E
+Lipider
+\op !
+Fett
+\op -E
+FTT
+\op i
+\ort TIFT

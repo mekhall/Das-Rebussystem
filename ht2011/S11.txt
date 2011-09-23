@@ -1,0 +1,7 @@
+\rebus 11319250T \av JJW
+\op !
+BOM 1 92 50 T
+\op ! per. sys.
+BOM H U 50 T
+\op ! rom
+\ort BOMHULT

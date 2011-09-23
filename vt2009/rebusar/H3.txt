@@ -1,0 +1,9 @@
+\rebus JOHNRENCC \upphovsman MS
+\op +A, C->K
+Johan Renck
+\op !
+Stakka Bo
+\op K->C, -A
+Stackbo
+\op !
+\ort MYRA

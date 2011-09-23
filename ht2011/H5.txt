@@ -1,0 +1,7 @@
+\rebus LNOPPEN \av Koma
+\op l->s
+SNOPPEN
+\op !
+DASEN
+\op s->l
+\ort DALEN

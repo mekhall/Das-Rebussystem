@@ -1,0 +1,12 @@
+\op Enars alternativlösning:
+\rebus FETTEXPERT
+\op !
+Lipolog
+\op i
+PLOLOG
+\op L->R
+Prolog
+\op !
+Början
+\op R->L
+\ort BÖLJAN

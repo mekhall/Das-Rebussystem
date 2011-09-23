@@ -1,0 +1,12 @@
+\rebus ÅSYFOSSET \upphovsman FP
+ÅSYF OSSE T
+\op om
+ÅSYFTOMOSSE
+\op O->A
+Åsyfta mosse
+\op !
+Mena myr
+\op A->O
+MENOMYR
+\op om
+\ort MYREN

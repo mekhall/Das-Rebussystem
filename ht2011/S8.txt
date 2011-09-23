@@ -1,0 +1,11 @@
+\rebus GILNNIVKHECÅGILNM \av JJW
+\op <->
+MNLIGÅCEHKVINNLIG
+\op +a, -e, å->o
+MANLIG OCH KVINNLIG
+\op !
+ANDROGYN
+\op -a, +e, o->å
+NEDRÅGYN
+\op <->
+\ort NYGÅRDEN

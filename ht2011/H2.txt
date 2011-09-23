@@ -1,0 +1,9 @@
+\rebus GARPARIHÄSTKREKERING \av Koma
+\op i
+HÄSTKREGARPARKERING
+\op e->i
+HÄSTKRIGARPARKERING
+\op !
+RIDDAR P
+\op i->e
+REDDARP
