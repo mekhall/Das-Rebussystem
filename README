@@ -1,4 +1,4 @@
-Das Rebussystem, ett Hallonhack
+Das Rebussystem, ett Hallonhack, baserat på BasPers perlhack
 Trial and Error, 2011
 
 För att anväda detta system behövs en webbserver med php-stöd
@@ -86,8 +86,3 @@ en databas eller php) använder man static.php.
 För att få upp presentationen på fler än en skärm samtidigt använder
 man inte VNC (som vi gjorde...). Däremot kör man lämpligtvis med det 
 nyutvecklade remote.php.
-
-
-
-
-
