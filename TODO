@@ -1,0 +1,16 @@
+bli av med 1,2,3,4.gif
+slutsida
+se till att positionen på lagnamn i r.php matchar prickraderna
+slide-effekter?
+skapa databasen på vettigt sätt
+opta databas, förmodligen bättre med bara en tabell
+sanity-check:
+  alla grenar med i presentationen exakt en gång
+  inga poäng över max
+  inga negativa på grenar som bara positiva, och tvärtom
+  kolla att rebusoperationer görs rätt (speciellt <->...)
+fyll i öppnat kuvär automatiskt om man fyller i stjälprebusar osv
+animation av sorterade listor, visa tendens
+färgkod på olika lag och staplarna
+snyggare grafer, animationer?
+gör <shortname>.php-filerna enklare att förstå och sätta upp
