@@ -2,9 +2,7 @@
 
 require_once 'slide.php';
 
-# These must map to the same directory
-define('DATAROOT', '/var/www/magnustest/');
-define('URLBASE', 'http://trialanderror.nu/magnustest/');
+define('DATAROOT', '/var/www/rebus/');
 
 require_once 'ht2011.php';
 
