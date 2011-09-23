@@ -1,7 +1,11 @@
 body {
     font-family:Arial;
     font-size:12px;
-    background-color:#b0b0b0
+    background-color:#b0b0b0;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-left:0px;
+    margin-right:0px
 }
 td {
     font-family:Arial;
@@ -27,24 +31,24 @@ a {
     background-color:#d0d0d0
 }
 .tr_odd td, .tr_even td { 
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding-top:4px;
+    padding-bottom:4px;
 }
 .rebustable {
     background-color:#dddddd;
-    padding:20;
-    border:0
+    padding:20px;
+    border:0px
 }
 .header {
     background-color:#ff0000;
     font-size:18px;
     vertical-align:middle;
     text-align:left;
-    height: 55
+    height:55px
 }
 .headerline {
     background-color:#000000;
-    height: 1
+    height:1px
 }
 .rub1 {
     font-family:Arial Black;
