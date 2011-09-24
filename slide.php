@@ -153,7 +153,7 @@ class SolutionSlide extends Slide
 
     function SolutionSlide($type, $nr) {
     	$f = $type . $nr;
-	$this->file = file(DATAROOT . '/' . SHORT_NAME . '/' . $f . '.txt');
+	$this->file = file(DATAROOT . '/' . NAME . '/' . $f . '.txt');
 	if ($type == 'R') {
 	    $this->title = "Rebus " . $nr;
 	}

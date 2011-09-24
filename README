@@ -4,10 +4,11 @@ Trial and Error, 2011
 För att anväda detta system behövs en webbserver med php-stöd
 samt php-sqlite.
 
-All information om ett specifikt rally ligger i en fil, t.ex. ht2011.php.
+Välj ett namn på rally, tex ht2011, och lägg in det i rebus_settings.php.
+All information om ett specifikt rally finns i en fil med namnet ht2011.php.
+Alla data som hör till rallyt finns i en katalog med namnet ht2011.
 
-I denna fil finns förutom några sökvägar till rallyts filer även en
-samling arrayer med data. Dessa är relativt självförklarande.
+I ht2011.php filen finns samling arrayer med data. Dessa är relativt självförklarande.
 Dessa finns i dagsläget:
 
 teams: En array som mappar lagnamn mot lagnummer och antal lagmedlemmar.
@@ -30,19 +31,18 @@ info: Här kan man mappa in specialinformation per gren. Denna info
 visas på rättningssidan till stor hjälp för de stackars satar som
 rättar. Man kan givetvis använda regexpar för att mappa.
 
-
-När man har skapat sitt rallys php-fil (t.ex. ht2011.php) pekar
-man ut den i filen rebus.php. I samma fil ställer man in
-sökvägar till webbserverrooten dels lokalt på webbservern men
-även för http-access.
-
-
 All inmatad information finns i en sqlite-databas som skapas i
 rallyts katalog om den inte finns. Filnamnet är 'db'. För att
 rensa bort allt och börja med en ny databas är det bara att ta 
 bort den filen. Se dock till att inte fler än en dator skapar
 upp en ny databas. Det tar en liten stund att skapa upp den,
 men när den väl finns på plats kan flera använda den samtidigt.
+
+Glöm inte att sätta lämpliga rättigheter så att webservern kan
+skriva i databsen. Oftast ska man göra:
+
+chgrp www-data <katalog> <katalog>/db
+chmod g+w <katalog> <katalog>/db
 
 
 För att mata in resultat surfar man till r.php på servern.
@@ -64,7 +64,7 @@ att använda piltangenterna eller page up, page down. Vi använde
 en trådlös presenterarmojt som var hårdkodad till page up, page down.
 
 Det går att få länkar till individuella sidor i presentationen
-genom att sätta index_links till 1 i rebus.php.
+genom att sätta index_links till 1 i rebus_settings.php.
 
 
 

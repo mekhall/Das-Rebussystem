@@ -2,7 +2,7 @@
 
 require_once "rebus.php";
 
-define('SQLITE_DB', DATAROOT . '/' . SHORT_NAME . '/db');
+define('SQLITE_DB', DATAROOT . '/' . NAME . '/db');
 
 function create()
 {

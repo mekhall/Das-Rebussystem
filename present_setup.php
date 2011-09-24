@@ -8,7 +8,7 @@ $actions = array();
 
 $pic = "title";
 if (checkPic($pic)) {
-   array_push($actions, new PictureSlide("Rebusrally " . SHORT_NAME, $pic));
+   array_push($actions, new PictureSlide("Rebusrally " . NAME, $pic));
 }
 
 foreach ($parts as $part => $data) {
