@@ -1,9 +1,0 @@
-\rebus KLASOMINESSON \upphovsman JT
-\op -OM, +G
-Klas Ingesson
-\op ! 
-Östgötalegend
-\op +OM, -G
-ÖSTGÖTALEEN om D
-\op om
-\ort ÖSTGÖTALEDEN

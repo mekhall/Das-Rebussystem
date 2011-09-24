@@ -1,7 +1,0 @@
-\rebus TBYSTMINUTPÅDREAMHACK \upphovsman FP
-\op -B
-Tyst minut på dreamhack
-\op !
-Lansorg
-\op +B
-\ort LANSBORG

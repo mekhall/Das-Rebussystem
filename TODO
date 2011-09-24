@@ -3,7 +3,6 @@ slutsida
 se till att positionen på lagnamn i r.php matchar prickraderna
 slide-effekter?
 skapa databasen på vettigt sätt
-opta databas, förmodligen bättre med bara en tabell
 sanity-check:
   alla grenar med i presentationen exakt en gång
   inga poäng över max

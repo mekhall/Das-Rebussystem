@@ -1,9 +1,0 @@
-\rebus BAYNAJERN \upphovsman HS
-\op i
-Naj i Bayern
-\op A->E
-Nej i Bayern
-\op !
-Nein
-\op E->A
-\ort NAIN

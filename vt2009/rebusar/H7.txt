@@ -1,7 +1,0 @@
-\rebus PROPPADEMEDBOKINKAR \upphovsman FP
-\op K->F
-Proppade med bofinkar
-\op !
-Fågelfulla
-\op F->K
-\ort FÅGELKULLA

@@ -1,7 +1,0 @@
-\rebus HELSINGBORGHELSINGÖRHELSINGBORGHELSINGÖRHELSINGBORGHELSINGÖRHELSINGBONG \upphovsman LG BP
-\op N->R
-Helsingborg-Helsingör-Helsingborg-Helsingör-Helsingborg-Helsingör-Helsingborg
-\op !
-Tura
-\op R->N
-\ort TUNA

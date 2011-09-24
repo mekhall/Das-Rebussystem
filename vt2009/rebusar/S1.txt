@@ -1,9 +1,0 @@
-\rebus DARDIVA \upphovsman AB vt02
-\op i
-DIV i DARA
-\op A->E
-Dividera
-\op !
-Dela
-\op E->A
-\ort DALA

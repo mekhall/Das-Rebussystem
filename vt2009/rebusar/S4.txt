@@ -1,9 +1,0 @@
-\rebus HUVUDINGREDIENSIHORNBORGKALOPS \upphovsman HS
-\op +A
-Huvudingrediens i hornborgakalops
-\op !
-Bitar av trana
-\op -A
-BITRAVTRANA
-\op i
-\ort TRAVTRBANA

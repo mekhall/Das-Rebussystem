@@ -1,9 +1,0 @@
-\rebus ÅTIANALMARK \upphovsman FP
-\op i
-Anal ÅTMARK
-\op +V
-Anal våtmark
-\op !
-Rövkärr
-\op -V
-\ort RÖKÄRR
