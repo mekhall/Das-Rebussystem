@@ -6,7 +6,7 @@ define('SQLITE_DB', DATAROOT . '/' . NAME . '/db');
 
 function create()
 {
-    $db = new SQLiteDatabase(SQLITE_DB);
+    $db = new SQLite3(SQLITE_DB);
 
     $columns = array();
     $values = array();
@@ -19,20 +19,43 @@ function create()
     $db->queryExec($c);
 
     for ($team = 0; $team < count($GLOBALS['teams']); ++$team) {
-	$db->queryExec("INSERT INTO rebus VALUES($team, " . implode(',', $values) . ")");
+	$db->queryExec("INSERT INTO rebus VALUES ($team, " . implode(',', $values) . ")");
     }
 }
 
 function getDb()
 {
-    static $instance;
-    if (!isset($instance)) {
+    static $db;
+    static $teamn;
+    static $eventn;
+    if (!isset($db)) {
 	if (!is_readable(SQLITE_DB)) {
 	    create();
 	}
-	$instance = new SQLiteDatabase(SQLITE_DB);
+	$db = new SQLite3(SQLITE_DB);
+	$teamn = $db->querySingle("SELECT COUNT(*) FROM rebus");
+	$e = $db->querySingle("SELECT * FROM rebus WHERE team=0", true);
+	$eventn = count($e) - 1;
     }
-    return $instance;
+
+    if (count($GLOBALS['teams']) > $teamn) {
+	$values = array();
+	for ($event = 0; $event < count($GLOBALS['events']); ++$event) { 
+	    $values[] = "NULL";
+	}
+	for ($team = $teamn; $team < count($GLOBALS['teams']); ++$team) {
+	    $db->query("INSERT INTO rebus VALUES ($team, " . implode(',', $values) . ")");
+	}
+	$teamn = count($GLOBALS['teams']);
+    }
+    if (count($GLOBALS['events']) > $eventn) {
+	for ($event = $eventn; $event < count($GLOBALS['events']); ++$event) { 
+	    $db->query("ALTER TABLE rebus ADD COLUMN event$event INTEGER DEFAULT NULL");
+	}
+	$eventn = count($GLOBALS['events']);
+    }
+
+    return $db;
 }
 
 function convert()
@@ -45,12 +68,12 @@ function convert()
 
     for ($team = 0; $team < count($GLOBALS['teams']); ++$team) {
 	for ($event = 0; $event < count($GLOBALS['events']); ++$event) { 
-	    $p = $db->singleQuery("SELECT points FROM team$team WHERE event=$event");
+	    $p = $db->querySingle("SELECT points FROM team$team WHERE event=$event");
 	    setPoints($team, $event, $p);
 	}
     }
     for ($team = 0; $team < count($GLOBALS['teams']); ++$team) {
-	$db->queryExec("DROP TABLE team$team");
+	$db->query("DROP TABLE team$team");
     }
 }
 
@@ -66,14 +89,14 @@ function setPoints($team, $event, $points)
 	return;
     }
 
-     $db->queryExec("UPDATE rebus SET event$event=$points WHERE team=$team");
+     $db->query("UPDATE rebus SET event$event=$points WHERE team=$team");
 }
 
 function getPoints($team, $event)
 {
     $db = getDb();
 
-    $row = $db->singleQuery("SELECT event$event FROM rebus WHERE team=$team");
+    $row = $db->querySingle("SELECT event$event FROM rebus WHERE team=$team");
 
     return $row;
 }
