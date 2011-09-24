@@ -8,7 +8,7 @@ function norm($nr, $max)
 	$nr = 0;
 	$max = 1;
     }
-    $barwidth = 300;
+    $barwidth = 500;
     $norm = abs(round($barwidth * ($nr / $max)));
 
     if ($norm == 0) {
@@ -94,7 +94,7 @@ function chart($data, $sort = 0)
     }
 
     $max = -1000;
-    $min = 1000;
+    $min = 0;
     foreach ($data as $teamnr => $d) {
 	$p = getPoint($d);
 	if ($p < $min) {
