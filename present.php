@@ -83,7 +83,7 @@ function next(nr, maxLine)
 	    window.location = "present.php?nr=" + (nr + 1);
 	}
 	else {	
-	    $$('div.rebus' + line).tween('opacity', 1);
+	    $$('div.rebus' + line).setStyle('opacity', 1);
 	}
     }
     else {
