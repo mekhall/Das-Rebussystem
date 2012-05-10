@@ -40,7 +40,6 @@ $events = array(
     'S 9' => 'Stjälp 9',
     'S 10' => 'Stjälp 10',
     'S 11' => 'Stjälp 11',
-    'S 12' => 'Stjälp 12',
 
     // Heldagspyssel
     'P MUS' => 'Musikkrysset',
@@ -114,11 +113,10 @@ $parts = array(
     array(new PictureSlide("Lunch", "lunch.jpg"),
 	  'P GRI', 'P TPS', 'P TAT', 'P HZZ', 'P TUP',
 	  'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7',
-	  'S 8', 'S 9', 'S 10', 'S 11', 
-	  new SolutionSlide('S', '11puh'), 'S 12', 
+	  'S 8', 'S 9', 'S 10', 'S 11',
 	  new SumSlide('Stjälprebusar totalt',
 		       array('S 1', 'S 2', 'S 3', 'S 4',
-			     'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11', 'S 12'))),
+			     'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11'))),
     'Totalt efter Lunch' => array('*sum*', 'Totalt efter Etapp 4', 'Lunchsummering'),
 
     'Etapp 5' => array('R 5', 'P STR', 'P FRI', 'TP 5', 'FP 5'),
@@ -151,7 +149,7 @@ $parts = array(
     'Rebusar och stjälprebusar totalt' => 
     array('*sum*',
 	  'S 1', 'S 2', 'S 3', 'S 4',
-	  'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11', 'S 12',
+	  'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11',
 	  'R 1', 'R 2', 'R 3', 'R 4',
 	  'R 5', 'R 6', 'R 7', 'R 8'),
 
