@@ -1,0 +1,5 @@
+\rebus BESTÄMDGETFORMSINGULAR \av Mårten 2012
+\op i
+Get i bestämd form singular
+\op !
+\ort GETEN

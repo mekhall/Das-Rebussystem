@@ -1,0 +1,11 @@
+\rebus NAKSIRPÅP \av Mårten 2011
+\op <-> 
+PÅPRISKAN
+\op S->C, A->E 
+På pricken
+\op ! 
+Precis
+\op C->S, E->A 
+PRASIS
+\op <-> 
+\ort SISARP

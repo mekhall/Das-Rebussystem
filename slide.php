@@ -117,7 +117,7 @@ class SolutionSlide extends Slide
     /* Rebusformat:
     \bild <bild>
     \rebus <rebus start>
-    \ort <rebus svar>
+    \ort <rebussvar>
     \upphovsman <signatur>
     \av <signatur>
     \op <rebus operation>
@@ -142,8 +142,8 @@ class SolutionSlide extends Slide
     
 	$text = preg_replace('/\\\\rebus /i', '', $text);
 	$text = preg_replace('/\\\\ort /i', '', $text);
-	$text = preg_replace('/\\\\upphovsman ((\w|\s)+\w)/i', '<span class=rebusmaker>($1)</span>', $text);
-	$text = preg_replace('/\\\\av ((\w|\s)+\w)/i', '<span class=rebusmaker>($1)</span>', $text);
+	$text = preg_replace('/\\\\upphovsman (.+)/i', '<span class=rebusmaker>($1)</span>', $text);
+	$text = preg_replace('/\\\\av (.+)/i', '<span class=rebusmaker>($1)</span>', $text);
 	$text = preg_replace('/\\\w* /', '', $text);
 
 	return $text;

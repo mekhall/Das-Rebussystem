@@ -1,0 +1,7 @@
+\rebus PYRAMASSPART \av BasPer 2012 
+\op R->J, A->O 
+Pyjamassport 
+\op ! 
+Judo 
+\op J->R, O->A 
+\ort RUDA 

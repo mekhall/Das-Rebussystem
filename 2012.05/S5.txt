@@ -1,0 +1,9 @@
+\rebus ITSTK \av Herman 2004
+\op om 
+ITK om ST 
+\op T->N 
+Inkomst 
+\op ! 
+Lön
+\op N->T 
+LÖT 

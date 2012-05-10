@@ -1,0 +1,7 @@
+\rebus BENSRÄCKAREIVASSEN \av BasPer 2012
+\op +T 
+Bensträckare i vassen 
+\op ! 
+Moses rast 
+\op -T 
+\ort MOSESRAS 

@@ -1,0 +1,7 @@
+\rebus SVARTROCKAREMMAN \av Dicken 2008
+\op +H 
+Svartrockarhemman
+\op ! 
+Gothtorp
+\op -H 
+GOTTORP 

@@ -1,0 +1,9 @@
+\rebus KOPOR \av Herman 1999
+\op ! 
+KOP ostdjur 
+\op +M 
+Kompostdjur 
+\op ! 
+Mask 
+\op -M 
+\ort ASK 

@@ -1,3 +1,4 @@
+<?php header('Content-type: text/html; charset=iso-8859-15'); ?>
 <?php
 
 require_once 'rebus.php';
@@ -97,13 +98,13 @@ function next(nr, maxLine)
 <table border=0 cellpadding=0 cellspacing=0 width=100%>
 
 <tr class=header>
-  <td class=header>
-    <a class=rub1>&nbsp;&nbsp;&nbsp;<?php echo $action->getTitle(); ?></a>&nbsp;
+  <td class=header align=left>
+    <a class=rub1><?php echo $action->getTitle(); ?></a>&nbsp;
   </td>
 <?php 
   if ($display_logo) {
     $p = PICTURE_URL;
-    echo "<td class=header><img src=\"$p/tae.png\" width=100% height=80%></td>";
+    echo "<td class=header align=right valign=top><img src=\"$p/logga.gif\" align=right valign=middle></td>\n";
   }
 ?>
 </tr>
