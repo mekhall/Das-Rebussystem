@@ -6,7 +6,7 @@ define('SQLITE_DB', DATAROOT . '/' . NAME . '/db');
 
 function create()
 {
-    $GLOBALS['error_messages'] = $GLOBALS['error_messages']."ERROR not a valid database. Creating a new one!<br>\n."; 
+    error_log("Not a valid database. Creating a new one!<br>\n.",0); 
     $db = new SQLite3(SQLITE_DB);
 
     $columns = array();
@@ -14,16 +14,16 @@ function create()
     for ($event = 0; $event < count($GLOBALS['events']); ++$event) { 
         $columns[] = "event$event INTEGER";
 	$values[] = "NULL";
-	$GLOBALS['error_messages'] = $GLOBALS['error_messages']."event$event INTEGER<br>\n."; 
+	error_log("event$event INTEGER<br>\n.",0); 
     }
 
     $c = "CREATE TABLE rebus (team INTEGER PRIMARY KEY, " . implode(',', $columns) . ")";
-    $GLOBALS['error_messages'] = $GLOBALS['error_messages']."CREATE TABLE rebus (team INTEGER PRIMARY KEY, " . implode(',', $columns) . ")<br>\n."; 
+    error_log("CREATE TABLE rebus (team INTEGER PRIMARY KEY, " . implode(',', $columns) . ")<br>\n.",0); 
     $db->query($c);
 
     for ($team = 0; $team < count($GLOBALS['teams']); ++$team) {
 	$db->query("INSERT INTO rebus VALUES ($team, " . implode(',', $values) . ")");
-	$GLOBALS['error_messages'] = $GLOBALS['error_messages']."INSERT INTO rebus VALUES ($team, " . implode(',', $values) . ")<br>\n."; 
+	error_log("INSERT INTO rebus VALUES ($team, " . implode(',', $values) . ")<br>\n.",0); 
     }
 }
 
@@ -34,7 +34,7 @@ function getDb()
     static $eventn;
     if (!isset($db)) {
 	if (!is_readable(SQLITE_DB)) {
-	    $GLOBALS['error_messages'] = $GLOBALS['error_messages']."db not readable $db<br>\n."; 
+	    error_log("db not readable $db<br>\n.",0); 
 	    create();
 	}
 	$db = new SQLite3(SQLITE_DB);
@@ -43,24 +43,29 @@ function getDb()
 	$eventn = count($e) - 1;
     }
 
+    if ($teamn==""){
+       $teamn = 0;
+    }
+
     $teams_in_setup = count($GLOBALS['teams']);
     if (count($GLOBALS['teams']) > $teamn) {
-	$GLOBALS['error_messages'] = $GLOBALS['error_messages']."teams in db is less than in setup:$teamn<$teams_in_setup<br>\n."; 
+	error_log("teams in db is less than in setup:$teamn<$teams_in_setup<br>\n.",0); 
     	$values = array();
 	for ($event = 0; $event < count($GLOBALS['events']); ++$event) { 
 	    $values[] = "NULL";
 	}
 	for ($team = $teamn; $team < count($GLOBALS['teams']); ++$team) {
 	    $db->query("INSERT INTO rebus VALUES ($team, " . implode(',', $values) . ")");
+	    error_log("INSERT INTO rebus VALUES ($team, " . implode(',', $values) . ")",0);
 	}
 	$teamn = count($GLOBALS['teams']);
     }
     $events_in_setup = count($GLOBALS['events']);
     if (count($GLOBALS['events']) > $eventn) {
-    	$GLOBALS['error_messages'] = $GLOBALS['error_messages']."events in db are less than in setup:$eventn<$eventss_in_setup<br>\n."; 
+    	error_log("events in db are less than in setup:$eventn<$eventss_in_setup<br>\n.",0); 
 	for ($event = $eventn; $event < count($GLOBALS['events']); ++$event) { 
 	    $db->query("ALTER TABLE rebus ADD COLUMN event$event INTEGER DEFAULT NULL");
-	    $GLOBALS['error_messages'] = $GLOBALS['error_messages']."ERROR event numbers not matching. Adding event $event.<br>\n"; 
+	    error_log("ERROR event numbers not matching. Adding event $event.<br>\n",0); 
 	}
 	$eventn = count($GLOBALS['events']);
     }
