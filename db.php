@@ -16,10 +16,10 @@ function create()
     }
 
     $c = "CREATE TABLE rebus (team INTEGER PRIMARY KEY, " . implode(',', $columns) . ")";
-    $db->queryExec($c);
+    $db->querySingle($c);
 
     for ($team = 0; $team < count($GLOBALS['teams']); ++$team) {
-	$db->queryExec("INSERT INTO rebus VALUES ($team, " . implode(',', $values) . ")");
+	$db->querySingle("INSERT INTO rebus VALUES ($team, " . implode(',', $values) . ")");
     }
 }
 
