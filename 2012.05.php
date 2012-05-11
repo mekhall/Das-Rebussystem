@@ -97,7 +97,7 @@ $parts = array(
     'Totalt efter Etapp 4' => array('*sum*', 'Totalt efter Etapp 3', 'Etapp 4'),
 
     'Lunch' => 
-    array(new PictureSlide("Lunch", "lunch.jpg"),
+    array(new PictureSlide("Lunch", "2012.05/lunch.jpg"),
           'Stil',
 	  'P HEMT', 'P KORS',
 	  'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7',
@@ -146,30 +146,31 @@ $parts = array(
 	  'R 1', 'R 2', 'R 3', 'R 4',
 	  'R 5', 'R 6', 'R 7', 'R 8'),
 
-    'Totalt' => array('*sum*', 'Totalt efter Etapp 7', 'Etapp 8', 'Stil')
+    'Totalt' => array('*sum*', 'Totalt efter Etapp 7', 'Etapp 8')
     );
 
 $maxPoints = 
   array(
-         'P MUSK' => 0,
-	 'P KART' => 0,
-	 'P RAMO' => 0,
-	 'P FACE' => 0,
-	 'P POPC' => 0,
-	 'P STYS' => 0,
-	 'P LAPP' => 0,
-	 'P HEMT' => 0,
-	 'P KORS' => 0,
-	 'P SKID' => 0,
-	 'P FOTO' => 0,
-	 'P FOBI' => 0,
-	 'P TERJ' => 0
+         'P MUSK' => 46,
+	 'P KART' => 16,
+	 'P RAMO' => 20,
+	 'P FACE' => 42,
+	 'P POPC' => 20,
+	 'P STYS' => 28,
+	 'P LAPP' => 22,
+	 'P HEMT' => 21,
+	 'P KORS' => 16,
+	 'P SKID' => 18,
+	 'P FOTO' => 30,
+	 'P FOBI' => 16,
+	 'P TERJ' => 28
 	 );
 
 $info = 
   array(
-	'P .*' => '1 per fel',
-	'Tid .' => '1 per minut, 2 efter 17:30',
+	'Tid S' => '1 per minut',
+	'Tid L' => '1 per minut',
+	'Tid M' => '1 per minut, 2 efter 17:45, 4 efter 18:15, 8 efter 18:45',
 	'R [0-9]+' => '25 klippt hjälp, 45 klippt nöd, felaktiga kontrollbokstäver 25',
 	'S [0-9]+' => '-10 korrekt motiverad lösning',
 	'FP [0-9]+' => '10 missat plock, 20 falskt plock',

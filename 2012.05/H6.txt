@@ -1,4 +1,4 @@
-\rebus PYRAMASSPART \av BasPer 2012 
+\rebus PYRAMASSPART \av BasPer 2012
 \op R->J, A->O 
 Pyjamassport 
 \op ! 

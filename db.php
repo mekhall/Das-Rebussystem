@@ -33,7 +33,6 @@ function getDb()
     static $teamn;
     static $eventn;
     if (!isset($db)) {
-	$GLOBALS['error_messages'] = $GLOBALS['error_messages']."db not set $db<br>\n."; 
 	if (!is_readable(SQLITE_DB)) {
 	    $GLOBALS['error_messages'] = $GLOBALS['error_messages']."db not readable $db<br>\n."; 
 	    create();
