@@ -42,38 +42,25 @@ $events = array(
     'S 11' => 'Stjälp 11',
 
     // Heldagspyssel
-    'P MUS' => 'Musikkrysset',
-    'P BRO' => 'Gissa Brotten',
-    'P MAR' => 'Gissa Mårten',
-    'P TAT' => 'Gissa Tåten',
-    'P HZZ' => 'Uranus Hertz',
-    'P TUP' => 'I tuppgropen',
-
+    'P MUSK' => 'Musikkrysset',
+    'P KART' => 'Kartogram',
+    'P RAMO' => 'Ramones intron',
+    'P FACE' => 'Facepysslet',
+    'P POPC' => 'Popstjärnecluedo',
+            
     // Förmiddagspyssel
-    'P ALF' => 'Alfabeten', 
-    'P PRO' => 'Pocenten, Helge!',
-    'P RUS' => 'Rustika rus',
-    'P DOD' => 'Död eller levande?',
-    'P HOP' => 'Skrivihop',
-
+    'P STYS' => 'Stysslet',
+    'P LAPP' => 'Lapptäcket', 
+            
     // Lunchpyssel
-    'P GRI' => 'Slicka på grisen',
-    'P TPS' => 'Tipspromenad',
-
+    'P HEMT' => 'Hemmet i närbild',
+    'P KORS' => 'Korso',
+            
     // Eftermiddagspyssel
-    'P STR' => 'Vilken Star Trek-ras?',
-    'P FRI' => 'Hockey, hockey',
-    'P MAS' => 'Mer hockey',
-    'P DIA' => 'Dialektpysslet',
-    'P TTM' => 'You talkin\' to me?', 
-    'P PYT' => 'Vem är python',
-
-    // Stjälppyssel
-    'P BRU' => '17 nyanser av brunt',
-    'P BOT' => 'Das boot',
-    'P TRA' => 'Träslaget',
-    'P SLO' => 'Hertigdömet Östergötland',
-    'P SAT' => 'Sattellitter',
+    'P SKID' => 'Skidbrudar',
+    'P FOTO' => 'Sverigefotoplock',
+    'P FOBI' => 'Fobier',
+    'P TERJ' => 'Terje',
 
     'Stil' => 'Stil och finess',
     'Tid S' => 'Tidsprickar vid Start',
@@ -98,20 +85,20 @@ $events = array(
     );
 
 $parts = array(
-    'Etapp 1' => array('Tid S', 'R 1', 'P ALF', 'P MUS', 'TP 1', 'FP 1'),
+    'Etapp 1' => array('Tid S', 'R 1', 'P MUSK', 'P STYS', 'TP 1', 'FP 1'),
 
-    'Etapp 2' => array('R 2', 'P PRO', 'P BRO', 'TP 2', 'FP 2'),
+    'Etapp 2' => array('R 2', 'P POPC', 'TP 2', 'FP 2'),
     'Totalt efter Etapp 2' => array('*sum*', 'Etapp 1', 'Etapp 2'),
 
-    'Etapp 3' => array('R 3', 'P RUS', 'P MAR', 'TP 3', 'FP 3'),
+    'Etapp 3' => array('R 3', 'P LAPP', 'P FOTO', 'TP 3', 'FP 3'),
     'Totalt efter Etapp 3' => array('*sum*', 'Totalt efter Etapp 2', 'Etapp 3'),
 
-    'Etapp 4' => array('R 4', 'P DOD', 'P HOP', 'TP 4', 'FP 4', 'Tid L'),
+    'Etapp 4' => array('R 4', 'P SKID', 'TP 4', 'FP 4', 'Tid L'),
     'Totalt efter Etapp 4' => array('*sum*', 'Totalt efter Etapp 3', 'Etapp 4'),
 
     'Lunch' => 
     array(new PictureSlide("Lunch", "lunch.jpg"),
-	  'P GRI', 'P TPS', 'P TAT', 'P HZZ', 'P TUP',
+	  'P HEMT', 'P KORS',
 	  'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7',
 	  'S 8', 'S 9', 'S 10', 'S 11',
 	  new SumSlide('Stjälprebusar totalt',
@@ -119,13 +106,13 @@ $parts = array(
 			     'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11'))),
     'Totalt efter Lunch' => array('*sum*', 'Totalt efter Etapp 4', 'Lunchsummering'),
 
-    'Etapp 5' => array('R 5', 'P STR', 'P FRI', 'TP 5', 'FP 5'),
+    'Etapp 5' => array('R 5', 'P FOBI', 'TP 5', 'FP 5'),
     'Totalt efter Etapp 5' => array('*sum*', 'Totalt efter Lunch', 'Etapp 5'),
 
-    'Etapp 6' => array('R 6', 'P MAS', 'P DIA', 'TP 6', 'FP 6'),
+    'Etapp 6' => array('R 6', 'P RAMO', 'P FACE', 'TP 6', 'FP 6'),
     'Totalt efter Etapp 6' => array('*sum*', 'Totalt efter Etapp 5', 'Etapp 6'),
 
-    'Etapp 7' => array('R 7', 'P TTM', 'P PYT', 'TP 7', 'FP 7'),
+    'Etapp 7' => array('R 7', 'P KART', 'P TERJ', 'TP 7', 'FP 7'),
     'Totalt efter Etapp 7' => array('*sum*', 'Totalt efter Etapp 6', 'Etapp 7'),
 
     'Totalt efter stjälppyssel' => array('*sum*', 'Totalt efter Etapp 7', 'Stjälppyssel'),
@@ -134,19 +121,28 @@ $parts = array(
 
     'Stil',
     
-    'Plock totalt inklusive stjälp' => 
+    'Plock totalt' => 
     array('*sum*',
 	  'TP 1', 'TP 2', 'TP 3', 'TP 4', 'TP 5', 'TP 6', 'TP 7', 'TP 8',
 	  'FP 1', 'FP 2', 'FP 3', 'FP 4', 'FP 5', 'FP 6', 'FP 7', 'FP 8'),
 
-    'Pyssel totalt inklusive stjälp' => 
+    'Pyssel totalt' => 
     array('*sum*', 
-	  'P MUS', 'P BRO', 'P MAR', 'P TAT', 'P HZZ', 'P TUP', 
-	  'P ALF', 'P PRO', 'P RUS', 'P DOD', 'P HOP', 
-	  'P GRI', 'P TPS', 
-	  'P STR', 'P FRI', 'P MAS', 'P DIA', 'P TTM', 'P PYT'),
+         'P MUSK',
+	 'P KART',
+	 'P RAMO',
+	 'P FACE',
+	 'P POPC',
+	 'P STYS',
+	 'P LAPP',
+	 'P HEMT',
+	 'P KORS',
+	 'P SKID',
+	 'P FOTO',
+	 'P FOBI',
+	 'P TERJ'),
 
-    'Rebusar och stjälprebusar totalt' => 
+    'Rebusar och heldagsrebusar totalt' => 
     array('*sum*',
 	  'S 1', 'S 2', 'S 3', 'S 4',
 	  'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11',
@@ -157,25 +153,31 @@ $parts = array(
     );
 
 $maxPoints = 
-  array('P MUS' => 40, 'P BRO' => 20, 'P MAR' => 14, 'P TAT' => 25, 'P HZZ' => 19, 
-        'P TUP' => 12, 'P ALF' => 15, 'P PRO' => 15, 'P RUS' => 14, 'P DOD' => 14, 
-        'P HOP' => 18, 'P GRI' => 14, 'P TPS' => 13, 'P STR' => 18, 'P FRI' => 14, 
-        'P MAS' => 14, 'P DIA' => 19, 'P TTM' => 25, 'P PYT' => 15, 'P BRU' => -17, 
-        'P BOT' => -14, 'P TRA' => -18, 'P SLO' => -10, 'P SAT' => -20);
+  array(
+         'P MUSK' => 0,
+	 'P KART' => 0,
+	 'P RAMO' => 0,
+	 'P FACE' => 0,
+	 'P POPC' => 0,
+	 'P STYS' => 0,
+	 'P LAPP' => 0,
+	 'P HEMT' => 0,
+	 'P KORS' => 0,
+	 'P SKID' => 0,
+	 'P FOTO' => 0,
+	 'P FOBI' => 0,
+	 'P TERJ' => 0
+	 );
 
 $info = 
-  array('P TTM' => '<red>0.5 per fel', 'P GRI' => '<red>2 per fel',
-	'P BRU' => '<red>-1 per rätt',
-	'P BOT' => '<red>-1 per rätt',
-	'P TRA' => '<red>-1 per rätt',
-	'P SLO' => '<red>-1 per rätt',
-	'P SAT' => '<red>-0.5 per rätt',
+  array(
 	'P .*' => '1 per fel',
 	'Tid .' => '1 per minut, 2 efter 17:30',
 	'R [0-9]+' => '25 klippt hjälp, 45 klippt nöd, felaktiga kontrollbokstäver 25',
 	'S [0-9]+' => '-10 korrekt motiverad lösning',
 	'FP [0-9]+' => '10 missat plock, 20 falskt plock',
-	'TP [0-9]+' => '5 missat plock, 10 falskt plock');
+	'TP [0-9]+' => '5 missat plock, 10 falskt plock'
+	);
 
-$error_messages = "First!<br>\n";
+$error_messages = "";
 ?>

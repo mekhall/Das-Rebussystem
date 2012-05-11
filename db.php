@@ -32,24 +32,21 @@ function getDb()
     static $db;
     static $teamn;
     static $eventn;
-    $GLOBALS['error_messages'] = $GLOBALS['error_messages']."in getDb<br>\n."; 
     if (!isset($db)) {
 	$GLOBALS['error_messages'] = $GLOBALS['error_messages']."db not set $db<br>\n."; 
-#	if (!is_readable(SQLITE_DB)) {
+	if (!is_readable(SQLITE_DB)) {
 	    $GLOBALS['error_messages'] = $GLOBALS['error_messages']."db not readable $db<br>\n."; 
 	    create();
-#	}
+	}
 	$db = new SQLite3(SQLITE_DB);
 	$teamn = $db->querySingle("SELECT COUNT(*) FROM rebus");
-	$GLOBALS['error_messages'] = $GLOBALS['error_messages']."teams in db:$teamn<br>\n."; 
 	$e = $db->querySingle("SELECT * FROM rebus WHERE team=0", true);
 	$eventn = count($e) - 1;
-	$GLOBALS['error_messages'] = $GLOBALS['error_messages']."events in db:$eventn<br>\n."; 
     }
 
     $teams_in_setup = count($GLOBALS['teams']);
     if (count($GLOBALS['teams']) > $teamn) {
-	$GLOBALS['error_messages'] = $GLOBALS['error_messages']."teamss in db is less than in setup:$teamn<$teams_in_setup<br>\n."; 
+	$GLOBALS['error_messages'] = $GLOBALS['error_messages']."teams in db is less than in setup:$teamn<$teams_in_setup<br>\n."; 
     	$values = array();
 	for ($event = 0; $event < count($GLOBALS['events']); ++$event) { 
 	    $values[] = "NULL";
@@ -61,7 +58,7 @@ function getDb()
     }
     $events_in_setup = count($GLOBALS['events']);
     if (count($GLOBALS['events']) > $eventn) {
-    	$GLOBALS['error_messages'] = $GLOBALS['error_messages']."eventss in db are less than in setup:$eventn<$eventss_in_setup<br>\n."; 
+    	$GLOBALS['error_messages'] = $GLOBALS['error_messages']."events in db are less than in setup:$eventn<$eventss_in_setup<br>\n."; 
 	for ($event = $eventn; $event < count($GLOBALS['events']); ++$event) { 
 	    $db->query("ALTER TABLE rebus ADD COLUMN event$event INTEGER DEFAULT NULL");
 	    $GLOBALS['error_messages'] = $GLOBALS['error_messages']."ERROR event numbers not matching. Adding event $event.<br>\n"; 
