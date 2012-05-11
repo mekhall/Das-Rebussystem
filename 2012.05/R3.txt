@@ -1,5 +1,3 @@
-\rebus FRUROVASBRIDGEPARTNER \av BasPer 2004
-Fru Rovas bridgepartner 
+\rebus Fru Rovas bridgepartner \av BasPer 2004
 \op ! 
-Herr Beta
-\ort HERRBETA
+\ort Herr Beta

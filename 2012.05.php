@@ -98,13 +98,14 @@ $parts = array(
 
     'Lunch' => 
     array(new PictureSlide("Lunch", "lunch.jpg"),
+          'Stil',
 	  'P HEMT', 'P KORS',
 	  'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7',
 	  'S 8', 'S 9', 'S 10', 'S 11',
 	  new SumSlide('Stjälprebusar totalt',
 		       array('S 1', 'S 2', 'S 3', 'S 4',
 			     'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11'))),
-    'Totalt efter Lunch' => array('*sum*', 'Totalt efter Etapp 4', 'Lunchsummering'),
+    'Totalt efter Lunch' => array('*sum*', 'Totalt efter Etapp 4', 'Lunch'),
 
     'Etapp 5' => array('R 5', 'P FOBI', 'TP 5', 'FP 5'),
     'Totalt efter Etapp 5' => array('*sum*', 'Totalt efter Lunch', 'Etapp 5'),
@@ -115,12 +116,8 @@ $parts = array(
     'Etapp 7' => array('R 7', 'P KART', 'P TERJ', 'TP 7', 'FP 7'),
     'Totalt efter Etapp 7' => array('*sum*', 'Totalt efter Etapp 6', 'Etapp 7'),
 
-    'Totalt efter stjälppyssel' => array('*sum*', 'Totalt efter Etapp 7', 'Stjälppyssel'),
-
     'Etapp 8' => array('R 8', 'TP 8', 'FP 8', 'Tid M'),
 
-    'Stil',
-    
     'Plock totalt' => 
     array('*sum*',
 	  'TP 1', 'TP 2', 'TP 3', 'TP 4', 'TP 5', 'TP 6', 'TP 7', 'TP 8',
@@ -142,14 +139,14 @@ $parts = array(
 	 'P FOBI',
 	 'P TERJ'),
 
-    'Rebusar och heldagsrebusar totalt' => 
+    'Alla rebusar' => 
     array('*sum*',
 	  'S 1', 'S 2', 'S 3', 'S 4',
 	  'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11',
 	  'R 1', 'R 2', 'R 3', 'R 4',
 	  'R 5', 'R 6', 'R 7', 'R 8'),
 
-    'Totalt' => array('*sum*', 'Totalt efter stjälppyssel', 'Etapp 8', 'Stil')
+    'Totalt' => array('*sum*', 'Totalt efter Etapp 7', 'Etapp 8', 'Stil')
     );
 
 $maxPoints = 

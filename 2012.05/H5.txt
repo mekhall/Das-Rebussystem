@@ -1,4 +1,4 @@
-\rebus C \av Timby 2009
+\rebus C \av Sten-Johan 2009
 \op Periodiska systemet
 6
 \op Romerska siffror
