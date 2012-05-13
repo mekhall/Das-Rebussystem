@@ -81,7 +81,8 @@ Man kan givetvis lägga in godtyckligt antal bild-slides manuellt.
 
 
 För att generera en statisk presentation (ren html som inte behöver
-en databas eller php) använder man static.php.
+en databas eller php) använder man static.php från kommandoraden,
+och pekar ut en mapp där resultatet ska läggas.
 
 För att få upp presentationen på fler än en skärm samtidigt använder
 man inte VNC (som vi gjorde...). Däremot kör man lämpligtvis med det 

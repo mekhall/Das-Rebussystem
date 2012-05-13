@@ -37,7 +37,7 @@ a {
 }
 .header {
     background-color:#aebddb;
-    background-image:url('logga2.gif');
+/*    background-image:url('logga2.gif'); */
     background-repeat:no-repeat;
     background-attachment:fixed;
     background-position:5 5; 
