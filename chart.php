@@ -104,7 +104,7 @@ function chart($data, $sort = 0)
 	    $max = $p;
 	}
     }
-    $len = abs($max - $min);
+    $len = $max - $min;
 
     echo "<table border=0 cellspacing=0 cellpadding=2>\n";
     $i = 0;
