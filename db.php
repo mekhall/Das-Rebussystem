@@ -38,12 +38,13 @@ function getDb()
 	    create();
 	}
 	$db = new SQLite3(SQLITE_DB);
+	$db->busyTimeout(1000);
 	$teamn = $db->querySingle("SELECT COUNT(*) FROM rebus");
 	$e = $db->querySingle("SELECT * FROM rebus WHERE team=0", true);
 	$eventn = count($e) - 1;
     }
 
-    if ($teamn==""){
+    if ($teamn == "") {
        $teamn = 0;
     }
 
