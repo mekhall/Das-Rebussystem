@@ -1,7 +1,5 @@
 #!/usr/bin/php 
-
 <?php
-
 global $argv,$argc;
 if (count($argv) < 2) {
    echo "$argv[0] <dir>\n";
