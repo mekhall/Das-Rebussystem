@@ -93,7 +93,7 @@ function chart($data, $sort = 0)
 	uasort($data, "pointCmp");
     }
 
-    $max = -1000;
+    $max = 0;
     $min = 0;
     foreach ($data as $teamnr => $d) {
 	$p = getPoint($d);
@@ -104,7 +104,7 @@ function chart($data, $sort = 0)
 	    $max = $p;
 	}
     }
-    $max = $max - $min;
+    $len = abs($max - $min);
 
     echo "<table border=0 cellspacing=0 cellpadding=2>\n";
     $i = 0;
@@ -118,10 +118,10 @@ function chart($data, $sort = 0)
 	}
 	echo "<tr valign=center class=$class>\n";
 	if (is_array($d)) {
-	    chartRow(getTeamNumber($teamnr), getTeamName($teamnr), $max, $d[0], $d[1]);
+	    chartRow(getTeamNumber($teamnr), getTeamName($teamnr), $len, $d[0], $d[1]);
 	}
 	else {
-	    chartRow(getTeamNumber($teamnr), getTeamName($teamnr), $max, $d);
+	    chartRow(getTeamNumber($teamnr), getTeamName($teamnr), $len, $d);
 	}
 	echo "</tr>\n";
     }
