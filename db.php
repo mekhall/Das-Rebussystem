@@ -6,7 +6,6 @@ define('SQLITE_DB', DATAROOT . '/' . NAME . '/db');
 
 function create()
 {
-    error_log("Not a valid database. Creating a new one!<br>\n.",0); 
     $db = new SQLite3(SQLITE_DB);
 
     $columns = array();
@@ -14,16 +13,13 @@ function create()
     for ($event = 0; $event < count($GLOBALS['events']); ++$event) { 
         $columns[] = "event$event INTEGER";
 	$values[] = "NULL";
-	error_log("event$event INTEGER<br>\n.",0); 
     }
 
     $c = "CREATE TABLE rebus (team INTEGER PRIMARY KEY, " . implode(',', $columns) . ")";
-    error_log("CREATE TABLE rebus (team INTEGER PRIMARY KEY, " . implode(',', $columns) . ")<br>\n.",0); 
     $db->query($c);
 
     for ($team = 0; $team < count($GLOBALS['teams']); ++$team) {
 	$db->query("INSERT INTO rebus VALUES ($team, " . implode(',', $values) . ")");
-	error_log("INSERT INTO rebus VALUES ($team, " . implode(',', $values) . ")<br>\n.",0); 
     }
 }
 
@@ -34,8 +30,10 @@ function getDb()
     static $eventn;
     if (!isset($db)) {
 	if (!is_readable(SQLITE_DB)) {
-	    error_log("db not readable $db<br>\n.",0); 
 	    create();
+	}
+	if (!is_writable(SQLITE_DB)) {
+	    echo("<p><font color=red>Database " . SQLITE_DB . " not writable.</font></p>\n"); 
 	}
 	$db = new SQLite3(SQLITE_DB);
 	$db->busyTimeout(1000);
@@ -48,25 +46,19 @@ function getDb()
        $teamn = 0;
     }
 
-    $teams_in_setup = count($GLOBALS['teams']);
     if (count($GLOBALS['teams']) > $teamn) {
-	error_log("teams in db is less than in setup:$teamn<$teams_in_setup<br>\n.",0); 
     	$values = array();
 	for ($event = 0; $event < count($GLOBALS['events']); ++$event) { 
 	    $values[] = "NULL";
 	}
 	for ($team = $teamn; $team < count($GLOBALS['teams']); ++$team) {
 	    $db->query("INSERT INTO rebus VALUES ($team, " . implode(',', $values) . ")");
-	    error_log("INSERT INTO rebus VALUES ($team, " . implode(',', $values) . ")",0);
 	}
 	$teamn = count($GLOBALS['teams']);
     }
-    $events_in_setup = count($GLOBALS['events']);
     if (count($GLOBALS['events']) > $eventn) {
-    	error_log("events in db are less than in setup:$eventn<$eventss_in_setup<br>\n.",0); 
 	for ($event = $eventn; $event < count($GLOBALS['events']); ++$event) { 
 	    $db->query("ALTER TABLE rebus ADD COLUMN event$event INTEGER DEFAULT NULL");
-	    error_log("ERROR event numbers not matching. Adding event $event.<br>\n",0); 
 	}
 	$eventn = count($GLOBALS['events']);
     }
@@ -114,9 +106,6 @@ function getPoints($team, $event)
 
     $row = $db->querySingle("SELECT event$event FROM rebus WHERE team=$team");
 
-#    if ($row != 'NULL' and !is_numeric($row)){
-#       $GLOBALS['error_messages'] = $GLOBALS['error_messages']."ERROR not a valid return value:$row for event $event team $team<br>\n"; 
-#    }
     return $row;
 }
 

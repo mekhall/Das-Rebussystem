@@ -12,24 +12,37 @@ I ht2011.php filen finns samling arrayer med data. Dessa är relativt självför
 Dessa finns i dagsläget:
 
 teams: En array som mappar lagnamn mot lagnummer och antal lagmedlemmar.
+Antal lagmedlemmar behöver endast sättas till rätt antal om man vill
+använda prickberäkning baserat på antal lagmedlemmar.
 
-events: En ganska stor array innehåller alla rebusar, pyssel och plock.
+events: En ganska stor array som innehåller alla rebusar, pyssel och plock.
 De olika eventens kortnamn mappas mot deras fullständiga namn.
 Kortnamnens begynnelsebokstav måste vara R för rebusar, 
 S för stjälprebusar, P för pyssel, FP för fotoplock och TP för
 tallriksplock.
 
 parts: Här mappas rallyts etapper upp. Det är enligt denna gruppering
-som presentationen kommer att visas. Det speciella kortnamnet '*sum*'
+som presentationen kommer att visas. Om ett kortnamn på rebus, pyssel
+eller plock anges visas prickar för denna del. Det speciella kortnamnet '*sum*'
 används för att summera resten av grenarna i en array. På detta sätt
 kan man summera olika etapper, även med fördel rekursivt.
+För extra effekt kan man lägga in en bild:
+  new PictureSlide("Lunch", "lunch.jpg")
+eller en speciallösning av en rebus:
+  new SolutionSlide('S', '11puh')
+eller en summering:
+  new SumSlide('Stjälpplock totalt', array('StjPlk', 'ÖppPlk')),
 
 maxPoints: Pyssel mappas mot antal maxprickar i det pysslet. Om 
-maxprickar finns för ett pyssel visas det i presentationen.
+maxprickar finns för ett pyssel visas det i presentationen
+och på rättningssidan.
 
 info: Här kan man mappa in specialinformation per gren. Denna info
 visas på rättningssidan till stor hjälp för de stackars satar som
 rättar. Man kan givetvis använda regexpar för att mappa.
+Man kan använda specialsyntaxen: <red> för att markera texten
+röd om något är exakt viktigt. <Xp> ersätts med X multiplicerat med
+antalet lagmedlemmar.
 
 All inmatad information finns i en sqlite-databas som skapas i
 rallyts katalog om den inte finns. Filnamnet är 'db'. För att
@@ -67,7 +80,6 @@ Det går att få länkar till individuella sidor i presentationen
 genom att sätta index_links till 1 i rebus_settings.php.
 
 
-
 Det mesta av det grafiska går att justera med css. Just nu är det
 en css-mall som heter style.css.
 
@@ -83,6 +95,7 @@ Man kan givetvis lägga in godtyckligt antal bild-slides manuellt.
 För att generera en statisk presentation (ren html som inte behöver
 en databas eller php) använder man static.php från kommandoraden,
 och pekar ut en mapp där resultatet ska läggas.
+
 
 För att få upp presentationen på fler än en skärm samtidigt använder
 man inte VNC (som vi gjorde...). Däremot kör man lämpligtvis med det 

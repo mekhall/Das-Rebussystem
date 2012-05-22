@@ -253,8 +253,6 @@ echo '</table>';
 echo '</div>';
 echo '</td></tr>';
 echo '</table>';
-$emess = $GLOBALS['error_messages'];
-echo "ERROR MESSAGES<br>\n$emess";
 echo '</html>';
 
 ?>

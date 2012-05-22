@@ -177,6 +177,4 @@ $info =
 	'FP [0-9]+' => '10 missat plock, 20 falskt plock',
 	'TP [0-9]+' => '5 missat plock, 10 falskt plock'
 	);
-
-$error_messages = "";
 ?>

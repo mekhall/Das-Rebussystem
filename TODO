@@ -1,11 +1,5 @@
 Viktig skit:
 Lägg till felkontroller och skriv felmeddelanden
-Debugga databasen
- - Värden som läggs till för fort i r.php fastnar inte.
- - Nya värden skrivs ibland över med det tidigare innehållet
- - Plötsligt blir celler gröna och innehåller texten "False"
-Debugga static.php
- - 1.gif kopieras fel 
 sanity-check:
   alla grenar med i presentationen exakt en gång
   inga poäng över max
