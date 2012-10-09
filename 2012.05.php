@@ -88,13 +88,13 @@ $parts = array(
     'Etapp 1' => array('Tid S', 'R 1', 'P MUSK', 'P STYS', 'TP 1', 'FP 1'),
 
     'Etapp 2' => array('R 2', 'P POPC', 'TP 2', 'FP 2'),
-    'Totalt efter Etapp 2' => array('*sum*', 'Etapp 1', 'Etapp 2'),
+    'Totalt efter Etapp 2' => array('*sumcomp*', 'Etapp 1', 'Etapp 2'),
 
     'Etapp 3' => array('R 3', 'P LAPP', 'P FOTO', 'TP 3', 'FP 3'),
-    'Totalt efter Etapp 3' => array('*sum*', 'Totalt efter Etapp 2', 'Etapp 3'),
+    'Totalt efter Etapp 3' => array('*sumcomp*', 'Totalt efter Etapp 2', 'Etapp 3'),
 
     'Etapp 4' => array('R 4', 'P SKID', 'TP 4', 'FP 4', 'Tid L'),
-    'Totalt efter Etapp 4' => array('*sum*', 'Totalt efter Etapp 3', 'Etapp 4'),
+    'Totalt efter Etapp 4' => array('*sumcomp*', 'Totalt efter Etapp 3', 'Etapp 4'),
 
     'Lunch' => 
     array(new PictureSlide("Lunch", "2012.05/lunch.jpg"),
@@ -106,16 +106,16 @@ $parts = array(
 	  new SumSlide('Stjälprebusar totalt',
 		       array('S 1', 'S 2', 'S 3', 'S 4',
 			     'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11'))),
-    'Totalt efter Lunch' => array('*sum*', 'Totalt efter Etapp 4', 'Lunch'),
+    'Totalt efter Lunch' => array('*sumcomp*', 'Totalt efter Etapp 4', 'Lunch'),
 
     'Etapp 5' => array('R 5', 'P FOBI', 'TP 5', 'FP 5'),
-    'Totalt efter Etapp 5' => array('*sum*', 'Totalt efter Lunch', 'Etapp 5'),
+    'Totalt efter Etapp 5' => array('*sumcomp*', 'Totalt efter Lunch', 'Etapp 5'),
 
     'Etapp 6' => array('R 6', 'P RAMO', 'P FACE', 'TP 6', 'FP 6'),
-    'Totalt efter Etapp 6' => array('*sum*', 'Totalt efter Etapp 5', 'Etapp 6'),
+    'Totalt efter Etapp 6' => array('*sumcomp*', 'Totalt efter Etapp 5', 'Etapp 6'),
 
     'Etapp 7' => array('R 7', 'P KART', 'P TERJ', 'TP 7', 'FP 7'),
-    'Totalt efter Etapp 7' => array('*sum*', 'Totalt efter Etapp 6', 'Etapp 7'),
+    'Totalt efter Etapp 7' => array('*sumcomp*', 'Totalt efter Etapp 6', 'Etapp 7'),
 
     'Etapp 8' => array('R 8', 'TP 8', 'FP 8', 'Tid M'),
 

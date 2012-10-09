@@ -36,9 +36,21 @@ function barLine($color)
     echo "<img src=$p$color.gif width=1 height=$barheight border=0>";
 }
 
-function chartRow($teamnr, $name, $max, $nr, $nr2 = null)
+function chartRow($teamnr, $name, $max, $nr, $nr2 = null, $comp = null)
 {
     echo "<td align=right>$teamnr</td>";
+    $p = PICTURE_URL;
+    if (!is_null($comp)) {
+	if ($comp > 0) {
+	    echo "<td><img src=\"${p}red_arrow.png\"></img></td>";
+	}
+	else if ($comp < 0) {
+	    echo "<td><img src=\"${p}green_arrow.png\"></img></td>";
+	}
+	else {
+	    echo "<td>&nbsp;</td>";
+	}
+    }
     echo "<td align=left>$name</td>";
     echo "<td>&nbsp;&nbsp;</td>";
     $snr = $nr;
@@ -87,10 +99,26 @@ function pointCmp($a, $b)
     return ($ap < $bp) ? -1 : 1;
 }
 
-function chart($data, $sort = 0)
+function chart($data, $sort = 0, $prev_data = null)
 {
     if ($sort) {
 	uasort($data, "pointCmp");
+    }
+
+    $comp = null;
+    if (!is_null($prev_data)) {
+	if ($sort) {
+	    uasort($prev_data, "pointCmp");
+	}
+
+	$p = 0;
+	foreach ($data as $teamnr => $d) {
+	    $comp[$teamnr] = $p++;
+	}
+	$p = 0;
+	foreach ($prev_data as $teamnr => $d) {
+	    $comp[$teamnr] -= $p++;
+	}
     }
 
     $max = 0;
@@ -108,6 +136,7 @@ function chart($data, $sort = 0)
 
     echo "<table border=0 cellspacing=0 cellpadding=2>\n";
     $i = 0;
+    $c = null;
     foreach ($data as $teamnr => $d) {
 	++$i;
 	if ($i & 1) {
@@ -117,11 +146,14 @@ function chart($data, $sort = 0)
 	    $class = "tr_even";
 	}
 	echo "<tr valign=center class=$class>\n";
+	if (!is_null($comp)) {
+	    $c = $comp[$teamnr];
+	}
 	if (is_array($d)) {
-	    chartRow(getTeamNumber($teamnr), getTeamName($teamnr), $len, $d[0], $d[1]);
+	    chartRow(getTeamNumber($teamnr), getTeamName($teamnr), $len, $d[0], $d[1], $c);
 	}
 	else {
-	    chartRow(getTeamNumber($teamnr), getTeamName($teamnr), $len, $d);
+	    chartRow(getTeamNumber($teamnr), getTeamName($teamnr), $len, $d, null, $c);
 	}
 	echo "</tr>\n";
     }

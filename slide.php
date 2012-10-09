@@ -107,6 +107,41 @@ class SumSlide extends Slide
     }
 }
 
+class SumCompSlide extends Slide
+{
+    var $sum;
+
+    function SumCompSlide($t, $s) {
+	$this->title = $t;
+	if (!is_array($s)) {
+	    $this->sum = array($s);
+	}
+	else {
+	    $this->sum = $s;
+	}
+    }
+
+    function printHtml() {	
+	$data = array();
+	$first = 1;
+	$prev_data = array();
+
+	foreach ($this->sum as $e) {
+	    if ($e != '*sumcomp*') {
+		foreach (getPartEvents($e) as $e1) {
+		    updateEventPoints($data, getEventNumber($e1));
+		    if ($first) {
+			updateEventPoints($prev_data, getEventNumber($e1));
+		    }			
+		}
+		$first = 0;
+	    }
+	}
+
+	chart($data, 1, $prev_data);
+    }
+}
+
 class TitleSlide extends Slide
 {
     function TitleSlide($t) {

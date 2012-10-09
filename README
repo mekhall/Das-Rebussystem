@@ -25,7 +25,10 @@ parts: Här mappas rallyts etapper upp. Det är enligt denna gruppering
 som presentationen kommer att visas. Om ett kortnamn på rebus, pyssel
 eller plock anges visas prickar för denna del. Det speciella kortnamnet '*sum*'
 används för att summera resten av grenarna i en array. På detta sätt
-kan man summera olika etapper, även med fördel rekursivt.
+kan man summera olika etapper, även med fördel rekursivt. Man kan 
+alternativt använda '*sumcomp*' effekten blir liknande som med '*sum*'
+men dessutom visas pilar som visar hur lagens position har ändrats
+jämfört med den första sliden efter '*sumcomp*'.
 För extra effekt kan man lägga in en bild:
   new PictureSlide("Lunch", "lunch.jpg")
 eller en speciallösning av en rebus:

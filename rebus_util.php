@@ -64,7 +64,7 @@ function getPartEvents($part)
 	foreach ($events as $e) {
 	    if (!is_string($e)) {
 	    }
-	    elseif ($e == '*sum*') {
+	    elseif ($e == '*sum*' || $e == '*sumcomp*') {
 	    }
 	    elseif (array_key_exists($e, $GLOBALS['parts'])) {
 		$result = array_merge($result, getPartEvents($e));

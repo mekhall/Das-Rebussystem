@@ -18,6 +18,9 @@ foreach ($parts as $part => $data) {
     else if ($data[0] == '*sum*') {
 	array_push($actions, new SumSlide($part, $data));
     }
+    else if ($data[0] == '*sumcomp*') {
+	array_push($actions, new SumCompSlide($part, $data));
+    }
     else {
 	if (preg_match('/Etapp ([0-9]+)/', $part, $matches)) {
 	    $n = $matches[1];
