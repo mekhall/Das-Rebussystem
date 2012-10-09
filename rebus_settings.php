@@ -11,4 +11,6 @@ $rebus_split = 1;
 
 $display_logo = 1;
 
+$display_average = 0;
+
 ?>

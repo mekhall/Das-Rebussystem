@@ -101,7 +101,7 @@ function next(nr, maxLine)
     <a class=rub1><?php echo $action->getTitle(); ?></a>&nbsp;
   </td>
 <?php 
-  if ($display_logo) {
+  if ($GLOBALS[display_logo]) {
     $p = PICTURE_URL;
     echo "<td class=header align=right valign=top><img src=\"$p/logga.gif\" align=right valign=middle></td>\n";
   }

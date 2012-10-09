@@ -73,7 +73,9 @@ class EventSlide extends Slide
     	if ($this->max != -1) {
 	   echo "<br><span class=maxavg>Maxprickar: $this->max\n</span>\n";
 	}
-	printf("<br><span class=maxavg>Medelprickar: %01.1f\n</span>", $avg);
+	if ($GLOBALS[display_average]) {
+	    printf("<br><span class=maxavg>Medelprickar: %01.1f\n</span>", $avg);
+	}
     }
 }
 
