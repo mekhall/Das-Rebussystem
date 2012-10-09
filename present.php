@@ -1,4 +1,3 @@
-<?php header('Content-type: text/html; charset=iso-8859-15'); ?>
 <?php
 
 require_once 'rebus.php';
