@@ -7,13 +7,14 @@ $nr = array_key_exists('nr', $_GET) ? $_GET['nr'] : 0;
 if ($nr >= count($actions)) {
    $nr = count($actions) - 1;
 }
+$setline = array_key_exists('setline', $_GET) ? $_GET['setline'] : -1;
 $check = array_key_exists('check', $_GET) ? $_GET['check'] : 0;
 $dec = $nr <= 0 ? "nr=0" : "nr=".($nr - 1);
 $action = $actions[$nr];
 $lines = $action->getLines();
 
 if (array_key_exists('static', $GLOBALS) == 0 && $check == 0) {
-   file_put_contents("current", $nr);
+  file_put_contents("current", $nr);
 }
 
 ?>
@@ -59,6 +60,10 @@ window.addEvent('domready', function() {
     });
 
 <?php
+    if ($setline > 0) {
+      echo "for (var i=0; i < $setline; i++) {next($nr, $lines);}";
+    }
+
     if ($check) {
 ?>
     this.setInterval(function () { 
