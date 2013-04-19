@@ -27,22 +27,41 @@ if (array_key_exists('static', $GLOBALS) == 0 && $check == 0) {
 <script type="text/javascript">
 var maxLine = 0;
 var line = 0;
+var check = 0;
 
 <?php
     if ($check) {
 ?>
+check = 1;
+
 var updateRequest = new Request.JSON({
     url: 'check.php',
     method: 'get',
     onSuccess: function(response) {
-        if (response != <?php echo $nr ?>) {
-            window.location = "present.php?check=1&nr=" + response;
+        var parts = response[0].split(':');
+	var setline = "";
+	if (parts.length > 1) {
+	  setline = "&setline=" + parts[1];
+	}
+	
+        if (parts[0] != <?php echo $nr ?>) {
+            window.location = "present.php?check=1&nr=" + parts[0];
+	    return;
+	}
+	if (parts[1] != line) {
+            window.location = "present.php?check=1&nr=" + parts[0] + setline;	
 	}
     }
 });
 <?php
     }
 ?>
+
+var lineRequest = new Request.JSON({
+    url: 'currentline.php',
+    method: 'get'
+});
+
 
 window.addEvent('domready', function() {
     addEvent('keydown', function(event) {
@@ -87,8 +106,11 @@ function next(nr, maxLine)
 	if (line >= maxLine) {
 	    window.location = "present.php?nr=" + (nr + 1);
 	}
-	else {	
+	else {
 	    $$('div.rebus' + line).setStyle('opacity', 1);
+	    if (!check) {
+	      lineRequest.send('nr=' + nr + '&line=' + line);
+	    }
 	}
     }
     else {
