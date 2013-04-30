@@ -1,0 +1,174 @@
+Das Rebussystem, ett Hallonhack, baserat på BasPers perlhack från 1999
+======================================================================
+
+Skapat av Trial and Error 2011
+
+Installation
+------------
+För att anväda detta system behövs en webbserver med php-stöd
+samt php-sqlite. Lägg hela skiten i lämplig katalog och sätt igång!
+
+Ditt rally
+----------
+
+Välj ett namn på rallyt, tex ht2011, och lägg in det i rebus_settings.php.
+All information om ett specifikt rally finns i en fil med namnet ht2011.php.
+Alla data som hör till rallyt finns i en katalog med namnet ht2011.
+
+I ht2011.php filen finns samling arrayer med data. Dessa är relativt självförklarande.
+Dessa finns i dagsläget:
+
+* teams: En array som mappar lagnamn mot lagnummer och antal lagmedlemmar.
+Antal lagmedlemmar behöver endast sättas till rätt antal om man vill
+använda prickberäkning baserat på antal lagmedlemmar.
+
+* events: En ganska stor array som innehåller alla rebusar, pyssel och
+plock och övriga "grenar" som ger prickar, tex öppnade kuvert. 
+De olika grenarnas kortnamn mappas mot deras fullständiga namn. 
+Kortnamnens begynnelsebokstav måste vara R
+för rebusar, S för stjälprebusar, P för pyssel, FP för fotoplock och
+TP för tallriksplock. Övriga grenar behöver inte heta något speciellt.
+
+* parts: Här mappas rallyts etapper upp. Det är enligt denna gruppering
+som presentationen kommer att visas. Etapperna byggs upp av kortnamnen
+som definierades i events arrayen enligt ovan. Läs nästa avsnitt för mer
+information!
+
+* maxPoints: Pyssel mappas mot antal maxprickar i det pysslet. Om 
+maxprickar finns för ett pyssel visas det i presentationen
+och på rättningssidan.
+
+* info: Här kan man mappa in specialinformation per gren. Denna info
+visas på rättningssidan till stor hjälp för de stackars satar som
+rättar. Man kan givetvis använda regexpar för att mappa.
+Man kan använda specialsyntaxen: <red> för att markera texten
+röd om något är exakt viktigt. <Xp> ersätts med X multiplicerat med
+antalet lagmedlemmar.
+
+Etapper
+-------
+
+En etapp är antingen en enda gren som bara anges med kortnamnet eller
+så består den av flera grenar, enligt formatet `<etappnamn> =>
+array(<grenar>)`. Efter att grenarna har visats generas automatisk en
+summeringsslide som heter 'Summering <etapp>'. Om namnet på etappen är
+'Etapp X' och det finns en bild som heter `etappX.xxx` (xxx är jpg,
+png eller gif) kommer bilden att visas i en egen slide. På samma sätt
+visas bilder för pyssel och plock om det finns en bild med namnet
+`gren<grenkortnamn>.xxx`.
+
+Det speciella grennamnet `*sum*` används för att summera resten av
+grenarna i en array och presentera resultat i en sorterad lista. 
+På detta sätt kan man summera olika etapper, även
+med fördel rekursivt. Man kan alternativt använda `*sumcomp*`, effekten
+blir liknande som med `*sum*` men dessutom visas pilar som visar hur
+lagens position har ändrats jämfört med den första sliden efter
+`*sumcomp*`.
+
+För extra effekt kan man lägga in en bild:
+
+    new PictureSlide("Lunch", "lunch.jpg")
+
+eller en speciallösning av en rebus:
+
+    new SolutionSlide('S', '11puh')
+
+eller en summering:
+
+    new SumSlide('Stjälpplock totalt', array('StjPlk', 'ÖppPlk'))
+
+Detta verkade nog mycket mer komplicerat än det är, här är ett exempel
+för göra det tydligare (från ht2011.php):
+
+    ...
+
+    'Etapp 4' => array('R 4', 'P DOD', 'P HOP', 'TP 4', 'FP 4', 'Tid L'),
+    'Totalt efter Etapp 4' => array('*sumcomp*', 'Totalt efter Etapp 3', 'Etapp 4'),
+
+    'Lunch' => 
+      array(new PictureSlide("Lunch", "lunch.jpg"),
+            'P GRI', 'P TPS', 'P TAT', 'P HZZ', 'P TUP', 'ÖppPlk', 'StjPlk',
+            new SumSlide('Stjälpplock totalt', array('StjPlk', 'ÖppPlk')),
+            'ÖppReb',
+            'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7',
+            'S 8', 'S 9', 'S 10', 'S 11', 
+            new SolutionSlide('S', '11puh'), 'S 12', 
+            new SumSlide('Stjälprebusar totalt',
+                         array('ÖppReb', 'S 1', 'S 2', 'S 3', 'S 4',
+                               'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11', 'S 12'))),
+    'Totalt efter Lunch' => array('*sumcomp*', 'Totalt efter Etapp 4', 'Lunchsummering'),
+
+    ...
+
+Här definieras två etapper, nämligen 'Etapp 4' som innehåller en rebus
+och ett antal pyssel och plock. Även tidprickar för lunch visas
+här. Eftersom etappen heter 'Etapp 4' visas även bilden som heter
+`etapp4.jpg`. Efter att alla grenar har presenteras kommer en
+automatisk summeringslide som visar resultatet av etappen och sedan
+en sorterad av summering av hela rallyt så långt ('Totalt efter Etapp 4').
+
+Lunchetappen inleds med en bild, sedan ett antal pyssel och en summering
+av stjälpplock. Ett antal stjälprebusar presenteras inklusive en alternativ 
+lösning, till slut en summering av stjälprebusarna och ett totalresult efter lunchen.
+
+
+Rättning
+--------
+
+All inmatad information finns i en sqlite-databas som skapas i
+rallyts katalog om den inte finns. Filnamnet är 'db'. För att
+rensa bort allt och börja med en ny databas är det bara att ta 
+bort den filen. Se dock till att inte fler än en dator skapar
+upp en ny databas. Det tar en liten stund att skapa upp den,
+men när den väl finns på plats kan flera använda den samtidigt.
+
+Glöm inte att sätta lämpliga rättigheter så att webservern kan
+skriva i databsen. Oftast ska man göra:
+
+    chgrp www-data <katalog> <katalog>/db
+    chmod g+w <katalog> <katalog>/db
+
+För att mata in resultat surfar man till `r.php` på servern.
+Där möts man av en stor matris. Röd bakgrundsfärg betyder att
+ingen har matat in något i den cellen. Vitt betyder att fältet
+är inmatat. Grönt blir fältet om data matats in av någon annan
+och du har fått det infört i ditt fält. Ajax!
+
+Datat skickas till databasen när man lämnar en cell. Data hämtas
+kontinuerligt från databasen, kolumn för kolumn. Tror det är någon
+sekund mellan kolumnuppdateringarna, så det tar några minuter att
+uppdatera hela matrisen.
+
+Presentation
+------------
+
+När som helst kan man kika på presentationen genom att surfa till
+`present.php`. Man navigerar mellan sidorna i presentationen genom 
+att använda piltangenterna eller page up, page down. Vi använde
+en trådlös presenterarmojt som var hårdkodad till page up, page down.
+
+Statisk presentation
+--------------------
+
+För att generera en statisk presentation (ren html som inte behöver
+en databas eller php) använder man static.php från kommandoraden,
+och pekar ut en mapp där resultatet ska läggas.
+
+Remote
+------
+
+För att få upp presentationen på fler än en skärm samtidigt använder
+man inte VNC (som vi gjorde...). Däremot kör man lämpligtvis med det 
+nyutvecklade remote.php: remote.php laddas på den eller de datorer som
+är kopplade till projektorer etc. Sedan kör man den "vanliga" present.php
+på en dator som då styr vad som visas på remote-datorerna.
+
+Övrigt
+------
+
+I `rebus_settings.php` går det att ändra diverse inställningar, tex
+kan man få länkar till individuella sidor i presentationen
+genom att sätta `index_links` till 1.
+
+Det mesta av det grafiska går att justera med css. Just nu är det
+en css-mall som heter style.css.
