@@ -1,4 +1,4 @@
-#!/usr/bin/php 
+#!/usr/bin/php
 <?php
 global $argv,$argc;
 if (count($argv) < 2) {

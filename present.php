@@ -39,18 +39,18 @@ var updateRequest = new Request.JSON({
     method: 'get',
     onSuccess: function(response) {
         var parts = response[0].split(':');
-	var setline = "";
-	if (parts.length > 1) {
-	  setline = "&setline=" + parts[1];
-	}
-	
+        var setline = "";
+        if (parts.length > 1) {
+          setline = "&setline=" + parts[1];
+        }
+
         if (parts[0] != <?php echo $nr ?>) {
             window.location = "present.php?check=1&nr=" + parts[0];
-	    return;
-	}
-	if (parts[1] != line) {
-            window.location = "present.php?check=1&nr=" + parts[0] + setline;	
-	}
+            return;
+        }
+        if (parts[1] != line) {
+            window.location = "present.php?check=1&nr=" + parts[0] + setline;
+        }
     }
 });
 <?php
@@ -65,17 +65,17 @@ var lineRequest = new Request.JSON({
 
 window.addEvent('domready', function() {
     addEvent('keydown', function(event) {
-	if (event.key == 'left' || event.key == '!') {
-	    window.location = "present.php?<?php echo $dec ?>";
-	}
-	else if (event.key == 'right' || event.key == 'space' || 
-		 event.key == '"') {
-	    next(<?php echo "$nr, $lines"; ?>);
-	}
+        if (event.key == 'left' || event.key == '!') {
+            window.location = "present.php?<?php echo $dec ?>";
+        }
+        else if (event.key == 'right' || event.key == 'space' ||
+                 event.key == '"') {
+            next(<?php echo "$nr, $lines"; ?>);
+        }
     });
 
     $$('tr.header').addEvent('click', function(event) {
-	next(<?php echo "$nr, $lines"; ?>);
+        next(<?php echo "$nr, $lines"; ?>);
     });
 
 <?php
@@ -85,8 +85,8 @@ window.addEvent('domready', function() {
 
     if ($check) {
 ?>
-    this.setInterval(function () { 
-	updateRequest.send();
+    this.setInterval(function () {
+        updateRequest.send();
     }, 1000);
 <?php
     }
@@ -97,30 +97,30 @@ function next(nr, maxLine)
 {
 <?php
     if ($rebus_split == 0) {
-	echo "    maxLine = 0;";
+        echo "    maxLine = 0;";
     }
 ?>
 
     if (maxLine > 0) {
-	line += 1;
-	if (line >= maxLine) {
-	    window.location = "present.php?nr=" + (nr + 1);
-	}
-	else {
-	    if (<?php echo $GLOBALS['rebus_tween']?> == 1) {
-	        $$('div.rebus' + line).tween('opacity', 1);
+        line += 1;
+        if (line >= maxLine) {
+            window.location = "present.php?nr=" + (nr + 1);
+        }
+        else {
+            if (<?php echo $GLOBALS['rebus_tween']?> == 1) {
+                $$('div.rebus' + line).tween('opacity', 1);
             }
             else {
                 $$('div.rebus' + line).setStyle('opacity', 1);
             }
-	    if (!check) {
-	      lineRequest.send('nr=' + nr + '&line=' + line);
-	    }
-	}
+            if (!check) {
+              lineRequest.send('nr=' + nr + '&line=' + line);
+            }
+        }
     }
     else {
-	line = 0;
-	window.location = "present.php?nr=" + (nr + 1);
+        line = 0;
+        window.location = "present.php?nr=" + (nr + 1);
     }
 }
 </script>
@@ -132,7 +132,7 @@ function next(nr, maxLine)
   <td class=header align=left>
     <a class=rub1><?php echo $action->getTitle(); ?></a>&nbsp;
   </td>
-<?php 
+<?php
   if ($GLOBALS[display_logo]) {
     $p = PICTURE_URL;
     echo "<td class=header align=right valign=top><img src=\"$p/logga.gif\" align=right valign=middle></td>\n";
