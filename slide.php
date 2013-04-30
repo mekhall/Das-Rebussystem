@@ -220,9 +220,6 @@ class SolutionSlide extends Slide
 	    else {
 	        echo "<div class=rebus$i style=\"opacity:$opacity\">";
 	    }
-	    if (mb_detect_encoding($f) == 'UTF-8') {
-		$f = iconv('UTF-8', 'ISO-8859-1', $f);
-	    }
 	    echo $this->rebusParse($f, $break);
 	    echo "$break</div>\n";
 	    ++$i;
