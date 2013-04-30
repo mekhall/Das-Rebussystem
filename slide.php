@@ -73,7 +73,7 @@ class EventSlide extends Slide
         if ($this->max != -1) {
            echo "<br><span class=maxavg>Maxprickar: $this->max\n</span>\n";
         }
-        if ($GLOBALS[display_average]) {
+        if ($GLOBALS['display_average']) {
             printf("<br><span class=maxavg>Medelprickar: %01.1f\n</span>", $avg);
         }
     }
@@ -194,11 +194,14 @@ class SolutionSlide extends Slide
         if ($type == 'R') {
             $this->title = "Rebus " . $nr;
         }
-        if ($type == 'H') {
+        elseif ($type == 'H') {
             $this->title = "Hjälp " . $nr;
         }
-        if ($type == 'S') {
+        elseif ($type == 'S') {
             $this->title = "Stjälp " . $nr;
+        }
+        else {
+            echo "ERROR: Bad rebus type '$type'<br>";
         }
     }
 
@@ -225,7 +228,7 @@ class SolutionSlide extends Slide
             ++$i;
         }
 
-        echo "</div></td></tr></table>\n";
+	echo "</div></td></tr></table>\n";
     }
 }
 
