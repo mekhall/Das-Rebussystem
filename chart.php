@@ -1,6 +1,7 @@
 <?php
 
 require_once 'rebus_util.php';
+require_once 'rebus_settings.php';
 
 function norm($nr, $max)
 {
@@ -41,6 +42,9 @@ function chartRow($teamnr, $name, $max, $nr, $nr2 = null, $comp = null)
     echo "<td align=right>$teamnr</td>";
     $p = PICTURE_URL;
     if (!is_null($comp)) {
+	if ($GLOBALS['display_arrows'] == 0) {
+	    $comp = 0;
+	}
 	if ($comp > 0) {
 	    echo "<td><img src=\"${p}red_arrow.png\"></img></td>";
 	}

@@ -107,7 +107,12 @@ function next(nr, maxLine)
 	    window.location = "present.php?nr=" + (nr + 1);
 	}
 	else {
-	    $$('div.rebus' + line).setStyle('opacity', 1);
+	    if (<?php echo $GLOBALS['rebus_tween']?> == 1) {
+	        $$('div.rebus' + line).tween('opacity', 1);
+            }
+            else {
+                $$('div.rebus' + line).setStyle('opacity', 1);
+            }
 	    if (!check) {
 	      lineRequest.send('nr=' + nr + '&line=' + line);
 	    }

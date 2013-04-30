@@ -120,7 +120,10 @@ echo <<<EOT
 	}
 	var max = '';
 	if (maxpoints[sEvent]) {
-	    max = ', max: ' + maxpoints[sEvent];
+	    if (i != "&nbsp;") {
+		max = ', ';
+	    }
+	    max = max + 'max: ' + maxpoints[sEvent];
 	}
 	$('status').set('html', teams[sTeam] + '<br><br>' + events[sEvent] + '<br><br>' + i + max);
 

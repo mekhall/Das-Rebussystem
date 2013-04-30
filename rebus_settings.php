@@ -13,4 +13,10 @@ $display_logo = 1;
 
 $display_average = 0;
 
+// Display tendency arrows on summary slides
+$display_arrows = 1;
+
+// Animate rebus solution parts
+$rebus_tween = 0;
+
 ?>
