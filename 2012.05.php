@@ -47,15 +47,15 @@ $events = array(
     'P RAMO' => 'Ramones intron',
     'P FACE' => 'Facepysslet',
     'P POPC' => 'Popstjärnecluedo',
-            
+
     // Förmiddagspyssel
     'P STYS' => 'Stysslet',
-    'P LAPP' => 'Lapptäcket', 
-            
+    'P LAPP' => 'Lapptäcket',
+
     // Lunchpyssel
     'P HEMT' => 'Hemmet i närbild',
     'P KORS' => 'Korso',
-            
+
     // Eftermiddagspyssel
     'P SKID' => 'Skidbrudar',
     'P FOTO' => 'Sverigefotoplock',
@@ -85,6 +85,8 @@ $events = array(
     );
 
 $parts = array(
+    '*picture*Rebusrally 2012-05:title.jpg',
+
     'Etapp 1' => array('Tid S', 'R 1', 'P MUSK', 'P STYS', 'TP 1', 'FP 1'),
 
     'Etapp 2' => array('R 2', 'P POPC', 'TP 2', 'FP 2'),
@@ -96,16 +98,15 @@ $parts = array(
     'Etapp 4' => array('R 4', 'P SKID', 'TP 4', 'FP 4', 'Tid L'),
     'Totalt efter Etapp 4' => array('*sumcomp*', 'Totalt efter Etapp 3', 'Etapp 4'),
 
-    'Lunch' => 
-    array(new PictureSlide("Lunch", "2012.05/lunch.jpg"),
+    'Lunch' =>
+    array('*picture*Lunch:lunch.jpg',
           'Stil',
           'P HEMT', 'P KORS',
           'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7',
-          'S 8', 'S 9', new SolutionSlide('S', '9Rattmuffarna'),
+          'S 8', 'S 9', '*solution*S9Rattmuffarna',
           'S 10', 'S 11',
-          new SumSlide('Stjälprebusar totalt',
-                       array('S 1', 'S 2', 'S 3', 'S 4',
-                             'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11'))),
+          array('*esum*', 'Stjälprebusar totalt', 'S 1', 'S 2', 'S 3', 'S 4', 'S 5',
+                'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11')),
     'Totalt efter Lunch' => array('*sumcomp*', 'Totalt efter Etapp 4', 'Lunch'),
 
     'Etapp 5' => array('R 5', 'P FOBI', 'TP 5', 'FP 5'),
@@ -119,13 +120,13 @@ $parts = array(
 
     'Etapp 8' => array('R 8', 'TP 8', 'FP 8', 'Tid M'),
 
-    'Plock totalt' => 
+    'Plock totalt' =>
     array('*sum*',
           'TP 1', 'TP 2', 'TP 3', 'TP 4', 'TP 5', 'TP 6', 'TP 7', 'TP 8',
           'FP 1', 'FP 2', 'FP 3', 'FP 4', 'FP 5', 'FP 6', 'FP 7', 'FP 8'),
 
-    'Pyssel totalt' => 
-    array('*sum*', 
+    'Pyssel totalt' =>
+    array('*sum*',
          'P MUSK',
          'P KART',
          'P RAMO',
@@ -140,7 +141,7 @@ $parts = array(
          'P FOBI',
          'P TERJ'),
 
-    'Alla rebusar' => 
+    'Alla rebusar' =>
     array('*sum*',
           'S 1', 'S 2', 'S 3', 'S 4',
           'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11',
@@ -150,7 +151,7 @@ $parts = array(
     'Totalt' => array('*sum*', 'Totalt efter Etapp 7', 'Etapp 8')
     );
 
-$maxPoints = 
+$maxPoints =
   array(
          'P MUSK' => 46,
          'P KART' => 16,
@@ -167,7 +168,7 @@ $maxPoints =
          'P TERJ' => 28
          );
 
-$info = 
+$info =
   array(
         'Tid S' => '1 per minut',
         'Tid L' => '1 per minut',

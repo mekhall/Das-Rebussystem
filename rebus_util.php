@@ -5,6 +5,10 @@ require_once 'rebus.php';
 function checkPic(&$name)
 {
     $pic = PICTURE_PATH . $name;
+    if (is_readable($pic)) {
+        $name = PICTURE_URL . $name;
+        return 1;
+    }
     if (is_readable($pic . ".jpg")) {
         $name = PICTURE_URL . $name . ".jpg";
         return 1;
@@ -29,7 +33,7 @@ function getEventNumber($event)
         }
         ++$i;
     }
-    echo "ERROR: Could not find $event<br>";
+    echo "ERROR: Could not find event '$event'<br>";
 }
 
 function getTeamInfo($number)
@@ -37,8 +41,8 @@ function getTeamInfo($number)
     $i = 0;
     foreach ($GLOBALS['teams'] as $tname => $v) {
         if ($i == $number) {
-	    $flair = count($v) > 2 ? $v[2] : "";
-	    return array('name' => $tname, 'number' => $v[0], 'members' => $v[1], 'flair' => $flair);
+            $flair = count($v) > 2 ? $v[2] : "";
+            return array('name' => $tname, 'number' => $v[0], 'members' => $v[1], 'flair' => $flair);
         }
         ++$i;
     }
@@ -52,7 +56,7 @@ function getPartEvents($part)
         foreach ($events as $e) {
             if (!is_string($e)) {
             }
-            elseif ($e == '*sum*' || $e == '*sumcomp*') {
+            elseif (preg_match('/\*[a-z]+\*/', $e)) {
             }
             elseif (array_key_exists($e, $GLOBALS['parts'])) {
                 $result = array_merge($result, getPartEvents($e));

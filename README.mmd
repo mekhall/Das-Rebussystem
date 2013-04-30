@@ -65,20 +65,23 @@ blir liknande som med `*sum*` men dessutom visas pilar som visar hur
 lagens position har ändrats jämfört med den första sliden efter
 `*sumcomp*`.
 
-För extra effekt kan man lägga in en bild:
+För extra effekt kan man lägga in en bild (som får titeln 'Lunch'):
 
-    new PictureSlide("Lunch", "lunch.jpg")
+    *picture*Lunch:lunch.jpg
 
 eller en speciallösning av en rebus:
 
-    new SolutionSlide('S', '11puh')
+    *solution*S11puh
 
-eller en summering:
+eller en event summering (första posten efter *esum* blir titeln):
 
-    new SumSlide('Stjälpplock totalt', array('StjPlk', 'ÖppPlk'))
+    array(*esum*, 'Stjälpplock totalt', 'StjPlk', 'ÖppPlk')
 
-Detta verkade nog mycket mer komplicerat än det är, här är ett exempel
-för göra det tydligare (från ht2011.php):
+Detta verkade nog mycket mer komplicerat än det är, utgå från en gammal
+fil så går det lätt. Använd webserverns log för att hitta eventuella
+syntaxproblem.
+
+Här är ett utdrag från ht2011.php:
 
     ...
 
@@ -86,16 +89,16 @@ för göra det tydligare (från ht2011.php):
     'Totalt efter Etapp 4' => array('*sumcomp*', 'Totalt efter Etapp 3', 'Etapp 4'),
 
     'Lunch' => 
-      array(new PictureSlide("Lunch", "lunch.jpg"),
+      array('*picture*Lunch:lunch.jpg',
             'P GRI', 'P TPS', 'P TAT', 'P HZZ', 'P TUP', 'ÖppPlk', 'StjPlk',
-            new SumSlide('Stjälpplock totalt', array('StjPlk', 'ÖppPlk')),
+            array('*esum*', 'Stjälpplock totalt', 'StjPlk', 'ÖppPlk'),
             'ÖppReb',
             'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7',
             'S 8', 'S 9', 'S 10', 'S 11', 
-            new SolutionSlide('S', '11puh'), 'S 12', 
-            new SumSlide('Stjälprebusar totalt',
-                         array('ÖppReb', 'S 1', 'S 2', 'S 3', 'S 4',
-                               'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11', 'S 12'))),
+            '*solution*S11puh', 'S 12',
+            array('*esum*', 'Stjälprebusar totalt',
+                  'ÖppReb', 'S 1', 'S 2', 'S 3', 'S 4',
+                  'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11', 'S 12')),
     'Totalt efter Lunch' => array('*sumcomp*', 'Totalt efter Etapp 4', 'Lunchsummering'),
 
     ...
@@ -112,11 +115,31 @@ summering av stjälpplock. Ett antal stjälprebusar presenteras
 inklusive en alternativ lösning, till slut en summering av
 stjälprebusarna och ett totalresult efter lunchen.
 
+Rebusar
+-------
+
+Rebusar ska ha filnamn `Rn.txt`, `Hn.txt` eller `Sn.txt` för vanliga rebusar,
+stjälprebusar och hjälprebusar, där n är numret på rebusen. För att göra
+alternativlösningar kan man byta ut siffran mot valfri text och sedan använda
+t.ex. '*solution*S<text>' som beskrivs ovan.
+
+I rebusfilerna kan man använda dessa taggar:
+
+    \bild <bild>
+    \rebus <rebus start>
+    \ort <rebussvar>
+    \upphovsman <signatur>
+    \av <signatur>
+    \op <rebus operation>
+
+Allt annat blir vanlig text.
+
+
 Rättning
 --------
 
 All inmatad information finns i en sqlite-databas som skapas i
-rallyts katalog om den inte finns. Filnamnet är 'db'. För att
+rallyts katalog om den inte finns. Filnamnet är `db`. För att
 rensa bort allt och börja med en ny databas är det bara att ta 
 bort den filen. Se dock till att inte fler än en dator skapar
 upp en ny databas. Det tar en liten stund att skapa upp den,
@@ -146,9 +169,6 @@ När som helst kan man kika på presentationen genom att surfa till
 `present.php`. Man navigerar mellan sidorna i presentationen genom 
 att använda piltangenterna eller page up, page down. Vi använde
 en trådlös presenterarmojt som var hårdkodad till page up, page down.
-
-Alla slides bygger på events-arrayen som beskrivs ovan, förutom titelsidan
-som visar bilden `title.xxx` (xxx är jpg, png eller gif).
 
 Statisk presentation
 --------------------

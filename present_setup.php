@@ -6,19 +6,23 @@ require_once 'slide.php';
 
 $actions = array();
 
-$pic = "title";
-if (checkPic($pic)) {
-   array_push($actions, new PictureSlide("Rebusrally " . NAME, $pic));
-}
-
 foreach ($parts as $part => $data) {
     if (is_string($data) and array_key_exists($data, $events)) {
         array_push($actions, new EventSlide($events[$data], $data));
     }
-    else if ($data[0] == '*sum*') {
+    elseif (is_string($data) and preg_match('/^\*picture\*(.+):(.+)/', $data, $matches)) {
+        $pic = $matches[2];
+        if (checkPic($pic)) {
+            array_push($actions, new PictureSlide($matches[1], $pic));
+        }
+        else {
+            echo "ERROR: Could not find picture '$pic'<br>";
+        }
+    }
+    elseif ($data[0] == '*sum*') {
         array_push($actions, new SumSlide($part, $data));
     }
-    else if ($data[0] == '*sumcomp*') {
+    elseif ($data[0] == '*sumcomp*') {
         array_push($actions, new SumCompSlide($part, $data));
     }
     else {
@@ -32,7 +36,10 @@ foreach ($parts as $part => $data) {
 
         foreach ($data as $e) {
             if (!is_string($e)) {
-                if (is_subclass_of($e, 'Slide')) {
+                if (is_array($e) and $e[0] == '*esum*') {
+                    array_push($actions, new SumSlide($e[1], array_slice($e, 2)));
+                }
+                elseif (is_subclass_of($e, 'Slide')) {
                     array_push($actions, $e);
                 }
             }
@@ -82,6 +89,18 @@ foreach ($parts as $part => $data) {
                     else {
                         array_push($actions, new EventSlide($eventName, $e));
                     }
+                }
+                elseif (preg_match('/^\*picture\*(.+):(.+)/', $e, $matches)) {
+                    $pic = $matches[2];
+                    if (checkPic($pic)) {
+                        array_push($actions, new PictureSlide($matches[1], $pic));
+                    }
+                    else {
+                        echo "ERROR: Could not find picture '$pic'<br>";
+                    }
+                }
+                elseif (preg_match('/^\*solution\*(.)(.+)/', $e, $matches)) {
+                    array_push($actions, new SolutionSlide($matches[1], $matches[2]));
                 }
                 else {
                     // Övrigt, tex öppnade stjälp.

@@ -228,7 +228,7 @@ class SolutionSlide extends Slide
             ++$i;
         }
 
-	echo "</div></td></tr></table>\n";
+        echo "</div></td></tr></table>\n";
     }
 }
 
