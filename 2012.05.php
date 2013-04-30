@@ -3,19 +3,19 @@
 require_once 'slide.php';
 
 $teams = array(
-               // Name => (number, number of members)	
-	       'Risk för dåligt väglag' => array(1, 1),
-	       'Öset Luhring'           => array(2, 1),
-	       'Knowledge and passion'  => array(3, 1),
-	       'Trial & Error'          => array(4, 1),
-	       'Enar Åkered'            => array(5, 1),
-	       'RRL för Claes Elfsberg' => array(6, 1),
-	       'Ingen Aning'            => array(7, 1),
-	       '1 till 2 till'          => array(8, 1),
-	       'I minsta laget'         => array(9, 1),
-	       'Rattmuffarna'           => array(10,1),
-	       'Katlas kompisar'        => array(11,1)
-	       );
+               // Name => (number, number of members, flair)
+               'Risk för dåligt väglag' => array(1, 1),
+               'Öset Luhring'           => array(2, 1),
+               'Knowledge and passion'  => array(3, 1),
+               'Trial & Error'          => array(4, 1),
+               'Enar Åkered'            => array(5, 1),
+               'RRL för Claes Elfsberg' => array(6, 1),
+               'Ingen Aning'            => array(7, 1, "<small><blue>"),
+               '1 till 2 till'          => array(8, 1),
+               'I minsta laget'         => array(9, 1, "<small>"),
+               'Rattmuffarna'           => array(10, 1, "<blue>"),
+               'Katlas kompisar'        => array(11, 1)
+               );
 
 $events = array(
     // Rebusar
@@ -99,13 +99,13 @@ $parts = array(
     'Lunch' => 
     array(new PictureSlide("Lunch", "2012.05/lunch.jpg"),
           'Stil',
-	  'P HEMT', 'P KORS',
-	  'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7',
-	  'S 8', 'S 9', new SolutionSlide('S', '9Rattmuffarna'),
-	  'S 10', 'S 11',
-	  new SumSlide('Stjälprebusar totalt',
-		       array('S 1', 'S 2', 'S 3', 'S 4',
-			     'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11'))),
+          'P HEMT', 'P KORS',
+          'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7',
+          'S 8', 'S 9', new SolutionSlide('S', '9Rattmuffarna'),
+          'S 10', 'S 11',
+          new SumSlide('Stjälprebusar totalt',
+                       array('S 1', 'S 2', 'S 3', 'S 4',
+                             'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11'))),
     'Totalt efter Lunch' => array('*sumcomp*', 'Totalt efter Etapp 4', 'Lunch'),
 
     'Etapp 5' => array('R 5', 'P FOBI', 'TP 5', 'FP 5'),
@@ -121,31 +121,31 @@ $parts = array(
 
     'Plock totalt' => 
     array('*sum*',
-	  'TP 1', 'TP 2', 'TP 3', 'TP 4', 'TP 5', 'TP 6', 'TP 7', 'TP 8',
-	  'FP 1', 'FP 2', 'FP 3', 'FP 4', 'FP 5', 'FP 6', 'FP 7', 'FP 8'),
+          'TP 1', 'TP 2', 'TP 3', 'TP 4', 'TP 5', 'TP 6', 'TP 7', 'TP 8',
+          'FP 1', 'FP 2', 'FP 3', 'FP 4', 'FP 5', 'FP 6', 'FP 7', 'FP 8'),
 
     'Pyssel totalt' => 
     array('*sum*', 
          'P MUSK',
-	 'P KART',
-	 'P RAMO',
-	 'P FACE',
-	 'P POPC',
-	 'P STYS',
-	 'P LAPP',
-	 'P HEMT',
-	 'P KORS',
-	 'P SKID',
-	 'P FOTO',
-	 'P FOBI',
-	 'P TERJ'),
+         'P KART',
+         'P RAMO',
+         'P FACE',
+         'P POPC',
+         'P STYS',
+         'P LAPP',
+         'P HEMT',
+         'P KORS',
+         'P SKID',
+         'P FOTO',
+         'P FOBI',
+         'P TERJ'),
 
     'Alla rebusar' => 
     array('*sum*',
-	  'S 1', 'S 2', 'S 3', 'S 4',
-	  'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11',
-	  'R 1', 'R 2', 'R 3', 'R 4',
-	  'R 5', 'R 6', 'R 7', 'R 8'),
+          'S 1', 'S 2', 'S 3', 'S 4',
+          'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11',
+          'R 1', 'R 2', 'R 3', 'R 4',
+          'R 5', 'R 6', 'R 7', 'R 8'),
 
     'Totalt' => array('*sum*', 'Totalt efter Etapp 7', 'Etapp 8')
     );
@@ -153,28 +153,28 @@ $parts = array(
 $maxPoints = 
   array(
          'P MUSK' => 46,
-	 'P KART' => 16,
-	 'P RAMO' => 20,
-	 'P FACE' => 42,
-	 'P POPC' => 20,
-	 'P STYS' => 28,
-	 'P LAPP' => 22,
-	 'P HEMT' => 21,
-	 'P KORS' => 16,
-	 'P SKID' => 18,
-	 'P FOTO' => 30,
-	 'P FOBI' => 16,
-	 'P TERJ' => 28
-	 );
+         'P KART' => 16,
+         'P RAMO' => 20,
+         'P FACE' => 42,
+         'P POPC' => 20,
+         'P STYS' => 28,
+         'P LAPP' => 22,
+         'P HEMT' => 21,
+         'P KORS' => 16,
+         'P SKID' => 18,
+         'P FOTO' => 30,
+         'P FOBI' => 16,
+         'P TERJ' => 28
+         );
 
 $info = 
   array(
-	'Tid S' => '1 per minut',
-	'Tid L' => '1 per minut',
-	'Tid M' => '1 per minut, 2 efter 17:45, 4 efter 18:15, 8 efter 18:45',
-	'R [0-9]+' => '25 klippt hjälp, 45 klippt nöd, felaktiga kontrollbokstäver 25',
-	'S [0-9]+' => '-10 korrekt motiverad lösning',
-	'FP [0-9]+' => '10 missat plock, 20 falskt plock',
-	'TP [0-9]+' => '5 missat plock, 10 falskt plock'
-	);
+        'Tid S' => '1 per minut',
+        'Tid L' => '1 per minut',
+        'Tid M' => '1 per minut, 2 efter 17:45, 4 efter 18:15, 8 efter 18:45',
+        'R [0-9]+' => '25 klippt hjälp, 45 klippt nöd, felaktiga kontrollbokstäver 25',
+        'S [0-9]+' => '-10 korrekt motiverad lösning',
+        'FP [0-9]+' => '10 missat plock, 20 falskt plock',
+        'TP [0-9]+' => '5 missat plock, 10 falskt plock'
+        );
 ?>

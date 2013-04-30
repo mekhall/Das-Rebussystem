@@ -32,25 +32,13 @@ function getEventNumber($event)
     echo "ERROR: Could not find $event<br>";
 }
 
-function getTeamName($number)
+function getTeamInfo($number)
 {
     $i = 0;
     foreach ($GLOBALS['teams'] as $tname => $v) {
-        $tnumber = $v[0];
         if ($i == $number) {
-            return $tname;
-        }
-        ++$i;
-    }
-}
-
-function getTeamNumber($number)
-{
-    $i = 0;
-    foreach ($GLOBALS['teams'] as $tname => $v) {
-        $tnumber = $v[0];
-        if ($i == $number) {
-            return $tnumber;
+	    $flair = count($v) > 2 ? $v[2] : "";
+	    return array('name' => $tname, 'number' => $v[0], 'members' => $v[1], 'flair' => $flair);
         }
         ++$i;
     }

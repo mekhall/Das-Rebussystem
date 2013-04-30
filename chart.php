@@ -37,8 +37,19 @@ function barLine($color)
     echo "<img src=$p$color.gif width=1 height=$barheight border=0>";
 }
 
-function chartRow($teamnr, $name, $max, $nr, $nr2 = null, $comp = null)
+function chartRow($teaminfo, $max, $nr, $nr2 = null, $comp = null)
 {
+    $flair = "";
+    preg_match_all('/<([^>]*)>/', $teaminfo['flair'], $matches);
+    foreach ($matches[1] as $f) {
+        if (checkPic($f)) {
+            $flair = $flair . "<img src=\"$f\">";
+        }
+    }
+
+    $name = $teaminfo['name'] . $flair;
+    $teamnr = $teaminfo['number'];
+
     echo "<td align=right>$teamnr</td>";
     $p = PICTURE_URL;
     if (!is_null($comp)) {
@@ -151,10 +162,10 @@ function chart($data, $sort = 0, $prev_data = null)
             $c = $comp[$teamnr];
         }
         if (is_array($d)) {
-            chartRow(getTeamNumber($teamnr), getTeamName($teamnr), $len, $d[0], $d[1], $c);
+            chartRow(getTeamInfo($teamnr), $len, $d[0], $d[1], $c);
         }
         else {
-            chartRow(getTeamNumber($teamnr), getTeamName($teamnr), $len, $d, null, $c);
+            chartRow(getTeamInfo($teamnr), $len, $d, null, $c);
         }
         echo "</tr>\n";
     }
