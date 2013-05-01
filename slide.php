@@ -172,7 +172,7 @@ class SolutionSlide extends Slide
         }
         $p = PICTURE_URL;
         $text = preg_replace('/\\\\bild (\S+)/i',
-                             "<center><img src=\"$p/$1\" width=100%></center>", $text, -1, $c);
+                             "<center><img src=\"$p/$1\" width=\"100%\" alt=\"$1\"></center>", $text, -1, $c);
         if ($c > 0) {
             $break_line = "";
         }

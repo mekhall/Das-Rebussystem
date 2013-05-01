@@ -18,11 +18,12 @@ if (array_key_exists('static', $GLOBALS) == 0 && $check == 0) {
 }
 
 ?>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css"></link>
+<meta http-equiv="Content-type" content="text/html;charset=iso-8859-1">
+<title>Rebusrally <?php echo NAME ?></title>
+<link rel="stylesheet" type="text/css" href="style.css">
 <script src="mootools.js" type="text/javascript"></script>
 <script type="text/javascript">
 var maxLine = 0;
@@ -80,7 +81,7 @@ window.addEvent('domready', function() {
 
 <?php
     if ($setline > 0) {
-      echo "for (var i=0; i < $setline; i++) {next($nr, $lines);}";
+        echo "for (var i = 0; i < $setline; i++) { next($nr, $lines); }";
     }
 
     if ($check) {
@@ -107,12 +108,7 @@ function next(nr, maxLine)
             window.location = "present.php?nr=" + (nr + 1);
         }
         else {
-            if (<?php echo $GLOBALS['rebus_tween']?> == 1) {
-                $$('div.rebus' + line).tween('opacity', 1);
-            }
-            else {
-                $$('div.rebus' + line).setStyle('opacity', 1);
-            }
+            $$('div.rebus' + line).<?php echo $GLOBALS['rebus_tween'] ? 'tween' : 'setStyle' ?>('opacity', 1);
             if (!check) {
               lineRequest.send('nr=' + nr + '&line=' + line);
             }
@@ -125,8 +121,8 @@ function next(nr, maxLine)
 }
 </script>
 </head>
-<body marginheight=0 marginwidth=0 rightmargin=0 leftmargin=0 topmargin=0>
-<table border=0 cellpadding=0 cellspacing=0 width=100%>
+<body>
+<table border=0 cellpadding=0 cellspacing=0 width="100%">
 
 <tr class=header>
   <td class=header align=left>
@@ -134,13 +130,15 @@ function next(nr, maxLine)
   </td>
 <?php
   if ($GLOBALS['display_logo']) {
-    $p = PICTURE_URL;
-    echo "<td class=header align=right valign=top><img src=\"$p/logga.gif\" align=right valign=middle></td>\n";
+    $p = "logga.gif";
+    if (checkPic($p)) {
+      echo "<td class=header align=right valign=top><img src=\"$p\" class=logo alt=logo></td>\n";
+    }
   }
 ?>
 </tr>
 
-<tr height=1>
+<tr>
   <td colspan=2 class=headerline></td>
 </tr>
 
@@ -150,12 +148,12 @@ function next(nr, maxLine)
 
 <tr>
   <td align=center>
-    <table width=90% border=0>
+    <table width="90%" border=0>
       <tr>
         <td align=right>
           <a class=rub3 href=present.php?<?php echo $dec ?> >föregående</a>
           <a> | </a>
-          <a href=# onclick="next(<?php echo "$nr, $lines"; ?>)" class=rub3>nästa</a>
+          <a href="#" onclick="next(<?php echo "$nr, $lines"; ?>)" class=rub3>nästa</a>
         </td>
       </tr>
     </table>
@@ -166,10 +164,10 @@ function next(nr, maxLine)
     }
 
     if ($action->getMiddle()) {
-        echo '<tr height=450><td colspan=2 align=center valign=top><table height=\"100%\"><tr><td valign=middle>';
+        echo '<tr style="height:450px"><td colspan=2 align=center valign=top><table style="height:100%"><tr><td valign=middle>';
     }
     else {
-        echo '<tr height=450><td colspan=2 align=center valign=top><table cellpadding=10><tr><td>';
+        echo '<tr style="height:450px"><td colspan=2 align=center valign=top><table cellpadding=10><tr><td>';
     }
 
     echo $action->printHtml();
@@ -181,12 +179,12 @@ function next(nr, maxLine)
 
 <tr>
 <td align=center>
-<table width=90% border=0>
+<table width="90%" border=0>
   <tr>
     <td align=right>
       <a class=rub3 href=present.php?<?php echo $dec ?>>föregående</a>
       <a> | </a>
-      <a href=# onclick="next(<?php echo "$nr, $lines"; ?>)" class=rub3>nästa</a>
+      <a href="#" onclick="next(<?php echo "$nr, $lines"; ?>)" class=rub3>nästa</a>
     </td>
   </tr>
 </table>
@@ -195,7 +193,7 @@ function next(nr, maxLine)
 
 <tr>
 <td align=center>
-<table width=90%>
+<table width="90%">
   <tr>
     <td>
 <?php

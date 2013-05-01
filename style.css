@@ -1,86 +1,94 @@
 body {
-    font-family:Arial;
-    font-size:12px;
-    background-color:#aebddb;
+    font-family: Arial;
+    font-size: 12px;
+    background-color: #aebddb;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 td {
-    font-family:Arial;
-    font-size:18px;
-    color:#000000
+    font-family: Arial;
+    font-size: 18px;
+    color: #000000;
 }
 .maxavg {
-    font-family:Arial;
-    font-style:italic;
-    font-size:13px;
-    color:#334450
+    font-family: Arial;
+    font-style: italic;
+    font-size: 13px;
+    color: #334450;
 }
 a {
-    font-family:Arial;
-    font-size:12px;
-    text-decoration:none;
-    color:#334450
+    font-family: Arial;
+    font-size: 12px;
+    text-decoration: none;
+    color: #334450;
 }
 .tr_odd {
-    background-color:#becdeb
+    background-color: #becdeb;
 }
 .tr_even {
-    background-color:#aebddb
+    background-color: #aebddb;
 }
 .tr_odd td, .tr_even td { 
     padding-top: 4px;
     padding-bottom: 4px;
 }
 .rebustable {
-    background-color:#aebddb;
-    padding:20;
-    border:0
+    background-color: #aebddb;
+    padding: 20px;
+    border: 0
 }
 .header {
-    background-color:#aebddb;
+    background-color: #aebddb;
 /*    background-image:url('logga2.gif'); */
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-    background-position:5 5; 
-    font-size:18px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 5px 5px;
+    font-size: 18px;
     padding-left: 70px;
     padding-right: 70px;
     padding-top: 33px;
-    vertical-align:top;
-    text-align:left;
-    height: 80
+    vertical-align: top;
+    text-align: left;
+    height: 80px
 }
 .headerline {
-    background-color:#aebddb;
-    height: 1
+    background-color: #ffffff;
+    height: 0px;
 }
 .rub1 {
-    font-family:Arial Black;
-    font-size:24px;
-    color:#ffffff
+    font-family: 'Arial Black';
+    font-size: 24px;
+    color: #ffffff;
 }
 .rub2 {
-    color:#5384e5
+    color: #5384e5;
 }
 .rub3 {
-    color:#ffffff
+    color: #ffffff;
 }
 .rub4 {
-    font-size:10px
+    font-size: 10px;
 }
 .rub5 {
-    font-size:10px;
-    color:#ffffff
+    font-size: 10px;
+    color: #ffffff
 }
 .rebustext {
     font-size: xx-large;
-    text-align:left;
+    text-align: left;
 }
 .rebusop {
     font-size: x-large;
     font-style: italic;
-    text-align: center
+    text-align: center;
 }
 .rebusmaker {
     font-size: small;
     font-style: italic;
+}
+.logo {
+    vertical-align: middle;
+    float: right;
 }

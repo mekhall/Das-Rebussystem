@@ -24,17 +24,14 @@ function bar($nr, $max, $color)
     $norm = norm($nr, $max);
     $barheight = 10;
     $p = PICTURE_URL;
-    echo "<img src=$p$color.gif width=$norm height=$barheight alt=\"$nr\" border=0>";
-
-    // TODO something like:
-    // echo "<div style=width:$norm;height:$barheight;background-color:$color></div>";
+    echo "<img src=$p$color.gif alt=\"$nr\" width=$norm height=$barheight border=0>";
 }
 
 function barLine($color)
 {
     $barheight = 10;
     $p = PICTURE_URL;
-    echo "<img src=$p$color.gif width=1 height=$barheight border=0>";
+    echo "<img src=$p$color.gif alt=\"\" width=1 height=$barheight border=0>";
 }
 
 function chartRow($teaminfo, $max, $nr, $nr2 = null, $comp = null)
@@ -43,7 +40,7 @@ function chartRow($teaminfo, $max, $nr, $nr2 = null, $comp = null)
     preg_match_all('/<([^>]*)>/', $teaminfo['flair'], $matches);
     foreach ($matches[1] as $f) {
         if (checkPic($f)) {
-            $flair = $flair . "<img src=\"$f\">";
+            $flair = $flair . "<img src=\"$f\" alt=\"\">";
         }
     }
 
@@ -54,10 +51,10 @@ function chartRow($teaminfo, $max, $nr, $nr2 = null, $comp = null)
     $p = PICTURE_URL;
     if (!is_null($comp)) {
         if ($comp > 0) {
-            echo "<td><img src=\"${p}red_arrow.png\"></img></td>";
+            echo "<td><img src=\"${p}red_arrow.png\" alt=\"\"></td>";
         }
         else if ($comp < 0) {
-            echo "<td><img src=\"${p}green_arrow.png\"></img></td>";
+            echo "<td><img src=\"${p}green_arrow.png\" alt=\"\"></td>";
         }
         else {
             echo "<td>&nbsp;</td>";
@@ -74,7 +71,7 @@ function chartRow($teaminfo, $max, $nr, $nr2 = null, $comp = null)
         echo "<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>";
         if ($nr >= 0) {
             echo "<td>&nbsp;</td>\n";
-            echo "<td>", bar($nr, $max, 1), "</td>\n";
+            echo "<td align=left>", bar($nr, $max, 1), "</td>\n";
         }
         else {
             echo "<td align=right>", bar($nr, $max, 1), "</td>\n";
@@ -157,7 +154,7 @@ function chart($data, $sort = 0, $prev_data = null)
         else {
             $class = "tr_even";
         }
-        echo "<tr valign=center class=$class>\n";
+        echo "<tr class=$class>\n";
         if (!is_null($comp)) {
             $c = $comp[$teamnr];
         }
