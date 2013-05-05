@@ -177,10 +177,9 @@ class SolutionSlide extends Slide
             $break_line = "";
         }
 
-        $text = preg_replace('/\\\\rebus /i', '', $text);
-        $text = preg_replace('/\\\\ort /i', '', $text);
-        $text = preg_replace('/\\\\upphovsman (.+)/i', '<span class=rebusmaker>($1)</span>', $text);
-        $text = preg_replace('/\\\\av (.+)/i', '<span class=rebusmaker>($1)</span>', $text);
+        $text = preg_replace('/\\\\rebus ([^\\\\]+)/i', '<span class=originalrebus>$1</span>', $text);
+        $text = preg_replace('/\\\\ort (.+)/i', '<div class=rebusortDiv><span class=rebusort>$1</span></div>', $text);
+        $text = preg_replace('/\\\\(?:av|upphovsman) (.+)/i', '<span class=rebusmaker>($1)</span>', $text);
         $text = preg_replace('/\\\w* /', '', $text);
 
         return $text;
