@@ -5,8 +5,20 @@ Skapat av Trial and Error 2011
 
 Installation
 ------------
+
 För att använda detta system behövs en webbserver med php-stöd
 samt php-sqlite. Lägg hela skiten i lämplig katalog och sätt igång!
+
+
+Översikt
+--------
+
+Systemet består av två delar, presentation och rättning.
+För starta presentationen öppna present.php i lämplig browser.
+Presentationen består av ett antal slides som genereras av en datafil
+som beskrivs nedan. Filen beskriver alla lag och grenar i rallyt.
+De olika resultaten finns i en databas som uppdateras av rättningssidan r.php.
+
 
 Ditt rally
 ----------
@@ -44,6 +56,7 @@ rättar. Man kan givetvis använda regexpar för att mappa.
 Man kan använda specialsyntaxen: <red> för att markera texten
 röd om något är exakt viktigt. <Xp> ersätts med X multiplicerat med
 antalet lagmedlemmar.
+
 
 Etapper
 -------
@@ -115,6 +128,7 @@ summering av stjälpplock. Ett antal stjälprebusar presenteras
 inklusive en alternativ lösning, till slut en summering av
 stjälprebusarna och ett totalresult efter lunchen.
 
+
 Rebusar
 -------
 
@@ -162,6 +176,7 @@ kontinuerligt från databasen, kolumn för kolumn. Tror det är någon
 sekund mellan kolumnuppdateringarna, så det tar några minuter att
 uppdatera hela matrisen.
 
+
 Presentation
 ------------
 
@@ -170,12 +185,14 @@ När som helst kan man kika på presentationen genom att surfa till
 att använda piltangenterna eller page up, page down. Vi använde
 en trådlös presenterarmojt som var hårdkodad till page up, page down.
 
+
 Statisk presentation
 --------------------
 
 För att generera en statisk presentation (ren html som inte behöver
 en databas eller php) använder man static.php från kommandoraden,
 och pekar ut en mapp där resultatet ska läggas.
+
 
 Remote
 ------
@@ -185,6 +202,7 @@ man inte VNC (som vi gjorde...). Däremot kör man lämpligtvis med det
 nyutvecklade remote.php: remote.php laddas på den eller de datorer som
 är kopplade till projektorer etc. Sedan kör man den "vanliga" present.php
 på en dator som då styr vad som visas på remote-datorerna.
+
 
 Övrigt
 ------
