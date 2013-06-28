@@ -14,10 +14,12 @@ samt php-sqlite. Lägg hela skiten i lämplig katalog och sätt igång!
 --------
 
 Systemet består av två delar, presentation och rättning.
-För starta presentationen öppna present.php i lämplig browser.
+För starta presentationen öppna `present.php` i lämplig browser.
 Presentationen består av ett antal slides som genereras av en datafil
 som beskrivs nedan. Filen beskriver alla lag och grenar i rallyt.
-De olika resultaten finns i en databas som uppdateras av rättningssidan r.php.
+Presentationen blir roligare om det finns resultat för de olika 
+grenarna, det är där rättningen kommer in. Öppna `r.php` och beskåda
+alla tomma fält där prickar ska fyllas i.
 
 
 Ditt rally
@@ -27,8 +29,7 @@ Välj ett namn på rallyt, tex ht2011, och lägg in det i `rebus_settings.php`.
 All information om ett specifikt rally finns i en fil med namnet `ht2011.php`.
 Alla data som hör till rallyt finns i en katalog med namnet `ht2011`.
 
-I ht2011.php filen finns samling arrayer med data. Dessa är relativt självförklarande.
-Dessa finns i dagsläget:
+I ht2011.php filen finns en samling arrayer med data. Dessa är relativt självförklarande, men här är ändå en förklaring:
 
 * teams: En array som mappar lagnamn mot lagnummer och antal lagmedlemmar.
 Antal lagmedlemmar behöver endast sättas till rätt antal om man vill
@@ -190,7 +191,7 @@ Statisk presentation
 --------------------
 
 För att generera en statisk presentation (ren html som inte behöver
-en databas eller php) använder man static.php från kommandoraden,
+en databas eller php) använder man `static.php` från kommandoraden,
 och pekar ut en mapp där resultatet ska läggas.
 
 
@@ -199,8 +200,8 @@ Remote
 
 För att få upp presentationen på fler än en skärm samtidigt använder
 man inte VNC (som vi gjorde...). Däremot kör man lämpligtvis med det 
-nyutvecklade remote.php: remote.php laddas på den eller de datorer som
-är kopplade till projektorer etc. Sedan kör man den "vanliga" present.php
+nyutvecklade `remote.php`: sidan laddas på den eller de datorer som
+är kopplade till projektorer etc. Sedan kör man den "vanliga" `present.php`
 på en dator som då styr vad som visas på remote-datorerna.
 
 
@@ -212,4 +213,4 @@ kan man få länkar till individuella sidor i presentationen
 genom att sätta `index_links` till 1.
 
 Det mesta av det grafiska går att justera med css. Just nu är det
-en css-mall som heter style.css.
+en css-mall som heter `style.css`.
