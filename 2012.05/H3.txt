@@ -1,6 +1,6 @@
-\rebus BÅROSTFÖRMÄN \av BasPer 2012
+\rebus BÃ…ROSTFÃ–RMÃ„N \av BasPer 2012
 \op B->F
-Fårost för män
+FÃ¥rost fÃ¶r mÃ¤n
 \op !
 Herrfeta
 \op F->B

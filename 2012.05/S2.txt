@@ -1,6 +1,6 @@
-\rebus BENSRÄCKAREIVASSEN \av BasPer 2012
+\rebus BENSRÃ„CKAREIVASSEN \av BasPer 2012
 \op +T 
-Bensträckare i vassen 
+BenstrÃ¤ckare i vassen 
 \op ! 
 Moses rast 
 \op -T 

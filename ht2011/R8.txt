@@ -1,13 +1,13 @@
-\rebus RIAJÖS11 \av Hallon
+\rebus RIAJÃ–S11 \av Hallon
 \op i
-AJRÖS11
+AJRÃ–S11
 \op <->
-11SÖRJA
+11SÃ–RJA
 \op !
-11GRÖT
+11GRÃ–T
 \op ! per. sys.
-NAGRÖT
+NAGRÃ–T
 \op <->
-TÖRGAN
-\op -r, +r (förlåt)
-\ort TRÖGAN
+TÃ–RGAN
+\op -r, +r (fÃ¶rlÃ¥t)
+\ort TRÃ–GAN

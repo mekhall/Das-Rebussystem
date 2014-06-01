@@ -1,6 +1,6 @@
-\rebus SATTETÄDERNAIKRISTIKROPP \av BasPer 2012
+\rebus SATTETÃ„DERNAIKRISTIKROPP \av BasPer 2012
 \op +N 
-Satte tänderna i kristi kropp 
+Satte tÃ¤nderna i kristi kropp 
 \op ! 
 Bet i herran 
 \op -N 

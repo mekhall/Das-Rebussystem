@@ -4,12 +4,12 @@ require_once 'slide.php';
 
 $teams = array(
                // Name => (number, number of members, flair)
-               'Risk för dåligt väglag' => array(1, 1),
-               'Öset Luhring'           => array(2, 1),
+               'Risk fÃ¶r dÃ¥ligt vÃ¤glag' => array(1, 1),
+               'Ã–set Luhring'           => array(2, 1),
                'Knowledge and passion'  => array(3, 1),
                'Trial & Error'          => array(4, 1),
-               'Enar Åkered'            => array(5, 1),
-               'RRL för Claes Elfsberg' => array(6, 1),
+               'Enar Ã…kered'            => array(5, 1),
+               'RRL fÃ¶r Claes Elfsberg' => array(6, 1),
                'Ingen Aning'            => array(7, 1, "<small><blue>"),
                '1 till 2 till'          => array(8, 1),
                'I minsta laget'         => array(9, 1, "<small>"),
@@ -28,32 +28,32 @@ $events = array(
     'R 7' => 'Rebus 7',
     'R 8' => 'Rebus 8',
 
-    // Stjälp
-    'S 1' => 'Stjälp 1',
-    'S 2' => 'Stjälp 2',
-    'S 3' => 'Stjälp 3',
-    'S 4' => 'Stjälp 4',
-    'S 5' => 'Stjälp 5',
-    'S 6' => 'Stjälp 6',
-    'S 7' => 'Stjälp 7',
-    'S 8' => 'Stjälp 8',
-    'S 9' => 'Stjälp 9',
-    'S 10' => 'Stjälp 10',
-    'S 11' => 'Stjälp 11',
+    // StjÃ¤lp
+    'S 1' => 'StjÃ¤lp 1',
+    'S 2' => 'StjÃ¤lp 2',
+    'S 3' => 'StjÃ¤lp 3',
+    'S 4' => 'StjÃ¤lp 4',
+    'S 5' => 'StjÃ¤lp 5',
+    'S 6' => 'StjÃ¤lp 6',
+    'S 7' => 'StjÃ¤lp 7',
+    'S 8' => 'StjÃ¤lp 8',
+    'S 9' => 'StjÃ¤lp 9',
+    'S 10' => 'StjÃ¤lp 10',
+    'S 11' => 'StjÃ¤lp 11',
 
     // Heldagspyssel
     'P MUSK' => 'Musikkrysset',
     'P KART' => 'Kartogram',
     'P RAMO' => 'Ramones intron',
     'P FACE' => 'Facepysslet',
-    'P POPC' => 'Popstjärnecluedo',
+    'P POPC' => 'PopstjÃ¤rnecluedo',
 
-    // Förmiddagspyssel
+    // FÃ¶rmiddagspyssel
     'P STYS' => 'Stysslet',
-    'P LAPP' => 'Lapptäcket',
+    'P LAPP' => 'LapptÃ¤cket',
 
     // Lunchpyssel
-    'P HEMT' => 'Hemmet i närbild',
+    'P HEMT' => 'Hemmet i nÃ¤rbild',
     'P KORS' => 'Korso',
 
     // Eftermiddagspyssel
@@ -65,7 +65,7 @@ $events = array(
     'Stil' => 'Stil och finess',
     'Tid S' => 'Tidsprickar vid Start',
     'Tid L' => 'Tidsprickar vid Lunch',
-    'Tid M' => 'Tidsprickar vid Mål',
+    'Tid M' => 'Tidsprickar vid MÃ¥l',
     'TP 1' => 'Tallriksplock 1',
     'TP 2' => 'Tallriksplock 2',
     'TP 3' => 'Tallriksplock 3',
@@ -105,7 +105,7 @@ $parts = array(
           'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7',
           'S 8', 'S 9', '*solution*S9Rattmuffarna',
           'S 10', 'S 11',
-          array('*esum*', 'Stjälprebusar totalt', 'S 1', 'S 2', 'S 3', 'S 4', 'S 5',
+          array('*esum*', 'StjÃ¤lprebusar totalt', 'S 1', 'S 2', 'S 3', 'S 4', 'S 5',
                 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11')),
     'Totalt efter Lunch' => array('*sumcomp*', 'Totalt efter Etapp 4', 'Lunch'),
 
@@ -173,8 +173,8 @@ $info =
         'Tid S' => '1 per minut',
         'Tid L' => '1 per minut',
         'Tid M' => '1 per minut, 2 efter 17:45, 4 efter 18:15, 8 efter 18:45',
-        'R [0-9]+' => '25 klippt hjälp, 45 klippt nöd, felaktiga kontrollbokstäver 25',
-        'S [0-9]+' => '-10 korrekt motiverad lösning',
+        'R [0-9]+' => '25 klippt hjÃ¤lp, 45 klippt nÃ¶d, felaktiga kontrollbokstÃ¤ver 25',
+        'S [0-9]+' => '-10 korrekt motiverad lÃ¶sning',
         'FP [0-9]+' => '10 missat plock, 20 falskt plock',
         'TP [0-9]+' => '5 missat plock, 10 falskt plock'
         );

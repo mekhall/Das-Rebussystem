@@ -4,6 +4,6 @@
 \op +a
 08PARK
 \op !
-GRÖNALUND
+GRÃ–NALUND
 \op -a
-\ort GRÖNLUND
+\ort GRÃ–NLUND

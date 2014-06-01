@@ -1,6 +1,6 @@
-\rebus SVENSKRÖDBROKIGUNTERVATTENSROBOT \av BasPer 2012
+\rebus SVENSKRÃ–DBROKIGUNTERVATTENSROBOT \av BasPer 2012
 \op T->D 
-Svensk rödbrokig undervattensrobot 
+Svensk rÃ¶dbrokig undervattensrobot 
 \op ! 
 Kotorped 
 \op D->T 

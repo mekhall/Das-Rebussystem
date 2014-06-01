@@ -53,7 +53,7 @@ foreach ($parts as $part => $data) {
                     array_push($actions, new EventSlide($eventName, $e));
                 }
                 elseif (preg_match('/^S ([0-9]+)/', $e, $matches)) {
-                    // Stjälprebus
+                    // StjÃ¤lprebus
                     $n = $matches[1];
                     $eventName = $events[$e];
                     array_push($actions, new SolutionSlide('S', $n));
@@ -103,7 +103,7 @@ foreach ($parts as $part => $data) {
                     array_push($actions, new SolutionSlide($matches[1], $matches[2]));
                 }
                 else {
-                    // Övrigt, tex öppnade stjälp.
+                    // Ã–vrigt, tex Ã¶ppnade stjÃ¤lp.
                     $eventName = $events[$e];
                     $pic = "gren$e";
                     if (checkPic($pic)) {

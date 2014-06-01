@@ -4,6 +4,6 @@ GUMPERN
 \op g->j
 JUMPERN
 \op !
-TRÖJAN
+TRÃ–JAN
 \op j->g
-\ort TRÖGAN
+\ort TRÃ–GAN

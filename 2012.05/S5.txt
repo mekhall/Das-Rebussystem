@@ -4,6 +4,6 @@ ITK om ST
 \op T->N 
 Inkomst 
 \op ! 
-Lön
+LÃ¶n
 \op N->T 
-LÖT 
+LÃ–T 

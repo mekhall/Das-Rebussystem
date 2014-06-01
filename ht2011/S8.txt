@@ -1,11 +1,11 @@
-\rebus GILNNIVKHECÅGILNM \av JJW
+\rebus GILNNIVKHECÃ…GILNM \av JJW
 \op <->
-MNLIGÅCEHKVINNLIG
-\op +a, -e, å->o
+MNLIGÃ…CEHKVINNLIG
+\op +a, -e, Ã¥->o
 MANLIG OCH KVINNLIG
 \op !
 ANDROGYN
-\op -a, +e, o->å
-NEDRÅGYN
+\op -a, +e, o->Ã¥
+NEDRÃ…GYN
 \op <->
-\ort NYGÅRDEN
+\ort NYGÃ…RDEN

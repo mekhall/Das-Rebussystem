@@ -1,5 +1,5 @@
-\rebus BESTÄMDGETFORMSINGULAR \av E.P. Kenobi 2012
+\rebus BESTÃ„MDGETFORMSINGULAR \av E.P. Kenobi 2012
 \op i
-Get i bestämd form singular
+Get i bestÃ¤md form singular
 \op !
 \ort GETEN

@@ -194,10 +194,10 @@ class SolutionSlide extends Slide
             $this->title = "Rebus " . $nr;
         }
         elseif ($type == 'H') {
-            $this->title = "Hj‰lp " . $nr;
+            $this->title = "Hj√§lp " . $nr;
         }
         elseif ($type == 'S') {
-            $this->title = "Stj‰lp " . $nr;
+            $this->title = "Stj√§lp " . $nr;
         }
         else {
             echo "ERROR: Bad rebus type '$type'<br>";

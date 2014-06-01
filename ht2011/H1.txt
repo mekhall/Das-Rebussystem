@@ -1,6 +1,6 @@
-\rebus KALISTERKÖRPARE \av Hallon
+\rebus KALISTERKÃ–RPARE \av Hallon
 \op -a, -r
-KLISTERKÖPARE
+KLISTERKÃ–PARE
 \op !
 LIMKUND
 \op i

@@ -1,9 +1,9 @@
-\rebus FÖRITRÖMANDESKAF \av Hallon
+\rebus FÃ–RITRÃ–MANDESKAF \av Hallon
 \op i
-TRÖMFÖRANDESKAF
+TRÃ–MFÃ–RANDESKAF
 \op k->l, +s
-STRÖMFÖRANDESLAF
+STRÃ–MFÃ–RANDESLAF
 \op !
-ELSÄNG
+ELSÃ„NG
 \op l->k, -s
-\ort EKÄNG
+\ort EKÃ„NG

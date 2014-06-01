@@ -1,8 +1,8 @@
-\rebus NAKSIRPÅP \av Mårten 2011
+\rebus NAKSIRPÃ…P \av MÃ¥rten 2011
 \op <-> 
-PÅPRISKAN
+PÃ…PRISKAN
 \op S->C, A->E 
-På pricken
+PÃ¥ pricken
 \op ! 
 Precis
 \op C->S, E->A 

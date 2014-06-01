@@ -2,6 +2,6 @@
 \op S->R 
 Ollon och skulor 
 \op ! 
-Svinrätter 
+SvinrÃ¤tter 
 \op R->S 
-SVINSÄTTER 
+SVINSÃ„TTER 

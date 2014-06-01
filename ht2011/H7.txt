@@ -1,7 +1,7 @@
-\rebus FÅGELLOTARE \av Koma
+\rebus FÃ…GELLOTARE \av Koma
 \op l->m
-FÅGELMOTARE
+FÃ…GELMOTARE
 \op !
-SKRÄMMA
+SKRÃ„MMA
 \op m->l
-\ort SKRÄMLA
+\ort SKRÃ„MLA

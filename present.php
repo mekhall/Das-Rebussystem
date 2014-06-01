@@ -21,7 +21,7 @@ if (array_key_exists('static', $GLOBALS) == 0 && $check == 0) {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-type" content="text/html;charset=iso-8859-1">
+<meta http-equiv="Content-type" content="text/html;charset=utf-8">
 <title>Rebusrally <?php echo NAME ?></title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="mootools.js" type="text/javascript"></script>
@@ -151,9 +151,9 @@ function next(nr, maxLine)
     <table width="90%" border=0>
       <tr>
         <td align=right>
-          <a class=rub3 href=present.php?<?php echo $dec ?> >föregående</a>
+          <a class=rub3 href=present.php?<?php echo $dec ?> >fÃ¶regÃ¥ende</a>
           <a> | </a>
-          <a href="#" onclick="next(<?php echo "$nr, $lines"; ?>)" class=rub3>nästa</a>
+          <a href="#" onclick="next(<?php echo "$nr, $lines"; ?>)" class=rub3>nÃ¤sta</a>
         </td>
       </tr>
     </table>
@@ -182,9 +182,9 @@ function next(nr, maxLine)
 <table width="90%" border=0>
   <tr>
     <td align=right>
-      <a class=rub3 href=present.php?<?php echo $dec ?>>föregående</a>
+      <a class=rub3 href=present.php?<?php echo $dec ?>>fÃ¶regÃ¥ende</a>
       <a> | </a>
-      <a href="#" onclick="next(<?php echo "$nr, $lines"; ?>)" class=rub3>nästa</a>
+      <a href="#" onclick="next(<?php echo "$nr, $lines"; ?>)" class=rub3>nÃ¤sta</a>
     </td>
   </tr>
 </table>

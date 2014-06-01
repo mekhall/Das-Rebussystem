@@ -4,8 +4,8 @@ JAWS I KORTNET
 \op N->H 
 Jaws i korthet 
 \op ! 
-Haj dör 
+Haj dÃ¶r 
 \op H->N 
-NAJDÖR 
+NAJDÃ–R 
 \op <-> 
-\ort RÖDJAN 
+\ort RÃ–DJAN 

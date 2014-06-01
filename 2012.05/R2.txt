@@ -2,6 +2,6 @@
 \op +B 
 Barkis Janne 
 \op ! 
-Bröd Jan 
+BrÃ¶d Jan 
 \op -B 
-\ort RÖDJAN 
+\ort RÃ–DJAN 

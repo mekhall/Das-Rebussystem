@@ -1,10 +1,10 @@
-\rebus LLIAETEKLÄKGNI \av Hallon
+\rebus LLIAETEKLÃ„KGNI \av Hallon
 \op i
-EKLÄKGILLIAETNI
+EKLÃ„KGILLIAETNI
 \op <->
-INTEAILLIGKÄLKE
+INTEAILLIGKÃ„LKE
 \op a->b
-INTE BILLIG KÄLKE
+INTE BILLIG KÃ„LKE
 \op !
 DYR BOB
 \op b->a
