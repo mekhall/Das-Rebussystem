@@ -110,6 +110,143 @@ function pointCmp($a, $b)
 
 function chart($data, $sort = 0, $prev_data = null)
 {
+    $json = array();
+    foreach ($data as $teamnr => $d) {
+        $info = getTeamInfo($teamnr);
+        $info['points'] = getPoint($d);
+        $info['index'] = $teamnr;
+
+        preg_match_all('/<([^>]*)>/', $info['flair'], $matches);
+        foreach ($matches[1] as $f) {
+            if (checkPic($f)) {
+                $info['flair_img'] = $f;
+            }
+        }
+
+        $json[$teamnr] = $info;
+    }
+
+    $prevjson = array();
+    if (!is_null($prev_data)) {
+        foreach ($prev_data as $teamnr => $d) {
+            $info = getTeamInfo($teamnr);
+            $info['points'] = getPoint($d);
+            $info['index'] = $teamnr;
+
+            preg_match_all('/<([^>]*)>/', $info['flair'], $matches);
+            foreach ($matches[1] as $f) {
+                if (checkPic($f)) {
+                    $info['flair_img'] = $f;
+                }
+            }
+            $prevjson[$teamnr] = $info;
+        }
+    }
+
+    echo "<svg class='chart'></svg>\n";
+    echo "<script>\n";
+    echo "var data = " . json_encode($json) . ";\n";
+    echo "var prevdata = " . json_encode($prevjson) . ";\n";
+    echo "var sort = " . $sort . ";\n";
+    echo <<<EOT
+
+var graphWidth = 500;
+var barHeight = 30;
+var textWidth = 300;
+var width = graphWidth + textWidth;
+
+function update(_data) {
+var x = d3.scale.linear()
+    .domain([Math.min(0, d3.min(_data, function(d) { return d.points; })),
+             d3.max(_data, function(d) { return d.points; })])
+    .range([0, graphWidth]);
+
+var chart = d3.select(".chart")
+    .attr("width", width)
+    .attr("height", barHeight * _data.length);
+
+var row = chart.selectAll("g")
+    .data(_data);
+
+row.enter()
+  .append("g")
+    .attr("transform", function(d, i) { return "translate(0, " + i * barHeight + ")"; });
+
+row.exit().remove();
+
+if (sort) {
+  row.sort(function(a, b) { return d3.ascending(a.points, b.points); })
+    .transition()
+      .duration(function(d, i) { return 0; })
+      .delay(function(d, i) { return 0 * 100; })
+      .attr("transform", function(d, i) { return "translate(0, " + i * barHeight + ")"; });
+}
+
+var desc = row.append("g");
+var graph = row.append("g")
+  .attr("transform", "translate(" + textWidth + ",0)");
+
+graph.append("rect")
+    .attr("x", x(0))
+    .attr("width", 0)
+    .attr("height", barHeight - 1)
+  .transition()
+    .duration(500)
+    .attr("x", function(d) {
+      if (d.points < 0) {
+        return x(d.points);
+      }
+      else {
+        return x(0);
+      }
+    })
+    .attr("width", function(d) { return Math.abs(x(d.points) - x(0)); })
+
+var number_text = graph.append("text")
+  .style("fill-opacity", 0.0)
+  .attr("x", x(0))
+  .attr("y", barHeight / 2)
+  .attr("dy", ".35em")
+  .attr("fill", "white")
+  .attr("text-anchor", function(d) { return d.points < 0 ? "start" : "end"; })
+  .text(function(d) { return d.points == 0 ? "" : d.points; });
+
+number_text.transition()
+  .duration(500)
+  .style("fill-opacity", 1.0)
+  .attr("x", function(d) { return x(d.points) - 3 * Math.sign(d.points); })
+
+desc.append("text")
+  .attr("x", 0)
+  .attr("y", barHeight / 2)
+  .attr("dy", ".35em")
+  .text(function(d) { return d.number; });
+
+desc.append("image")
+  .attr("x", 30)
+  .attr("y", 0)
+  .attr("width", 20)
+  .attr("height", barHeight)
+  .attr("dy", ".35em")
+  .attr("xlink:href", function(d) { return d.flair_img; });
+
+desc.append("text")
+  .attr("x", 60)
+  .attr("y", barHeight / 2)
+  .attr("dy", ".35em")
+  .text(function(d) { return d.name; });
+}
+update(data);
+
+//if (prevdata.length > 0)
+//setTimeout(function () { update(prevdata); }, 1000);
+
+</script>
+EOT;
+}
+
+function oldchart($data, $sort = 0, $prev_data = null)
+{
     if ($sort) {
         uasort($data, "pointCmp");
     }

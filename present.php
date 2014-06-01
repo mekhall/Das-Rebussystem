@@ -18,13 +18,14 @@ if (array_key_exists('static', $GLOBALS) == 0 && $check == 0) {
 }
 
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-type" content="text/html;charset=utf-8">
 <title>Rebusrally <?php echo NAME ?></title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <script src="mootools.js" type="text/javascript"></script>
+<script src="d3.v3.min.js"></script>
 <script type="text/javascript">
 var maxLine = 0;
 var line = 0;

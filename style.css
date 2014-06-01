@@ -118,3 +118,11 @@ a {
     vertical-align: middle;
     float: right;
 }
+
+.chart rect {
+  fill: #000050;
+}
+
+.chart text {
+  font: 16px sans-serif;
+}
