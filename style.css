@@ -120,9 +120,9 @@ a {
 }
 
 .chart rect {
-  fill: #000050;
+    fill: #000050;
 }
 
 .chart text {
-  font: 16px sans-serif;
+    font: 16px sans-serif;
 }
