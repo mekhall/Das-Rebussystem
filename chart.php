@@ -148,7 +148,7 @@ function chart($data, $sort = 0, $prev_data = null)
     echo "var data = " . json_encode($json) . ";\n";
     echo "var prevdata = " . json_encode($prevjson) . ";\n";
     echo "var sort = " . $sort . ";\n";
-    echo <<<EOT
+    echo <<<JAVASCRIPT
 
 var graphWidth = 500;
 var barHeight = 30;
@@ -189,7 +189,7 @@ function update(data) {
     row.attr("transform", function(d, i) { return "translate(0, " + i * barHeight + ")"; });
   }
 
-  row.selectAll("rect").data(data, ƒ('index'))
+  row.selectAll(".graph_bar").data(data, ƒ('index'))
     .transition()
       .duration(1000)
       .attr("x", function(d) { return d.points < 0 ? x(d.points) : x(0); })
@@ -204,15 +204,22 @@ function update(data) {
           this.textContent = i(t);
         }
       })
-      .attr("x", function(d) { return x(d.points) - 3 * Math.sign(d.points); });
+      .attr("x", function(d) { return x(d.points) - 3 * Math.sign(d.points) * (Math.abs(d.points) > 5 ? 1 : 0); });
 
   // ENTER
+  var bg_row = row.enter().append("g");
+  bg_row.attr("transform", function(d, i) { return "translate(0, " + i * barHeight + ")"; });
+  bg_row.append("rect")
+   .attr("width", width)
+   .attr("height", barHeight - 1)
+   .attr("class", function(d, i) { return (i + 1) & 1 ? "graph_odd" : "graph_even" });
+
   var enter_row = row.enter().append("g").classed("row", true);
   if (sort) {
     enter_row.sort(function(a, b) { return d3.ascending(a.points, b.points); })
   }
   enter_row.attr("transform", function(d, i) { return "translate(0, " + i * barHeight + ")"; });
-
+  
   enter_row
     .append("g")
       .classed("desc", true);
@@ -228,6 +235,7 @@ function update(data) {
       .attr("x", x(0))
       .attr("width", 0)
       .attr("height", barHeight - 1)
+      .attr("class", "graph_bar")
     .transition()
       .duration(500)
       .attr("x", function(d) { return d.points < 0 ? x(d.points) : x(0); })
@@ -246,7 +254,7 @@ function update(data) {
     .transition()
       .duration(500)
       .style("fill-opacity", 1.0)
-      .attr("x", function(d) { return x(d.points) - 3 * Math.sign(d.points); });
+      .attr("x", function(d) { return x(d.points) - 3 * Math.sign(d.points) * (Math.abs(d.points) > 5 ? 1 : 0); });
 
   // ENTER+UPDATE
 
@@ -287,7 +295,7 @@ else {
 }
 
 </script>
-EOT;
+JAVASCRIPT;
 }
 
 function oldchart($data, $sort = 0, $prev_data = null)

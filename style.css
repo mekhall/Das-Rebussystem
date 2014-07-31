@@ -118,11 +118,15 @@ a {
     vertical-align: middle;
     float: right;
 }
-
-.chart rect {
+.graph_bar {
     fill: #000050;
 }
-
 .chart text {
     font: 16px sans-serif;
+}
+.graph_odd {
+    fill: #becdeb;
+}
+.graph_even {
+    fill: #aebddb;
 }
