@@ -162,6 +162,10 @@ function ƒ(name) {
   };
 }
 
+function sign(x) {
+    return (x >= 0) ? 1 : -1;
+}
+
 var x = d3.scale.linear()
     .domain([Math.min(0, d3.min(data, ƒ('points')), d3.min(prevdata, ƒ('points')) || Infinity),
              Math.max(d3.max(data, ƒ('points')), d3.max(prevdata, ƒ('points')) || -Infinity)])
@@ -204,7 +208,7 @@ function update(data) {
           this.textContent = i(t);
         }
       })
-      .attr("x", function(d) { return x(d.points) - 3 * Math.sign(d.points) * (Math.abs(d.points) > 5 ? 1 : 0); });
+      .attr("x", function(d) { return x(d.points) - 3 * sign(d.points) * (Math.abs(d.points) > 5 ? 1 : 0); });
 
   // ENTER
   var bg_row = row.enter().append("g");
@@ -254,7 +258,7 @@ function update(data) {
     .transition()
       .duration(500)
       .style("fill-opacity", 1.0)
-      .attr("x", function(d) { return x(d.points) - 3 * Math.sign(d.points) * (Math.abs(d.points) > 5 ? 1 : 0); });
+      .attr("x", function(d) { return x(d.points) - 3 * sign(d.points) * (Math.abs(d.points) > 5 ? 1 : 0); });
 
   // ENTER+UPDATE
 
