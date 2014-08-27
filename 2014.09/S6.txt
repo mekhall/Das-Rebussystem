@@ -1,0 +1,9 @@
+\rebus DAXBURTO
+\op i
+XIDABURTO
+\op <->
+OTRUBADIX
+\op !
+OBARD
+\op <->
+\ort DRABO

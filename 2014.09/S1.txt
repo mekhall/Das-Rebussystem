@@ -1,0 +1,9 @@
+\rebus KARNIBNARÖT
+\op i
+BNARKARNÖT
+\op b->k
+KNARKARNÖT
+\op !
+HÖGKO
+\op k->b
+\ort HÖGBO

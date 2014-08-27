@@ -1,0 +1,11 @@
+\rebus ACKAPILÄR
+\op i
+LACKAPÄR
+\op l->m
+MACKAPÄR
+\op !
+SAK
+\op om
+SKOMA
+\op m->l
+\ort SKOLA

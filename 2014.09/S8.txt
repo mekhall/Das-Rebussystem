@@ -1,0 +1,11 @@
+\rebus DNARNDDÄB
+\op <->
+BÄDDNRAND
+\op n->b
+BÄDDBRAND
+\op !
+SÄNGBÅL
+\op b->n
+SÄNGNÅL
+\op <->
+\ort LÅNGNÄS

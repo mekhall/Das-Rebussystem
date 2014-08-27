@@ -1,0 +1,9 @@
+\rebus MOTORFREAO
+\op o->k
+MOTORFREAK
+\op !
+BILTOK
+\op k->o
+BILTOO
+\op i
+\ort L. TOBO

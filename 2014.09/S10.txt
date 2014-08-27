@@ -1,0 +1,13 @@
+\rebus PUSKAPASOLDATFRER
+\op i
+SKAPASOLDATFIPURER
+\op p->g
+SKAPASOLDATFIGURER
+\op !
+GJUTAITENN
+\op ! (per)
+GJUTAISN
+\op i
+SGJUTAN
+\op g->p
+\ort SPJUTAN

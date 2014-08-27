@@ -1,0 +1,11 @@
+\rebus EDÅLUPTKTPNOKGNUT
+\op <->
+TUNGKONPTKTPULÅDE
+\op n->m, t->a, +s, +r
+TUNG KOMPAKT PULSÅDER
+\op !
+MASSIV ARTÄR
+\op <->
+RÄTRAVISSAM
+\op -r, -s, a->t, m->n
+\ort RÄTTVISAN
