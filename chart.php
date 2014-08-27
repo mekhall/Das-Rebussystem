@@ -205,7 +205,9 @@ function update(data) {
       .tween("text", function(d) {
         var i = d3.interpolateRound(parseInt(this.textContent), d.points);
         return function(t) {
-          this.textContent = i(t);
+          num = i(t);
+          if (!is_NaN(num))
+              this.textContent = num;
         }
       })
       .attr("x", function(d) { return x(d.points) - 3 * sign(d.points) * (Math.abs(d.points) > 5 ? 1 : 0); });
