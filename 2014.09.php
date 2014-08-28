@@ -48,7 +48,7 @@ $events = array(
     'ÖppReb' => 'Öppnat stjälprebuskuvertet',
 
     // Heldagspyssel
-    'P BOK' => 'Boookie',
+    'P BOK' => 'Bookie',
     'P BAJ' => 'Skitpyssel',
     'P HIS' => 'Historiska foton',
     'P JAP' => 'Japanska pyssel',

@@ -1,1 +1,13 @@
-???
+\rebus DAOLBILBÅ
+\op <->
+ÅBLIBLOAD
+\op +d
+ÅBLIBLODAD
+\op i
+BLÅBLODAD
+\op !
+ADLAD
+\op -d
+ALAD
+\op <->
+\ort DALA

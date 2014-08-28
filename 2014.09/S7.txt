@@ -1,1 +1,9 @@
-???
+\rebus VVI
+\op i
+VIVI
+\op i
+VIVII
+\op ! rom
+VI7
+\op ! per
+\ort VIN
