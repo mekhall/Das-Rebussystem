@@ -50,20 +50,32 @@ $events = array(
     // Heldagspyssel
     'P BOK' => 'Boookie',
     'P BAJ' => 'Skitpyssel',
-    'P FOT' => 'Historiska foton',
+    'P HIS' => 'Historiska foton',
     'P JAP' => 'Japanska pyssel',
-    'P MUS' => 'Musikkrysset',
-
-    // Förmiddagspyssel
     'P MAT' => 'Matiga hen',
     'P SUB' => 'Undervattenshörförståelse',
-    'P BON' => 'Tur med vädret',
+
+    // Förmiddagspyssel
+    'P CEL' => 'Namnge kändisen',
+    'P MUS' => 'Musikkrysset',
 
     // Lunchpyssel
-    'P LCH' => 'Lunchpyssel',
+    'P FEM' => 'Finn fem fel',
+    'P KRD' => 'Sätt krydda på tillvaron',
 
     // Eftermiddagspyssel
     'P BIO' => 'Biofilmer',
+    'P BON' => 'Tur med vädret',
+    'P PUP' => 'Name the pup',
+
+    // Stjälppyssel
+    'P POP' => 'Påvar',
+    'P MAL' => 'Single-malt',
+    'P BIL' => 'Bildrebusar',
+    'P ZOM' => 'Zombiekrysset',
+    'P SOR' => 'Sportfrågan',
+    'P ASS' => 'Assoiciationsrebusar',
+    'ÖppPyss' => 'Öppnat stjälppysselkuvert',
 
     'Stil' => 'Stil och finess',
     'Tid S' => 'Tidsprickar vid Start',
@@ -84,43 +96,44 @@ $events = array(
     'FP 5' => 'Fotoplock 5',
     'FP 6' => 'Fotoplock 6',
     'FP 7' => 'Fotoplock 7',
-    'FP 8' => 'Fotoplock 8',
+    'FP 8' => 'Fotoplock 8'
     );
 
 $parts = array(
     '*picture*Rebusrally 2014-09:trial-error.gif',
 
-    'Etapp 1' => array('Tid S', 'R 1', 'P BOK', 'P BOK', 'TP 1', 'FP 1'),
+    'Etapp 1' => array('Tid S', 'R 1', 'P BOK', 'P BAJ', 'TP 1', 'FP 1'),
 
-    'Etapp 2' => array('R 2', 'P BOK', 'TP 2', 'FP 2'),
+    'Etapp 2' => array('R 2', 'P HIS', 'P JAP', 'TP 2', 'FP 2'),
     'Totalt efter Etapp 2' => array('*sumcomp*', 'Etapp 1', 'Etapp 2'),
 
-    'Etapp 3' => array('R 3', 'P BOK', 'P BOK', 'TP 3', 'FP 3'),
+    'Etapp 3' => array('R 3', 'P MAT', 'P SUB', 'TP 3', 'FP 3'),
     'Totalt efter Etapp 3' => array('*sumcomp*', 'Totalt efter Etapp 2', 'Etapp 3'),
 
-    'Etapp 4' => array('R 4', 'P BOK', 'TP 4', 'FP 4', 'Tid L'),
+    'Etapp 4' => array('R 4', 'P CEL', 'P MUS', 'TP 4', 'FP 4', 'Tid L'),
     'Totalt efter Etapp 4' => array('*sumcomp*', 'Totalt efter Etapp 3', 'Etapp 4'),
 
     'Lunch' =>
     array('*picture*Lunch:lunch.jpg',
           'Stil',
-          'P BOK', 'P BOK',
+          'P FEM', 'P KRD',
           'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7',
           'S 8', 'S 9', 'S 10', 'S 11', 'S 12',
           array('*esum*', 'Stjälprebusar totalt', 'S 1', 'S 2', 'S 3', 'S 4', 'S 5',
                 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11', 'S 12')),
     'Totalt efter Lunch' => array('*sumcomp*', 'Totalt efter Etapp 4', 'Lunch'),
 
-    'Etapp 5' => array('R 5', 'P BOK', 'TP 5', 'FP 5'),
+    'Etapp 5' => array('R 5', 'P BIO', 'P BON', 'TP 5', 'FP 5'),
     'Totalt efter Etapp 5' => array('*sumcomp*', 'Totalt efter Lunch', 'Etapp 5'),
 
-    'Etapp 6' => array('R 6', 'P BOK', 'P BOK', 'TP 6', 'FP 6'),
+    'Etapp 6' => array('R 6', 'P PUP', 'P POP', 'TP 6', 'FP 6'),
     'Totalt efter Etapp 6' => array('*sumcomp*', 'Totalt efter Etapp 5', 'Etapp 6'),
 
-    'Etapp 7' => array('R 7', 'P BOK', 'P BOK', 'TP 7', 'FP 7'),
+    'Etapp 7' => array('R 7', 'P MAL', 'P BIL', 'TP 7', 'FP 7'),
     'Totalt efter Etapp 7' => array('*sumcomp*', 'Totalt efter Etapp 6', 'Etapp 7'),
 
-    'Etapp 8' => array('R 8', 'TP 8', 'FP 8', 'Tid M'),
+    'Etapp 8' => array('R 8', 'P ZOM', 'P SOR', 'P ASS', 'TP 8', 'FP 8', 'Tid M'),
+
 
     'Plock totalt' =>
     array('*sum*',
@@ -129,8 +142,25 @@ $parts = array(
 
     'Pyssel totalt' =>
     array('*sum*',
-         'P BOK',
-         'P BOK'),
+          'P BOK',
+          'P BAJ',
+          'P HIS',
+          'P JAP',
+          'P MAT',
+          'P SUB',
+          'P CEL',
+          'P MUS',
+          'P FEM',
+          'P KRD',
+          'P BIO',
+          'P BON',
+          'P PUP',
+          'P POP',
+          'P MAL',
+          'P BIL',
+          'P ZOM',
+          'P SOR',
+          'P ASS'),
 
     'Alla rebusar' =>
     array('*sum*',
@@ -144,13 +174,13 @@ $parts = array(
 
 $maxPoints =
   array(
-         'P BOK' => 46,
          );
 
 $info =
   array(
         'P .*' => '1 per fel',
-        'ÖppReb' => '4 per medlem = <4p>', 'ÖppPlk' => '4 per medlem = <4p>', 'ÖppPyss' => '4 per medlem = <4p>',
+        'ÖppReb' => '4 per medlem = <4p>', 
+        'ÖppPyss' => '4 per medlem = <4p>',
         'Tid S' => '1 per minut',
         'Tid L' => '1 per minut',
         'Tid M' => '1 per minut, 2 efter 17:45, 4 efter 18:15, 8 efter 18:45',
