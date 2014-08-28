@@ -10,14 +10,14 @@ $teams = array(
                'Sötgötarna'             => array(4, 1),
                'Ibsens kusiner'         => array(5, 1),
                'Så att säga'            => array(6, 1),
-               'Webus Express'          => array(7, 1),
+               'Webus express'          => array(7, 1),
                '1 till 2 till'          => array(8, 1),
                'RRL för Claes Elfsberg' => array(9, 1),
                'Ingen Aning'            => array(10, 1),
                'Psst!'                  => array(11, 1),
-               '?'                      => array(12, 1),
+               'Puh - Det mörka hotet'  => array(12, 1),
                'SK2:AIRR'               => array(13, 1),
-               'Risk för Dåligt Väglag' => array(15, 1),
+               'Risk för dåligt väglag' => array(15, 1),
                'Rattmuffarna'           => array(42, 1)
                );
 
