@@ -74,7 +74,7 @@ $events = array(
     'P BIL' => 'Bildrebusar',
     'P ZOM' => 'Zombiekrysset',
     'P SOR' => 'Sportfrågan',
-    'P ASS' => 'Assoiciationsrebusar',
+    'P ASS' => 'Associationsrebusar',
     'ÖppPyss' => 'Öppnat stjälppysselkuvert',
 
     'Stil' => 'Stil och finess',
@@ -115,25 +115,32 @@ $parts = array(
 
     'Lunch' =>
     array('*picture*Lunch:lunch.jpg',
-          'Stil',
           'P FEM', 'P KRD',
+          'ÖppReb',
           'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7',
           'S 8', 'S 9', 'S 10', 'S 11', 'S 12',
-          array('*esum*', 'Stjälprebusar totalt', 'S 1', 'S 2', 'S 3', 'S 4', 'S 5',
+          array('*esum*', 'Stjälprebusar totalt',
+                'ÖppReb',
+                'S 1', 'S 2', 'S 3', 'S 4', 'S 5',
                 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11', 'S 12')),
     'Totalt efter Lunch' => array('*sumcomp*', 'Totalt efter Etapp 4', 'Lunch'),
 
     'Etapp 5' => array('R 5', 'P BIO', 'P BON', 'TP 5', 'FP 5'),
     'Totalt efter Etapp 5' => array('*sumcomp*', 'Totalt efter Lunch', 'Etapp 5'),
 
-    'Etapp 6' => array('R 6', 'P PUP', 'P POP', 'TP 6', 'FP 6'),
+    'Etapp 6' => array('R 6', 'P PUP', 'TP 6', 'FP 6'),
     'Totalt efter Etapp 6' => array('*sumcomp*', 'Totalt efter Etapp 5', 'Etapp 6'),
 
-    'Etapp 7' => array('R 7', 'P MAL', 'P BIL', 'TP 7', 'FP 7'),
+    'Etapp 7' => array('R 7', 'TP 7', 'FP 7'),
     'Totalt efter Etapp 7' => array('*sumcomp*', 'Totalt efter Etapp 6', 'Etapp 7'),
 
-    'Etapp 8' => array('R 8', 'P ZOM', 'P SOR', 'P ASS', 'TP 8', 'FP 8', 'Tid M'),
+    'Stjälppyssel' => array('ÖppPyss', 'P POP', 'P MAL', 'P BIL', 'P ZOM', 'P SOR', 'P ASS'),
 
+    'Totalt efter stjälppyssel' => array('*sum*', 'Totalt efter Etapp 7', 'Stjälppyssel'),
+
+    'Etapp 8' => array('R 8', 'TP 8', 'FP 8', 'Tid M'),
+
+    'Stil',
 
     'Plock totalt' =>
     array('*sum*',
@@ -142,34 +149,20 @@ $parts = array(
 
     'Pyssel totalt' =>
     array('*sum*',
-          'P BOK',
-          'P BAJ',
-          'P HIS',
-          'P JAP',
-          'P MAT',
-          'P SUB',
-          'P CEL',
-          'P MUS',
-          'P FEM',
-          'P KRD',
-          'P BIO',
-          'P BON',
+          'P BOK', 'P BAJ', 'P HIS', 'P JAP',
+          'P MAT', 'P SUB', 'P CEL', 'P MUS',
+          'P FEM', 'P KRD', 'P BIO', 'P BON',
           'P PUP',
-          'P POP',
-          'P MAL',
-          'P BIL',
-          'P ZOM',
-          'P SOR',
-          'P ASS'),
+          'ÖppPyss', 'P POP', 'P MAL', 'P BIL', 'P ZOM', 'P SOR', 'P ASS'),
 
-    'Alla rebusar' =>
+    'Rebusar totalt' =>
     array('*sum*',
-          'S 1', 'S 2', 'S 3', 'S 4',
+          'ÖppReb', 'S 1', 'S 2', 'S 3', 'S 4',
           'S 5', 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11', 'S 12',
           'R 1', 'R 2', 'R 3', 'R 4',
           'R 5', 'R 6', 'R 7', 'R 8'),
 
-    'Totalt' => array('*sum*', 'Totalt efter Etapp 7', 'Etapp 8')
+    'Totalt' => array('*sum*', 'Totalt efter stjälppyssel', 'Etapp 8', 'Stil')
     );
 
 $maxPoints =
