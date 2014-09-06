@@ -75,8 +75,8 @@ function sign(x) {
 }
 
 function pos_offset(p) {
-    a = Math.abs(p);
-    return -3 * sign(p) * ((a < 0 || a > 1) ? 1 : -4)
+    var width = Math.abs(x(p) - x(0));
+    return -3 * sign(p) * ((width > 10) ? 1 : -4);
 }
 
 var x = d3.scale.linear()
@@ -118,8 +118,8 @@ function update(data) {
       .tween("text", function(d) {
         var i = d3.interpolateRound(parseInt(this.textContent), d.points);
         return function(t) {
-          num = i(t);
-          if (!is_NaN(num))
+          var num = i(t);
+          if (!isNaN(num))
             this.textContent = num;
         }
       })
