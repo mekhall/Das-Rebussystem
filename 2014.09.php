@@ -152,7 +152,7 @@ $parts = array(
     array('*sum*',
           'TP 1', 'TP 2', 'TP 3', 'TP 4', 'TP 5', 'TP 6', 'TP 7', 'TP 8',
           'FP 1', 'FP 2', 'FP 3', 'FP 4', 'FP 5', 'FP 6', 'FP 7', 'FP 8',
-          'ÖppPlk', 'StjPlk')
+          'ÖppPlk', 'StjPlk'),
 
     'Pyssel totalt' =>
     array('*sum*',
