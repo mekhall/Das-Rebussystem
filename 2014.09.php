@@ -47,21 +47,25 @@ $events = array(
     'S 12' => 'Stjälp 12',
     'ÖppReb' => 'Öppnat stjälprebuskuvertet',
 
+    'ÖppPlk' => 'Öppnat stjälpplockkuvertet',
+    'StjPlk' => 'Stjälpplock',
+
     // Heldagspyssel
-    'P BOK' => 'Bookie',
+    'P BOK' => 'Bookie Wookie',
     'P BAJ' => 'Skitpyssel',
-    'P HIS' => 'Historiska foton',
-    'P JAP' => 'Japanska pyssel',
+    'P FOT' => 'Historiska foton',
+    'P ASS' => 'Associationsrebusar',
     'P MAT' => 'Matiga hen',
+    'P SPO' => 'Sportfrågan',
     'P SUB' => 'Undervattenshörförståelse',
 
     // Förmiddagspyssel
-    'P CEL' => 'Namnge kändisen',
+    'P VIP' => 'Namnge kändisen',
     'P MUS' => 'Musikkrysset',
 
     // Lunchpyssel
     'P FEM' => 'Finn fem fel',
-    'P KRD' => 'Sätt krydda på tillvaron',
+    'P KRY' => 'Sätt krydda på tillvaron',
 
     // Eftermiddagspyssel
     'P BIO' => 'Biofilmer',
@@ -73,8 +77,8 @@ $events = array(
     'P MAL' => 'Single-malt',
     'P BIL' => 'Bildrebusar',
     'P ZOM' => 'Zombiekrysset',
-    'P SOR' => 'Sportfrågan',
-    'P ASS' => 'Associationsrebusar',
+    'P YOU' => 'Gissa Youtubekändisen',
+    'P JAP' => 'Japanska pyssel',
     'ÖppPyss' => 'Öppnat stjälppysselkuvert',
 
     'Stil' => 'Stil och finess',
@@ -104,18 +108,20 @@ $parts = array(
 
     'Etapp 1' => array('Tid S', 'R 1', 'P BOK', 'P BAJ', 'TP 1', 'FP 1'),
 
-    'Etapp 2' => array('R 2', 'P HIS', 'P JAP', 'TP 2', 'FP 2'),
+    'Etapp 2' => array('R 2', 'P FOT', 'P ASS', 'TP 2', 'FP 2'),
     'Totalt efter Etapp 2' => array('*sumcomp*', 'Etapp 1', 'Etapp 2'),
 
-    'Etapp 3' => array('R 3', 'P MAT', 'P SUB', 'TP 3', 'FP 3'),
+    'Etapp 3' => array('R 3', 'P MAT', 'P SPO', 'TP 3', 'FP 3'),
     'Totalt efter Etapp 3' => array('*sumcomp*', 'Totalt efter Etapp 2', 'Etapp 3'),
 
-    'Etapp 4' => array('R 4', 'P CEL', 'P MUS', 'TP 4', 'FP 4', 'Tid L'),
+    'Etapp 4' => array('R 4', 'P SUB', 'P VIP', 'P MUS', 'TP 4', 'FP 4', 'Tid L'),
     'Totalt efter Etapp 4' => array('*sumcomp*', 'Totalt efter Etapp 3', 'Etapp 4'),
 
     'Lunch' =>
     array('*picture*Lunch:lunch.jpg',
-          'P FEM', 'P KRD',
+          'P FEM', 'P KRY',
+          'ÖppPlk', 'StjPlk',
+          array('*esum*', 'Stjälpplock totalt', 'StjPlk', 'ÖppPlk'),
           'ÖppReb',
           'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7',
           'S 8', 'S 9', 'S 10', 'S 11', 'S 12',
@@ -134,7 +140,7 @@ $parts = array(
     'Etapp 7' => array('R 7', 'TP 7', 'FP 7'),
     'Totalt efter Etapp 7' => array('*sumcomp*', 'Totalt efter Etapp 6', 'Etapp 7'),
 
-    'Stjälppyssel' => array('ÖppPyss', 'P POP', 'P MAL', 'P BIL', 'P ZOM', 'P SOR', 'P ASS'),
+    'Stjälppyssel' => array('ÖppPyss', 'P POP', 'P MAL', 'P BIL', 'P ZOM', 'P YOU', 'P JAP'),
 
     'Totalt efter stjälppyssel' => array('*sum*', 'Totalt efter Etapp 7', 'Stjälppyssel'),
 
@@ -145,15 +151,16 @@ $parts = array(
     'Plock totalt' =>
     array('*sum*',
           'TP 1', 'TP 2', 'TP 3', 'TP 4', 'TP 5', 'TP 6', 'TP 7', 'TP 8',
-          'FP 1', 'FP 2', 'FP 3', 'FP 4', 'FP 5', 'FP 6', 'FP 7', 'FP 8'),
+          'FP 1', 'FP 2', 'FP 3', 'FP 4', 'FP 5', 'FP 6', 'FP 7', 'FP 8',
+          'ÖppPlk', 'StjPlk')
 
     'Pyssel totalt' =>
     array('*sum*',
-          'P BOK', 'P BAJ', 'P HIS', 'P JAP',
-          'P MAT', 'P SUB', 'P CEL', 'P MUS',
-          'P FEM', 'P KRD', 'P BIO', 'P BON',
-          'P PUP',
-          'ÖppPyss', 'P POP', 'P MAL', 'P BIL', 'P ZOM', 'P SOR', 'P ASS'),
+          'P BOK', 'P BIO', 'P BAJ', 'P FOT',
+          'P ASS', 'P BON', 'P MAT', 'P VIP',
+          'P PUP', 'P SPO', 'P FEM', 'P KRY',
+          'P MUS', 'P SUB',
+          'ÖppPyss', 'P POP', 'P MAL', 'P BIL', 'P ZOM', 'P YOU', 'P JAP'),
 
     'Rebusar totalt' =>
     array('*sum*',
@@ -167,13 +174,44 @@ $parts = array(
 
 $maxPoints =
   array(
-         );
+    'P BOK' => 0,
+    'P BIO' => 11,
+    'P BAJ' => 10,
+    'P FOT' => 0,
+    'P ASS' => 12,
+    'P BON' => 10,
+    'P MAT' => 14,
+    'P VIP' => 10,
+    'P PUP' => 15,
+    'P SPO' => 18,
+    'P FEM' => 20,
+    'P KRY' => 20,
+    'P MUS' => 20,
+    'P SUB' => 13,
+    'P POP' => -20,
+    'P MAL' => -20,
+    'P BIL' => -24,
+    'P ZOM' => -22,
+    'P YOU' => 0,
+    'P JAP' => -20
+  );
 
 $info =
   array(
+        'P FEM' => '<red>tio alternativ, 2 per fel',
+        'P KRY' => '<red>2 per fel',
+        'P ZOM' => '<red>2 per fel',
+        'P POP' => '<red>-1 per rätt',
+        'P MAL' => '<red>-1 per rätt',
+        'P BIL' => '<red>-1 per rätt',
+        'P ZOM' => '<red>-1 per rätt poster, -1 per rätt titel',
+        'P YOU' => '<red>-1 per rätt',
+        'P JAP' => '<red>-5 per korrekt pyssel',
         'P .*' => '1 per fel',
-        'ÖppReb' => '4 per medlem = <4p>', 
+        'ÖppReb' => '4 per medlem = <4p>',
+        'ÖppPlk' => '4 per medlem = <4p>',
         'ÖppPyss' => '4 per medlem = <4p>',
+        'StjPlk' => '-10 per plock',
         'Tid S' => '1 per minut',
         'Tid L' => '1 per minut',
         'Tid M' => '1 per minut, 2 efter 17:45, 4 efter 18:15, 8 efter 18:45',
