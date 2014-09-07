@@ -67,6 +67,10 @@ foreach ($parts as $part => $data) {
                     if (checkPic($pic)) {
                         array_push($actions, new PictureSlide($eventName, $pic));
                     }
+                    $pic = "$n";
+                    if (checkPic($pic)) {
+                        array_push($actions, new PictureSlide($eventName, $pic));
+                    }
                     if (array_key_exists($e, $maxPoints)) {
                         array_push($actions, new EventSlide($eventName, $e, null, $maxPoints[$e]));
                     }

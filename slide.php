@@ -30,13 +30,26 @@ class PictureSlide extends Slide
     var $picture;
 
     function PictureSlide($t, $p) {
+        $size = getimagesize($p);
+
         checkPic($p);
         $this->title = $t;
         $this->picture = $p;
+        $this->attr = "height=400";
+
+        $width = $size[0];
+        $height = $size[1];
+        if ($width && $height) {
+            $scale = 400.0 / $height;
+            $width *= $scale;
+            if ($width > 800) {
+                $this->attr = "width=800";
+            }
+        }
     }
 
     function printHtml() {
-        echo "<br><center><img src=\"$this->picture\"></center>\n";
+        echo "<br><center><img src=\"$this->picture\" $this->attr></center>\n";
     }
 
     function getMiddle() {
