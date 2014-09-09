@@ -52,33 +52,32 @@ $events = array(
 
     // Heldagspyssel
     'P BOK' => 'Bookie Wookie',
-    'P BAJ' => 'Skitpyssel',
-    'P FOT' => 'Historiska foton',
-    'P ASS' => 'Associationsrebusar',
+    'P BAJ' => 'Das Dass - ett skitpyssel',
+    'P FOT' => 'Historiska ögonblick',
+    'P ASS' => 'Associera mera',
     'P MAT' => 'Matiga hen',
-    'P SPO' => 'Sportfrågan',
-    'P SUB' => 'Undervattenshörförståelse',
+    'P SPO' => 'The name of the game',
+    'P SUB' => 'Minken - en studie i undervattenshörförståelse',
 
     // Förmiddagspyssel
-    'P VIP' => 'Namnge kändisen',
+    'P VIP' => 'Viktiga personer',
     'P MUS' => 'Musikkrysset',
 
     // Lunchpyssel
-    'P FEM' => 'Finn fem fel',
-    'P KRY' => 'Sätt krydda på tillvaron',
+    'P FEM' => 'Finn fem fel!',
+    'P KRY' => 'En krydda i tillvaron!',
 
     // Eftermiddagspyssel
-    'P BIO' => 'Biofilmer',
-    'P BON' => 'Tur med vädret',
+    'P BIO' => 'In das Lichtspiel',
+    'P BON' => 'Vi hade ju iallafall tur med vädret!',
     'P PUP' => 'Name the pup',
 
     // Stjälppyssel
-    'P POP' => 'Påvar',
-    'P MAL' => 'Single-malt',
+    'P POP' => 'Nu blir det andra bullor',
+    'P MAL' => 'Singlemaltkrysset',
     'P BIL' => 'Bildrebusar',
-    'P ZOM' => 'Zombiekrysset',
-    'P YOU' => 'Gissa Youtubekändisen',
-    'P JAP' => 'Japanska pyssel',
+    'P ZOM' => 'Död eller levande?',
+    'P JAP' => 'Japaner, japaner, japaner',
     'ÖppPyss' => 'Öppnat stjälppysselkuvert',
 
     'Stil' => 'Stil och finess',
@@ -140,7 +139,7 @@ $parts = array(
     'Etapp 7' => array('R 7', 'TP 7', 'FP 7'),
     'Totalt efter Etapp 7' => array('*sumcomp*', 'Totalt efter Etapp 6', 'Etapp 7'),
 
-    'Stjälppyssel' => array('ÖppPyss', 'P POP', 'P MAL', 'P BIL', 'P ZOM', 'P YOU', 'P JAP'),
+    'Stjälppyssel' => array('ÖppPyss', 'P POP', 'P MAL', 'P BIL', 'P ZOM', 'P JAP'),
 
     'Totalt efter stjälppyssel' => array('*sum*', 'Totalt efter Etapp 7', 'Stjälppyssel'),
 
@@ -160,7 +159,7 @@ $parts = array(
           'P ASS', 'P BON', 'P MAT', 'P VIP',
           'P PUP', 'P SPO', 'P FEM', 'P KRY',
           'P MUS', 'P SUB',
-          'ÖppPyss', 'P POP', 'P MAL', 'P BIL', 'P ZOM', 'P YOU', 'P JAP'),
+          'ÖppPyss', 'P POP', 'P MAL', 'P BIL', 'P ZOM', 'P JAP'),
 
     'Rebusar totalt' =>
     array('*sum*',
@@ -174,10 +173,10 @@ $parts = array(
 
 $maxPoints =
   array(
-    'P BOK' => 0,
+    'P BOK' => 10,
     'P BIO' => 11,
     'P BAJ' => 10,
-    'P FOT' => 0,
+    'P FOT' => 13,
     'P ASS' => 12,
     'P BON' => 10,
     'P MAT' => 14,
@@ -192,7 +191,6 @@ $maxPoints =
     'P MAL' => -20,
     'P BIL' => -24,
     'P ZOM' => -22,
-    'P YOU' => 0,
     'P JAP' => -20
   );
 
@@ -205,7 +203,6 @@ $info =
         'P MAL' => '<red>-1 per rätt',
         'P BIL' => '<red>-1 per rätt',
         'P ZOM' => '<red>-1 per rätt poster, -1 per rätt titel',
-        'P YOU' => '<red>-1 per rätt',
         'P JAP' => '<red>-5 per korrekt pyssel',
         'P .*' => '1 per fel',
         'ÖppReb' => '4 per medlem = <4p>',
