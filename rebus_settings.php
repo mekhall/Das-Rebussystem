@@ -12,9 +12,7 @@ $rebus_split = 1;
 // Display logo in right corner, using file 'logga.gif'.
 $display_logo = 1;
 
-$display_average = 0;
-
 // Animate rebus solution parts
-$rebus_tween = 0;
+$rebus_tween = 1;
 
 ?>

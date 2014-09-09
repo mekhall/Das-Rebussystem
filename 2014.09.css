@@ -8,18 +8,10 @@ body {
     margin-bottom: 0px;
 }
 td {
-    font-family: Arial;
     font-size: 18px;
     color: #f0f0f0;
 }
-.maxavg {
-    font-family: Arial;
-    font-style: italic;
-    font-size: 13px;
-    color: #334450;
-}
 a {
-    font-family: Arial;
     font-size: 12px;
     text-decoration: none;
     color: #334450;
@@ -71,7 +63,7 @@ a {
     color: #ffffff
 }
 .rebustext {
-    font-family: TratexVit;
+    font-family: 'Verdana';
     font-size: xx-large;
     text-align: left;
 }
@@ -83,8 +75,9 @@ a {
     padding: 10px;
     text-align: center;
 }
-.rebusortSvart {
+.rebusortVarning {
     font-family: TratexSvart, 'Arial Black';
+    color: #000000;
     border:4px solid #c8002d;
     margin:4px 0 4px 0;
     padding: 5px 20px 5px 20px;
@@ -103,7 +96,6 @@ a {
 }
 .rebusop {
     font-size: x-large;
-    font-style: italic;
     text-align: center;
 }
 .rebusmaker {

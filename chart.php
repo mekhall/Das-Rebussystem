@@ -16,7 +16,7 @@ function getPoint($d)
     }
 }
 
-function chart($data, $sort = 0, $prev_data = null)
+function chart($data, $sort = 0, $prev_data = null, $max = 0)
 {
     $json = array();
     foreach ($data as $teamnr => $d) {
@@ -56,12 +56,14 @@ function chart($data, $sort = 0, $prev_data = null)
     echo "var data = " . json_encode($json) . ";\n";
     echo "var prevdata = " . json_encode($prevjson) . ";\n";
     echo "var sort = " . $sort . ";\n";
+    echo "var max = " . $max . ";\n";
     echo <<<JAVASCRIPT
 
 var graphWidth = 500;
 var barHeight = 30;
 var textWidth = 300;
 var width = graphWidth + textWidth;
+var height = barHeight * data.length + 30;
 
 function ƒ(name) {
   var v, params = Array.prototype.slice.call(arguments, 1);
@@ -75,18 +77,25 @@ function sign(x) {
 }
 
 function pos_offset(p) {
-    var width = Math.abs(x(p) - x(0));
-    return -3 * sign(p) * ((width > 10) ? 1 : -4);
+    var w = Math.abs(x(p) - x(0));
+    // Try to move text outside of graph bars if it does not fit
+    var maxw = p < 0 ? 20 : 10;
+    var off = p < 0 ? -5 : -3;
+    offset = -3 * sign(p) * ((w > maxw) ? 1 : off);
+    if (x(p) > width) {
+        offset -= 20;
+    }
+    return offset;
 }
 
 var x = d3.scale.linear()
-    .domain([Math.min(0, d3.min(data, ƒ('points')), d3.min(prevdata, ƒ('points')) || Infinity),
-             Math.max(d3.max(data, ƒ('points')), d3.max(prevdata, ƒ('points')) || -Infinity)])
+    .domain([Math.min(0, d3.min(data, ƒ('points')), d3.min(prevdata, ƒ('points')) || Infinity, (max < 0 ? max : Infinity)),
+             Math.max(d3.max(data, ƒ('points')), d3.max(prevdata, ƒ('points')) || -Infinity, (max > 0 ? max : -Infinity))])
     .range([0, graphWidth]);
 
 var chart = d3.select(".chart")
     .attr("width", width)
-    .attr("height", barHeight * data.length);
+    .attr("height", height);
 
 function update(data) {
 
@@ -123,6 +132,7 @@ function update(data) {
             this.textContent = num;
         }
       })
+      .attr("text-anchor", function(d) { return d.points < 0 ? "start" : "end"; })
       .attr("x", function(d) { return x(d.points) + pos_offset(d.points); });
 
   // ENTER
@@ -164,7 +174,7 @@ function update(data) {
     .append("text")
       .classed("number", true)
       .style("fill-opacity", 0.0)
-      .attr("x", x(0))
+      .attr("x", x(0) + pos_offset(0))
       .attr("y", barHeight / 2)
       .attr("dy", ".35em")
       .attr("fill", "white")
@@ -174,6 +184,22 @@ function update(data) {
       .duration(500)
       .style("fill-opacity", 1.0)
       .attr("x", function(d) { return x(d.points) + pos_offset(d.points); });
+
+  if (max != 0) {
+      chart.append("line")
+          .attr("x1", textWidth + x(max))
+          .attr("x2", textWidth + x(max))
+          .attr("y1", 0)
+          .attr("y2", height)
+          .style({'stroke': 'green', 'stroke-width': 2});
+      chart.append("text")
+          .attr("x", textWidth + x(max) + (max > 0 ? -10 : 10))
+          .attr("y", height - 10)
+          .attr("text-anchor", max > 0 ? "end" : "start")
+          .style("fill", "green")
+          .text("Max: " + max);
+  }
+
 
   // ENTER+UPDATE
 

@@ -63,7 +63,7 @@ class EventSlide extends Slide
     var $event2;
     var $max;
 
-    function EventSlide($t, $e, $e2 = null, $m = -1) {
+    function EventSlide($t, $e, $e2 = null, $m = 0) {
         $this->title = $t;
         $this->event = $e;
         $this->event2 = $e2;
@@ -71,23 +71,12 @@ class EventSlide extends Slide
     }
 
     function printHtml() {
-        $avg = 0;
-
         if (is_null($this->event2)) {
-            chart(getEventPoints(getEventNumber($this->event)));
-            $avg = getAvgEventPoints(getEventNumber($this->event));
+            chart(getEventPoints(getEventNumber($this->event)), 0, null, $this->max);
         }
         else {
             chart(getEventPoints(getEventNumber($this->event),
-                                 getEventNumber($this->event2)));
-            $avg = getAvgEventPoints(getEventNumber($this->event),
-                                     getEventNumber($this->event2));
-        }
-        if ($this->max != -1) {
-           echo "<br><span class=maxavg>Maxprickar: $this->max\n</span>\n";
-        }
-        if ($GLOBALS['display_average']) {
-            printf("<br><span class=maxavg>Medelprickar: %01.1f\n</span>", $avg);
+                                 getEventNumber($this->event2)), 0, null, $this->max);
         }
     }
 }
