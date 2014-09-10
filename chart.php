@@ -76,16 +76,30 @@ function sign(x) {
     return (x >= 0) ? 1 : -1;
 }
 
-function pos_offset(p) {
-    var w = Math.abs(x(p) - x(0));
-    // Try to move text outside of graph bars if it does not fit
-    var maxw = p < 0 ? 20 : 10;
-    var off = p < 0 ? -5 : -3;
-    offset = -3 * sign(p) * ((w > maxw) ? 1 : off);
-    if (x(p) > width) {
-        offset -= 20;
+function bar_width(p) {
+    return Math.abs(x(p) - x(0));
+}
+
+function text_pos(p) {
+    // Guess text_width, should use getBBox()
+    var text_width = 8;
+    if (p < 0) {
+        text_width += 8;
     }
-    return offset;
+    if (Math.abs(p) >= 10) {
+        text_width += 8;
+    }
+    // Try to move text outside of graph bars if it does not fit
+    var off = p < 0 ? -5 : -3;
+    offset = -3 * sign(p) * ((bar_width(p) > text_width) ? 1 : off);
+    if (p >= 0) {
+        offset -= text_width;
+    }
+    var maxRight = width - textWidth - 16;
+    if (x(p) + offset > maxRight) {
+        return maxRight;
+    }
+    return x(p) + offset;
 }
 
 var x = d3.scale.linear()
@@ -119,22 +133,22 @@ function update(data) {
     .transition()
       .duration(1000)
       .attr("x", function(d) { return d.points < 0 ? x(d.points) : x(0); })
-      .attr("width", function(d) { return Math.abs(x(d.points) - x(0)); });
+      .attr("width", function(d) { return bar_width(d.points); });
 
-  row.selectAll("text.number").data(data, ƒ('index'))
-    .transition()
+  var xxx = row.selectAll("text.number").data(data, ƒ('index'));
+    xxx.transition()
       .duration(1000)
       .tween("text", function(d) {
         var i = d3.interpolateRound(parseInt(this.textContent), d.points);
         return function(t) {
           var num = i(t);
-          if (!isNaN(num))
+          if (!isNaN(num)) {
             this.textContent = num;
+          }
         }
       })
-      .attr("text-anchor", function(d) { return d.points < 0 ? "start" : "end"; })
-      .attr("x", function(d) { return x(d.points) + pos_offset(d.points); });
-
+      .attr("x", function(d) { return text_pos(d.points); });
+    
   // ENTER
   var bg_row = row.enter().append("g");
   bg_row.attr("transform", function(d, i) { return "translate(0, " + i * barHeight + ")"; });
@@ -168,22 +182,21 @@ function update(data) {
     .transition()
       .duration(500)
       .attr("x", function(d) { return d.points < 0 ? x(d.points) : x(0); })
-      .attr("width", function(d) { return Math.abs(x(d.points) - x(0)); });
+      .attr("width", function(d) { return bar_width(d.points); });
 
   enter_graph
     .append("text")
       .classed("number", true)
       .style("fill-opacity", 0.0)
-      .attr("x", x(0) + pos_offset(0))
+      .attr("x", function(d) { return text_pos(0) + (d.points < 0 ? -16 : 0); })
       .attr("y", barHeight / 2)
       .attr("dy", ".35em")
       .attr("fill", "white")
-      .attr("text-anchor", function(d) { return d.points < 0 ? "start" : "end"; })
       .text(function(d) { return d.points; })
     .transition()
       .duration(500)
       .style("fill-opacity", 1.0)
-      .attr("x", function(d) { return x(d.points) + pos_offset(d.points); });
+      .attr("x", function(d) { return text_pos(d.points); });
 
   if (max != 0) {
       chart.append("line")
