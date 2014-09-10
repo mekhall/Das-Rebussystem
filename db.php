@@ -46,6 +46,8 @@ function getDb()
        $teamn = 0;
     }
 
+    // Fix database if new teams or events are added.
+    // Can only handle append at end so pretty useless.
     if (count($GLOBALS['teams']) > $teamn) {
         $values = array();
         for ($event = 0; $event < count($GLOBALS['events']); ++$event) {
@@ -97,7 +99,7 @@ function setPoints($team, $event, $points)
         return;
     }
 
-     $db->query("UPDATE rebus SET event$event=$points WHERE team=$team");
+    $db->query("UPDATE rebus SET event$event=$points WHERE team=$team");
 }
 
 function getPoints($team, $event)
@@ -111,13 +113,28 @@ function getPoints($team, $event)
 
 function getEventPoints($event, $event2 = null)
 {
-    for ($team = 0; $team < count($GLOBALS['teams']); ++$team) {
+    $db = getDb();
+    if (is_null($event2)) {
+        $q = "SELECT team, event$event FROM rebus";
+    }
+    else {
+        $q = "SELECT team, event$event, event$event2 FROM rebus";
+    }
+    $rows = $db->query($q);
+    while ($row = $rows->fetchArray()) {
+        $v = $row[1];
+        if (is_null($v)) {
+            $v = 0;
+        }
         if (is_null($event2)) {
-            $result[$team] = getPoints($team, $event);
+            $result[$row[0]] = $v;
         }
         else {
-            $result[$team] = array(getPoints($team, $event),
-                                   getPoints($team, $event2));
+            $v1 = $row[2];
+            if (is_null($v1)) {
+                $v1 = 0;
+            }
+            $result[$row[0]] = array($v, $v1);
         }
     }
     return $result;
