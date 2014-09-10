@@ -10,6 +10,10 @@ foreach ($parts as $part => $data) {
     if (is_string($data) and array_key_exists($data, $events)) {
         array_push($actions, new EventSlide($events[$data], $data));
     }
+    elseif (is_string($data) and preg_match('/^\*sorted\*(.+)/', $data, $matches)) {
+      $e = $matches[1];
+      array_push($actions, new EventSlide($events[$e], $e, null, 0, 1));
+    }
     elseif (is_string($data) and preg_match('/^\*picture\*(.+):(.+)/', $data, $matches)) {
         $pic = $matches[2];
         if (checkPic($pic)) {
