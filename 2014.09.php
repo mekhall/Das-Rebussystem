@@ -4,20 +4,24 @@ require_once 'slide.php';
 
 $teams = array(
                // Name => (number, number of members, flair)
-               'Öset Luhring'           => array(1, 1),
-               'Enar Åkered'            => array(2, 1),
-               'Katlas kompisar'        => array(3, 1),
-               'Sötgötarna'             => array(4, 1),
-               'Ibsens kusiner'         => array(5, 1),
-               'Så att säga'            => array(6, 1),
-               'Webus express'          => array(7, 1),
+               // Available flairs: <small>, <blue>, <smallblue>
+               'Öset Luhring'           => array(1, 8),
+               'Enar Åkered'            => array(2, 7),
+               'Katlas kompisar'        => array(3, 1, '<small>'),
+               'Sötgötarna'             => array(4, 9),
+               'Ibsens kusiner'         => array(5, 8),
+               'Så att säga'            => array(6, 5),
+               'Webus express'          => array(7, 5),
                '1 till 2 till'          => array(8, 1),
-               'RRL för Claes Elfsberg' => array(9, 1),
-               'Ingen Aning'            => array(10, 1),
+               'RRL för Claes Elfsberg' => array(9, 6),
+               'Wargen'                 => array(10, 1),
                'Psst!'                  => array(11, 1),
-               'Puh - Det mörka hotet'  => array(12, 1),
-               'SK2:AIRR'               => array(13, 1),
-               'Risk för dåligt väglag' => array(15, 1),
+               'Puh - Det mörka hotet'  => array(12, 3, '<small>'),
+               'SK2:AIRR'               => array(13, 8),
+               'Snorkråkorna & Elin'    => array(14, 1),
+               'Risk för dåligt väglag' => array(15, 5),
+               'Webus excess'           => array(16, 5),
+               'Murphys lag'            => array(17, 8),
                'Rattmuffarna'           => array(42, 1)
                );
 
@@ -141,18 +145,21 @@ $parts = array(
 
     'Stjälppyssel' => array('ÖppPyss', 'P POP', 'P MAL', 'P BIL', 'P ZOM', 'P JAP'),
 
-    'Totalt efter stjälppyssel' => array('*sum*', 'Totalt efter Etapp 7', 'Stjälppyssel'),
+    'Totalt efter stjälppyssel' => array('*sumcomp*', 'Totalt efter Etapp 7', 'Stjälppyssel'),
 
     'Etapp 8' => array('R 8', 'TP 8', 'FP 8', 'Tid M'),
 
-    'Stil',
+    // Stilpris
+    '*sorted*Stil',
 
+    // Plockpris
     'Plock totalt' =>
     array('*sum*',
           'TP 1', 'TP 2', 'TP 3', 'TP 4', 'TP 5', 'TP 6', 'TP 7', 'TP 8',
           'FP 1', 'FP 2', 'FP 3', 'FP 4', 'FP 5', 'FP 6', 'FP 7', 'FP 8',
           'ÖppPlk', 'StjPlk'),
 
+    // Pysselpriset
     'Pyssel totalt' =>
     array('*sum*',
           'P BOK', 'P BIO', 'P BAJ', 'P FOT',
@@ -161,6 +168,7 @@ $parts = array(
           'P MUS', 'P SUB',
           'ÖppPyss', 'P POP', 'P MAL', 'P BIL', 'P ZOM', 'P JAP'),
 
+    // Rebuspriset
     'Rebusar totalt' =>
     array('*sum*',
           'ÖppReb', 'S 1', 'S 2', 'S 3', 'S 4',
@@ -168,7 +176,16 @@ $parts = array(
           'R 1', 'R 2', 'R 3', 'R 4',
           'R 5', 'R 6', 'R 7', 'R 8'),
 
+    // Förstapriset
+    // Ständiga tvåan
+    // Sura trean
+    // Mittenpriset
+    // Bästa småbil
+    // Blåbärspriset
+    // Bästa utländska lag
     'Totalt' => array('*sum*', 'Totalt efter stjälppyssel', 'Etapp 8', 'Stil')
+
+    // Backpriset
     );
 
 $maxPoints =
@@ -182,7 +199,7 @@ $maxPoints =
     'P MAT' => 14,
     'P VIP' => 10,
     'P PUP' => 15,
-    'P SPO' => 18,
+    'P SPO' => 15,
     'P FEM' => 20,
     'P KRY' => 20,
     'P MUS' => 20,
@@ -196,9 +213,8 @@ $maxPoints =
 
 $info =
   array(
-        'P FEM' => '<red>tio alternativ, 2 per fel',
+        'P FEM' => '<red>2 per fel',
         'P KRY' => '<red>2 per fel',
-        'P ZOM' => '<red>2 per fel',
         'P POP' => '<red>-1 per rätt',
         'P MAL' => '<red>-1 per rätt',
         'P BIL' => '<red>-1 per rätt',
@@ -211,7 +227,7 @@ $info =
         'StjPlk' => '-10 per plock',
         'Tid S' => '1 per minut',
         'Tid L' => '1 per minut',
-        'Tid M' => '1 per minut, 2 efter 17:45, 4 efter 18:15, 8 efter 18:45',
+        'Tid M' => '1 per minut, 2 efter 17:30',
         'R [0-9]+' => '25 klippt hjälp, 45 klippt nöd, felaktiga kontrollbokstäver 25',
         'S [0-9]+' => '-10 korrekt motiverad lösning',
         'FP [0-9]+' => '10 missat plock, 20 falskt plock',
