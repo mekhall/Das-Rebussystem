@@ -22,6 +22,7 @@ $teams = array(
                'Risk för dåligt väglag' => array(15, 5),
                'Webus excess'           => array(16, 5),
                'Murphys lag'            => array(17, 8),
+               'Blancos Barlast'        => array(18, 1),
                'Rattmuffarna'           => array(42, 1)
                );
 
