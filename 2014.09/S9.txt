@@ -2,7 +2,7 @@
 \op <->
 GKALPOKROKBO
 \op i
-OKROK I GKALPBO
+OKROKIGKALPBO
 \op +s
 OKROKIGSKALPBO
 \op !
@@ -10,6 +10,6 @@ RAKLUS
 \op -s
 RAKLU
 \op i
-AK I RLU
+AKIRLU
 \op <->
 \ort ULRIKA

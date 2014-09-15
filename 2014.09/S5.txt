@@ -2,9 +2,9 @@
 \op <->
 TUNGKONPTKTPULÅDE
 \op n->m, t->a, +s, +r
-TUNG KOMPAKT PULSÅDER
+TUNGKOMPAKTPULSÅDER
 \op !
-MASSIV ARTÄR
+MASSIVARTÄR
 \op <->
 RÄTRAVISSAM
 \op -r, -s, a->t, m->n

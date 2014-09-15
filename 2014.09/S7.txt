@@ -3,7 +3,7 @@
 VIVI
 \op i
 VIVII
-\op ! rom
+\op ! (rom)
 VI7
-\op ! per
+\op ! (per)
 \ort VIN
