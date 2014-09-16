@@ -24,7 +24,7 @@ function setData(team, event, data) {
     var id = getId(team, event);
     var c;
 
-    if (data == null) {
+    if (data == null || data == '') {
         c = 'red';
         $(id).set('value', '');
     }

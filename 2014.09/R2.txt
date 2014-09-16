@@ -1,5 +1,5 @@
 \rebus OZONMBILT
-\op !
+\op ! (kemi)
 OOOMBILT
 \op om
 OBILTO

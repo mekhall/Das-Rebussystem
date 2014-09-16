@@ -56,9 +56,7 @@ $events = array(
     'StjPlk' => 'Stjälpplock',
 
     // Heldagspyssel
-    'P BOK' => 'Bookie Wookie',
     'P BAJ' => 'Das Dass - ett skitpyssel',
-    'P FOT' => 'Historiska ögonblick',
     'P ASS' => 'Associera mera',
     'P MAT' => 'Matiga hen',
     'P SPO' => 'The name of the game',
@@ -97,6 +95,8 @@ $events = array(
     'TP 6' => 'Tallriksplock 6',
     'TP 7' => 'Tallriksplock 7',
     'TP 8' => 'Tallriksplock 8',
+    'TP 9' => 'Tallrikstema',
+
     'FP 1' => 'Fotoplock 1',
     'FP 2' => 'Fotoplock 2',
     'FP 3' => 'Fotoplock 3',
@@ -110,9 +110,9 @@ $events = array(
 $parts = array(
     '*picture*Rebusrally 2014-09:trial-error.gif',
 
-    'Etapp 1' => array('Tid S', 'R 1', 'P BOK', 'P BAJ', 'TP 1', 'FP 1'),
+    'Etapp 1' => array('Tid S', 'R 1', 'P BAJ', 'TP 1', 'FP 1'),
 
-    'Etapp 2' => array('R 2', 'P FOT', 'P ASS', 'TP 2', 'FP 2'),
+    'Etapp 2' => array('R 2', 'P ASS', 'TP 2', 'FP 2'),
     'Totalt efter Etapp 2' => array('*sumcomp*', 'Etapp 1', 'Etapp 2'),
 
     'Etapp 3' => array('R 3', 'P MAT', 'P SPO', 'TP 3', 'FP 3'),
@@ -148,7 +148,7 @@ $parts = array(
 
     'Totalt efter stjälppyssel' => array('*sumcomp*', 'Totalt efter Etapp 7', 'Stjälppyssel'),
 
-    'Etapp 8' => array('R 8', 'TP 8', 'FP 8', 'Tid M'),
+    'Etapp 8' => array('R 8', 'TP 8', 'TP 9', 'FP 8', 'Tid M'),
 
     // Stilpris
     '*sorted*Stil',
@@ -157,13 +157,14 @@ $parts = array(
     'Plock totalt' =>
     array('*sum*',
           'TP 1', 'TP 2', 'TP 3', 'TP 4', 'TP 5', 'TP 6', 'TP 7', 'TP 8',
+          'TP 9',
           'FP 1', 'FP 2', 'FP 3', 'FP 4', 'FP 5', 'FP 6', 'FP 7', 'FP 8',
           'ÖppPlk', 'StjPlk'),
 
     // Pysselpriset
     'Pyssel totalt' =>
     array('*sum*',
-          'P BOK', 'P BIO', 'P BAJ', 'P FOT',
+          'P BIO', 'P BAJ',
           'P ASS', 'P BON', 'P MAT', 'P VIP',
           'P PUP', 'P SPO', 'P FEM', 'P KRY',
           'P MUS', 'P SUB',
@@ -191,10 +192,8 @@ $parts = array(
 
 $maxPoints =
   array(
-    'P BOK' => 10,
     'P BIO' => 11,
     'P BAJ' => 10,
-    'P FOT' => 13,
     'P ASS' => 12,
     'P BON' => 10,
     'P MAT' => 14,
@@ -232,6 +231,7 @@ $info =
         'R [0-9]+' => '25 klippt hjälp, 45 klippt nöd, felaktiga kontrollbokstäver 25',
         'S [0-9]+' => '-10 korrekt motiverad lösning',
         'FP [0-9]+' => '10 missat plock, 20 falskt plock',
+        'TP 9' => '-5 per korrekt tema',
         'TP [0-9]+' => '5 missat plock, 10 falskt plock'
         );
 ?>
