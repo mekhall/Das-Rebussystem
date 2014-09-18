@@ -123,17 +123,11 @@ function getEventPoints($event, $event2 = null)
     $rows = $db->query($q);
     while ($row = $rows->fetchArray()) {
         $v = $row[1];
-        if (is_null($v)) {
-            $v = 0;
-        }
         if (is_null($event2)) {
             $result[$row[0]] = $v;
         }
         else {
             $v1 = $row[2];
-            if (is_null($v1)) {
-                $v1 = 0;
-            }
             $result[$row[0]] = array($v, $v1);
         }
     }
