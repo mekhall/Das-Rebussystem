@@ -85,7 +85,7 @@ function text_pos(p) {
     var text_width = 9 * p.toString().length;
     // Try to move text outside of graph bars if it does not fit
     var off = p < 0 ? -6 : -3;
-    offset = -3 * sign(p) * ((bar_width(p) > text_width) ? 1 : off);
+    var offset = -3 * sign(p) * ((bar_width(p) > text_width) ? 1 : off);
     if (p >= 0) {
         offset -= text_width;
     }
