@@ -6,4 +6,4 @@ TVEKANDEAMFORA
 \op !
 VELKRUS
 \op <->
-SURKLEV
+\ort SURKLEV

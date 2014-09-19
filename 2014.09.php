@@ -83,6 +83,7 @@ $events = array(
     'P JAP' => 'Japaner, japaner, japaner',
     'ÖppPyss' => 'Öppnat stjälppysselkuvert',
 
+    'Fläsk' => 'Fläskharen',
     'Stil' => 'Stil och finess',
     'Tid S' => 'Tidsprickar vid Start',
     'Tid L' => 'Tidsprickar vid Lunch',
@@ -150,6 +151,8 @@ $parts = array(
 
     'Etapp 8' => array('R 8', 'TP 8', 'TP 9', 'FP 8', 'Tid M'),
 
+    'Fläsk',
+
     // Stilpris
     '*sorted*Stil',
 
@@ -185,7 +188,7 @@ $parts = array(
     // Bästa småbil
     // Blåbärspriset
     // Bästa utländska lag
-    'Totalt' => array('*sum*', 'Totalt efter stjälppyssel', 'Etapp 8', 'Stil')
+    'Totalt' => array('*sum*', 'Totalt efter stjälppyssel', 'Etapp 8', 'Fläsk', 'Stil')
 
     // Backpriset
     );
