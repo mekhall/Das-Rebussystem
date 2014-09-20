@@ -5,25 +5,25 @@ require_once 'slide.php';
 $teams = array(
                // Name => (number, number of members, flair)
                // Available flairs: <small>, <blue>, <smallblue>
-               'Öset Luhring'           => array(1, 8),
-               'Enar Åkered'            => array(2, 7),
-               'Katlas kompisar'        => array(3, 1, '<small>'),
+               'Öset Luhring'           => array(1, 7),
+               'Enar Åkered'            => array(2, 8),
+               'Katlas kompisar'        => array(3, 6),
                'Sötgötarna'             => array(4, 9),
-               'Ibsens kusiner'         => array(5, 8),
-               'Så att säga'            => array(6, 5),
-               'Webus express'          => array(7, 5),
-               '1 till 2 till'          => array(8, 1),
+               'Ibsens kusiner'         => array(5, 9),
+               'Så att säga'            => array(6, 3, '<small>'),
+               'Webus express'          => array(7, 7),
+               '1 till 2 till'          => array(8, 9),
                'RRL för Claes Elfsberg' => array(9, 6),
-               'Wargen'                 => array(10, 1),
-               'Psst!'                  => array(11, 1),
-               'Puh - Det mörka hotet'  => array(12, 3, '<small>'),
+               'Wargen'                 => array(10, 5, '<small>'),
+               'Psst!'                  => array(11, 7),
+               'Puh - Det mörka hotet'  => array(12, 7),
                'SK2:AIRR'               => array(13, 8),
-               'Snorkråkorna & Elin'    => array(14, 1),
-               'Risk för dåligt väglag' => array(15, 5),
-               'Webus excess'           => array(16, 5),
+               'Snorkråkorna & Elin'    => array(14, 5, '<smallblue>'),
+               'Risk för dåligt väglag' => array(15, 9),
+               'Webus excess'           => array(16, 5, '<small>'),
                'Murphys lag'            => array(17, 8),
-               'Blancos Barlast'        => array(18, 1),
-               'Rattmuffarna'           => array(42, 1)
+               'Blancos Barlast'        => array(18, 3, '<small>'),
+               'Rattmuffarna'           => array(42, 9)
                );
 
 $events = array(
@@ -110,6 +110,7 @@ $events = array(
 
 $parts = array(
     '*picture*Rebusrally 2014-09:trial-error.gif',
+    '*picture*Start:start.jpg',
 
     'Etapp 1' => array('Tid S', 'R 1', 'P BAJ', 'TP 1', 'FP 1'),
 
@@ -154,6 +155,10 @@ $parts = array(
     'Fläsk',
 
     // Stilpris
+    '*picture*Minions:stil.jpg',
+    '*picture*Festkort:rostkort.jpg',
+    '*picture*Spel:spel.jpg',
+    '*picture*Snormuffins:snormuffins.jpg',
     '*sorted*Stil',
 
     // Plockpris
@@ -188,7 +193,9 @@ $parts = array(
     // Bästa småbil
     // Blåbärspriset
     // Bästa utländska lag
-    'Totalt' => array('*sum*', 'Totalt efter stjälppyssel', 'Etapp 8', 'Fläsk', 'Stil')
+    'Totalt' => array('*sum*', 'Totalt efter stjälppyssel', 'Etapp 8', 'Fläsk', 'Stil'),
+
+    '*picture*Magnus bil:back.jpg'
 
     // Backpriset
     );
