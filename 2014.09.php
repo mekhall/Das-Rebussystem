@@ -156,7 +156,7 @@ $parts = array(
 
     // Stilpris
     '*picture*Minions:stil.jpg',
-    '*picture*Festkort:rostkort.jpg',
+    '*picture*Festkort:röstkort.jpg',
     '*picture*Spel:spel.jpg',
     '*picture*Snormuffins:snormuffins.jpg',
     '*sorted*Stil',

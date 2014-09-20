@@ -17,8 +17,10 @@ function dcopy($src, $ddir) {
   copy($src, "$ddir/$base");
 }
 
-dcopy("style.css", $dir);
+dcopy(NAME . ".css", $dir);
+dcopy("tratex_vit.ttf", $dir);
 dcopy("mootools.js", $dir);
+dcopy("d3.v3.min.js", $dir);
 
 foreach (glob(PICTURE_PATH . "*.jpg") as $f) {
   dcopy($f, $dir);
@@ -32,7 +34,7 @@ foreach (glob(PICTURE_PATH . "*.gif") as $f) {
 
 chdir($dir);
 
-$GLOBALS['index_links'] = 1;
+$GLOBALS['index_links'] = 0;
 $GLOBALS['rebus_split'] = 0;
 
 $static = 1;
