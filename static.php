@@ -48,7 +48,8 @@ for ($xnr = 0; $xnr < count($actions); ++$xnr) {
     $out = ob_get_clean();
     $out = preg_replace('/present.php\?nr=(\d+)/', 'page$1.html', $out);
     $out = preg_replace('/present.php\?nr=(.*);/', 'page$1 + ".html";', $out);
-    $out = preg_replace('#' . PICTURE_URL . '/?#', '', $out);
+    $out = preg_replace('#' . PICTURE_URL . '\\/?#', '', $out);
+    $out = preg_replace('#' . NAME . '\\\\/#', '', $out);
     file_put_contents("page$nr.html", $out);
 }
 
