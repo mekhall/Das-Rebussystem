@@ -21,12 +21,12 @@ if (array_key_exists('static', $GLOBALS) == 0 && $check == 0) {
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+<meta charset="utf-8">
 <title>Rebusrally <?php echo NAME ?></title>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script src="mootools.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo NAME ?>.css">
+<script src="mootools.js"></script>
 <script src="d3.v3.min.js"></script>
-<script type="text/javascript">
+<script>
 var maxLine = 0;
 var line = 0;
 var check = 0;
@@ -131,7 +131,7 @@ function next(nr, maxLine)
   </td>
 <?php
   if ($GLOBALS['display_logo']) {
-    $p = "logga.gif";
+    $p = "logga";
     if (checkPic($p)) {
       echo "<td class=header align=right valign=top><img src=\"$p\" class=logo alt=logo></td>\n";
     }

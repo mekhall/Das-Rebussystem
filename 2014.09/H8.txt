@@ -1,0 +1,7 @@
+\rebus OKUK
+\op -o
+KUK
+!
+KÖN
+\op +o
+\ort KOÖN

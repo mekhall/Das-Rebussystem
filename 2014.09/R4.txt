@@ -1,0 +1,11 @@
+\rebus NENSSKINKRNTYDD
+\op i
+INKRNTINENSSKYDD
+\op r->o
+INKONTINENSSKYDD
+\op !
+TENA
+\op om
+TAOMEN
+\op o->r
+\ort TARMEN

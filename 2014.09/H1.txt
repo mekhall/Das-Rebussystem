@@ -1,0 +1,7 @@
+\rebus CAREET
+\op r->f
+CAFEET
+\op !
+FIKET
+\op f->r
+\ort RIKET

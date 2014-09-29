@@ -1,0 +1,11 @@
+\rebus GÅRAPÄSMOSOK
+\op <->
+KOSOMSÄPARÅG
+\op +t, +l
+KOSOMSLÄPARTÅG
+\op !
+NÖTLOK
+\op -t, -l
+NÖOK
+\op <->
+\ort KOÖN

@@ -1,0 +1,15 @@
+\rebus OBKORKOPLAKG
+\op <->
+GKALPOKROKBO
+\op i
+OKROKIGKALPBO
+\op +s
+OKROKIGSKALPBO
+\op !
+RAKLUS
+\op -s
+RAKLU
+\op i
+AKIRLU
+\op <->
+\ort ULRIKA

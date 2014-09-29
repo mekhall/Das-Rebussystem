@@ -1,0 +1,11 @@
+\rebus GSVSTJÄLASKRYVKLEMP
+\op i
+STJÄLASKRYVKLIGSVEMP
+\op e->a, v->n
+STJÄLASKRYNKLIGSVAMP
+\op !
+SNOMURKLA
+\op om
+SURKLAN
+\op a->e, n->v
+\ort SURKLEV

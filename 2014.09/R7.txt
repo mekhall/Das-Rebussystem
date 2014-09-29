@@ -1,0 +1,9 @@
+\rebus NEKOKÄT
+\op i
+KOKÄINET
+\op -prickar
+KOKAINET
+\op !
+DROGEN
+\op +prickar
+\ort DRÖGEN

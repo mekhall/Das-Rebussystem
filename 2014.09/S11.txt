@@ -1,0 +1,9 @@
+\rebus TYCKMÄTA
+\op +r, +r, +e
+TRYCKMÄTARE
+\op !
+BAROMETER
+\op -r, -r, -e
+BAOMET
+\op om
+\ort BETA

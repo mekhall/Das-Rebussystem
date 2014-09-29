@@ -7,10 +7,10 @@ echo <<<EOT
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+<meta charset="utf-8">
 <title>Rebusrally rättning</title>
-<script language="javascript" type="text/javascript" src="mootools.js"></script>
-<script type="text/javascript">
+<script src="mootools.js"></script>
+<script>
 
 var sEvent = 0;
 var sTeam = 0;
@@ -24,26 +24,27 @@ function setData(team, event, data) {
     var id = getId(team, event);
     var c;
 
-    if (data == null) {
-        c = 'red';
-        $(id).set('value', '');
+    data = String(data);
+    if (data == 'null') {
+        data = '';
     }
-    else if ($(id).get('value') != data) {
-        c = 'green';
+
+    if (team == sTeam && event == sEvent) {
+        c = 'cyan';
+        if (data != lastData) {
+            $('status').set('html',
+                            '<font color=red>WARNING: DB updated with value \''
+                            + data + '\'</font>');
+        }
+    }
+    else if (data == '' || $(id).get('value') != data) {
+        c = data == '' ? 'red' : 'green';
         if (team == sTeam && event == sEvent) {
             // Dont overwrite selected data
-            if (data != lastData) {
-                $('status').set('html',
-                                '<font color=red>WARNING: DB updated with value '
-                                + data + '</font>');
-            }
         }
         else {
             $(id).set('value', data);
         }
-    }
-    else if (team == sTeam && event == sEvent) {
-        c = 'cyan';
     }
     else {
         c = 'white';
@@ -61,7 +62,6 @@ var updateRequest = new Request.JSON({
         });
     }
 });
-
 
 window.addEvent('domready', function() {
     var lastBg = '';
@@ -113,7 +113,7 @@ echo <<<EOT
         if (updateEvent >= maxEvent) {
             updateEvent = 0;
         }
-    }, 1000);
+    }, 500);
 
     function setCursor() {
         var i = info[sEvent];
@@ -127,7 +127,9 @@ echo <<<EOT
             }
             max = max + 'max: ' + maxpoints[sEvent];
         }
-        $('status').set('html', teams[sTeam] + '<br><br>' + events[sEvent] + '<br><br>' + i + max);
+        $('team').set('html', teams[sTeam]);
+        $('event').set('html', events[sEvent]);
+        $('status').set('html', i + max);
 
         if (lastBg != '') {
             var lastid = getId(lastTeam, lastEvent);
@@ -207,6 +209,8 @@ echo <<<EOT
 </head>
 EOT;
 
+echo '<div id=team></div><br><br>';
+echo '<div id=event></div><br><br>';
 echo '<div id=status></div>';
 
 echo '<table width=1100>';
@@ -246,7 +250,7 @@ foreach ($GLOBALS['teams'] as $t => $v) {
             $p = '';
             $style = 'style="background-color:red"';
         }
-        echo "<td><input class=box id=t${tnr}e${enr} type=text maxlength=6 size=3 name=e$enr value=\"$p\" $style></td>\n";
+        echo "<td><input class=\"box\" id=\"t${tnr}e${enr}\" type=\"text\" maxlength=4 size=3 value=\"$p\" $style></td>\n";
         ++$enr;
     }
     echo "</tr>";

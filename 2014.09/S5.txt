@@ -1,0 +1,11 @@
+\rebus EDÅLUPTKTPNOKGNUT
+\op <->
+TUNGKONPTKTPULÅDE
+\op n->m, t->a, +s, +r
+TUNGKOMPAKTPULSÅDER
+\op !
+MASSIVARTÄR
+\op <->
+RÄTRAVISSAM
+\op -r, -s, a->t, m->n
+\ort RÄTTVISAN

@@ -6,8 +6,9 @@ Skapat av Trial and Error 2011
 Installation
 ------------
 
-För att använda detta system behövs en webbserver med php-stöd
-samt php-sqlite. Lägg hela skiten i lämplig katalog och sätt igång!
+För att använda detta system behövs en webbserver med php-stöd samt
+php-sqlite och php-json. Lägg hela skiten i lämplig katalog och sätt
+igång!
 
 
 Översikt
@@ -29,7 +30,8 @@ Välj ett namn på rallyt, tex ht2011, och lägg in det i `rebus_settings.php`.
 All information om ett specifikt rally finns i en fil med namnet `ht2011.php`.
 Alla data som hör till rallyt finns i en katalog med namnet `ht2011`.
 
-I ht2011.php filen finns en samling arrayer med data. Dessa är relativt självförklarande, men här är ändå en förklaring:
+I ht2011.php filen finns en samling arrayer med data. Dessa är
+relativt självförklarande, men här är ändå en förklaring:
 
 * teams: En array som mappar lagnamn mot lagnummer och antal lagmedlemmar.
 Antal lagmedlemmar behöver endast sättas till rätt antal om man vill
@@ -69,13 +71,13 @@ summeringsslide som heter 'Summering <etapp>'. Om namnet på etappen är
 'Etapp X' och det finns en bild som heter `etappX.xxx` (xxx är jpg,
 png eller gif) kommer bilden att visas i en egen slide. På samma sätt
 visas bilder för pyssel och plock om det finns en bild med namnet
-`gren<grenkortnamn>.xxx`.
+`gren<grenkortnamn>.xxx` eller bara `<grenkortnamn>.xxx`.
 
 Det speciella grennamnet `*sum*` används för att summera resten av
 grenarna i en array och presentera resultat i en sorterad lista. 
 På detta sätt kan man summera olika etapper, även
 med fördel rekursivt. Man kan alternativt använda `*sumcomp*`, effekten
-blir liknande som med `*sum*` men dessutom visas pilar som visar hur
+blir liknande som med `*sum*` men dessutom görs en animation som visar hur
 lagens position har ändrats jämfört med den första sliden efter
 `*sumcomp*`.
 
@@ -90,6 +92,10 @@ eller en speciallösning av en rebus:
 eller en event summering (första posten efter *esum* blir titeln):
 
     array(*esum*, 'Stjälpplock totalt', 'StjPlk', 'ÖppPlk')
+
+En gren som presenteras som sorterad (kan används för tex stilpris):
+
+    *sorted*Stil
 
 Detta verkade nog mycket mer komplicerat än det är, utgå från en gammal
 fil så går det lätt. Använd webserverns log för att hitta eventuella
@@ -213,4 +219,4 @@ kan man få länkar till individuella sidor i presentationen
 genom att sätta `index_links` till 1.
 
 Det mesta av det grafiska går att justera med css. Just nu är det
-en css-mall som heter `style.css`.
+en css-mall som heter `<rallynamn>.css`.

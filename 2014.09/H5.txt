@@ -1,0 +1,7 @@
+\rebus KÄRRIN
+\op +g
+KÄRRING
+\op !
+HAGGA
+\op -g
+\ort HAGA

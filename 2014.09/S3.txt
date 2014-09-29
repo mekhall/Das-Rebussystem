@@ -1,0 +1,11 @@
+\rebus RÅLSVÖ
+\op ö->a
+RÅLSVA
+\op <->
+AVSLÅR
+\op !
+NEKAR
+\op <->
+RAKEN
+\op a->ö
+\ort RÖKEN

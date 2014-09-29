@@ -1,0 +1,7 @@
+\rebus OGIDTGVINNA
+\op d->f, g->k
+OGIFTKVINNA
+\op !
+FRÖKEN
+\op f->d, k->g
+\ort DRÖGEN

@@ -1,50 +1,47 @@
+@font-face {
+  font-family: "TratexVit";
+  src: url("tratex_vit.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TratexSvart";
+  src: url("tratex_svart.ttf") format("truetype");
+}
+
 body {
     font-family: Arial;
     font-size: 12px;
-    background-color: #aebddb;
+    background-color: #303030;
     margin-left: 0px;
     margin-right: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 td {
-    font-family: Arial;
     font-size: 18px;
-    color: #000000;
-}
-.maxavg {
-    font-family: Arial;
-    font-style: italic;
-    font-size: 13px;
-    color: #334450;
+    color: #f0f0f0;
 }
 a {
-    font-family: Arial;
     font-size: 12px;
     text-decoration: none;
     color: #334450;
 }
 .tr_odd {
-    background-color: #becdeb;
+    background-color: #303030;
 }
 .tr_even {
-    background-color: #aebddb;
+    background-color: #404040;
 }
-.tr_odd td, .tr_even td { 
+.tr_odd td, .tr_even td {
     padding-top: 4px;
     padding-bottom: 4px;
 }
 .rebustable {
-    background-color: #aebddb;
     padding: 20px;
     border: 0
 }
 .header {
-    background-color: #aebddb;
-/*    background-image:url('logga2.gif'); */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 5px 5px;
+    background-color: #000000;
     font-size: 18px;
     padding-left: 70px;
     padding-right: 70px;
@@ -76,6 +73,7 @@ a {
     color: #ffffff
 }
 .rebustext {
+    font-family: 'Verdana';
     font-size: xx-large;
     text-align: left;
 }
@@ -87,8 +85,9 @@ a {
     padding: 10px;
     text-align: center;
 }
-.rebusortSvart {
+.rebusortVarning {
     font-family: TratexSvart, 'Arial Black';
+    color: #000000;
     border:4px solid #c8002d;
     margin:4px 0 4px 0;
     padding: 5px 20px 5px 20px;
@@ -107,7 +106,6 @@ a {
 }
 .rebusop {
     font-size: x-large;
-    font-style: italic;
     text-align: center;
 }
 .rebusmaker {
@@ -119,14 +117,22 @@ a {
     float: right;
 }
 .graph_bar {
-    fill: #000050;
+    fill: #008000;
 }
-.chart text {
+text {
     font: 16px sans-serif;
+    fill: #f0f0f0;
 }
 .graph_odd {
-    fill: #becdeb;
+    fill: #303030;
 }
 .graph_even {
-    fill: #aebddb;
+    fill: #404040;
+}
+.maxline {
+    stroke: green;
+    stroke-width: 2px;
+}
+.maxline-text {
+    fill: green;
 }

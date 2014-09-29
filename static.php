@@ -17,8 +17,10 @@ function dcopy($src, $ddir) {
   copy($src, "$ddir/$base");
 }
 
-dcopy("style.css", $dir);
+dcopy(NAME . ".css", $dir);
+dcopy("tratex_vit.ttf", $dir);
 dcopy("mootools.js", $dir);
+dcopy("d3.v3.min.js", $dir);
 
 foreach (glob(PICTURE_PATH . "*.jpg") as $f) {
   dcopy($f, $dir);
@@ -32,7 +34,7 @@ foreach (glob(PICTURE_PATH . "*.gif") as $f) {
 
 chdir($dir);
 
-$GLOBALS['index_links'] = 1;
+$GLOBALS['index_links'] = 0;
 $GLOBALS['rebus_split'] = 0;
 
 $static = 1;
@@ -46,7 +48,8 @@ for ($xnr = 0; $xnr < count($actions); ++$xnr) {
     $out = ob_get_clean();
     $out = preg_replace('/present.php\?nr=(\d+)/', 'page$1.html', $out);
     $out = preg_replace('/present.php\?nr=(.*);/', 'page$1 + ".html";', $out);
-    $out = preg_replace('#' . PICTURE_URL . '/?#', '', $out);
+    $out = preg_replace('#' . PICTURE_URL . '\\/?#', '', $out);
+    $out = preg_replace('#' . NAME . '\\\\/#', '', $out);
     file_put_contents("page$nr.html", $out);
 }
 

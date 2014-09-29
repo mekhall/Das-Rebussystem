@@ -30,13 +30,26 @@ class PictureSlide extends Slide
     var $picture;
 
     function PictureSlide($t, $p) {
+        $size = getimagesize($p);
+
         checkPic($p);
         $this->title = $t;
         $this->picture = $p;
+        $this->attr = "height=400";
+
+        $width = $size[0];
+        $height = $size[1];
+        if ($width && $height) {
+            $scale = 400.0 / $height;
+            $width *= $scale;
+            if ($width > 800) {
+                $this->attr = "width=800";
+            }
+        }
     }
 
     function printHtml() {
-        echo "<br><center><img src=\"$this->picture\" height=400></center>\n";
+        echo "<br><center><img src=\"$this->picture\" $this->attr></center>\n";
     }
 
     function getMiddle() {
@@ -50,31 +63,21 @@ class EventSlide extends Slide
     var $event2;
     var $max;
 
-    function EventSlide($t, $e, $e2 = null, $m = -1) {
+    function EventSlide($t, $e, $e2 = null, $max = 0, $sort = 0) {
         $this->title = $t;
         $this->event = $e;
         $this->event2 = $e2;
-        $this->max = $m;
+        $this->max = $max;
+        $this->sort = $sort;
     }
 
     function printHtml() {
-        $avg = 0;
-
         if (is_null($this->event2)) {
-            chart(getEventPoints(getEventNumber($this->event)));
-            $avg = getAvgEventPoints(getEventNumber($this->event));
+            chart(getEventPoints(getEventNumber($this->event)), $this->sort, null, $this->max);
         }
         else {
             chart(getEventPoints(getEventNumber($this->event),
-                                 getEventNumber($this->event2)));
-            $avg = getAvgEventPoints(getEventNumber($this->event),
-                                     getEventNumber($this->event2));
-        }
-        if ($this->max != -1) {
-           echo "<br><span class=maxavg>Maxprickar: $this->max\n</span>\n";
-        }
-        if ($GLOBALS['display_average']) {
-            printf("<br><span class=maxavg>Medelprickar: %01.1f\n</span>", $avg);
+                                 getEventNumber($this->event2)), $this->sort, null, $this->max);
         }
     }
 }
