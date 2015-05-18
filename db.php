@@ -35,6 +35,10 @@ function getDb()
         if (!is_writable(SQLITE_DB)) {
             echo("<p><font color=red>Database " . SQLITE_DB . " not writable.</font></p>\n");
         }
+        $dir = dirname(SQLITE_DB);
+        if (!is_writable($dir)) {
+            echo("<p><font color=red>Database directory " . $dir . " not writable.</font></p>\n");
+        }
         $db = new SQLite3(SQLITE_DB);
         $db->busyTimeout(1000);
         $teamn = $db->querySingle("SELECT COUNT(*) FROM rebus");
