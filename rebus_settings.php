@@ -3,6 +3,8 @@
 // Current rally name
 define('NAME', '2014.09');
 
+define('SCREENWIDTH', 1024);
+
 // Show links for every page in the presentation
 $index_links = 0;
 

@@ -16,38 +16,32 @@ function getPoint($d)
     }
 }
 
+function getInfo($teamnr, $d) {
+    $info = getTeamInfo($teamnr);
+    $info['points'] = getPoint($d);
+    $info['disabled'] = is_null($d);
+    $info['index'] = $teamnr;
+
+    preg_match_all('/<([^>]*)>/', $info['flair'], $matches);
+    foreach ($matches[1] as $f) {
+        if (checkPic($f)) {
+            $info['flair_img'] = $f;
+        }
+    }
+    return $info;
+}
+
 function chart($data, $sort = 0, $prev_data = null, $max = 0)
 {
     $json = array();
     foreach ($data as $teamnr => $d) {
-        $info = getTeamInfo($teamnr);
-        $info['points'] = getPoint($d);
-        $info['index'] = $teamnr;
-
-        preg_match_all('/<([^>]*)>/', $info['flair'], $matches);
-        foreach ($matches[1] as $f) {
-            if (checkPic($f)) {
-                $info['flair_img'] = $f;
-            }
-        }
-
-        $json[$teamnr] = $info;
+        $json[$teamnr] = getInfo($teamnr, $d);
     }
 
     $prevjson = array();
     if (!is_null($prev_data)) {
         foreach ($prev_data as $teamnr => $d) {
-            $info = getTeamInfo($teamnr);
-            $info['points'] = getPoint($d);
-            $info['index'] = $teamnr;
-
-            preg_match_all('/<([^>]*)>/', $info['flair'], $matches);
-            foreach ($matches[1] as $f) {
-                if (checkPic($f)) {
-                    $info['flair_img'] = $f;
-                }
-            }
-            $prevjson[$teamnr] = $info;
+            $prevjson[$teamnr] = getInfo($teamnr, $d);
         }
     }
 
@@ -57,11 +51,12 @@ function chart($data, $sort = 0, $prev_data = null, $max = 0)
     echo "var prevdata = " . json_encode($prevjson) . ";\n";
     echo "var sort = " . $sort . ";\n";
     echo "var max = " . $max . ";\n";
+    echo "var screenWidth = " . SCREENWIDTH . ";\n";
     echo <<<JAVASCRIPT
 
-var graphWidth = 500;
+var graphWidth = screenWidth * 0.75;
+var textWidth = screenWidth * 0.25;
 var barHeight = 30;
-var textWidth = 300;
 var width = graphWidth + textWidth;
 var height = barHeight * data.length + 30;
 
@@ -97,8 +92,12 @@ function text_pos(p) {
 }
 
 var x = d3.scale.linear()
-    .domain([Math.min(0, d3.min(data, ƒ('points')), d3.min(prevdata, ƒ('points')) || Infinity, (max < 0 ? max : Infinity)),
-             Math.max(d3.max(data, ƒ('points')), d3.max(prevdata, ƒ('points')) || -Infinity, (max > 0 ? max : -Infinity))])
+    .domain([Math.min(0, d3.min(data, ƒ('points')),
+                      d3.min(prevdata, ƒ('points')) || Infinity,
+                      (max < 0 ? max : Infinity)),
+             Math.max(d3.max(data, ƒ('points')),
+                      d3.max(prevdata, ƒ('points')) || -Infinity,
+                      (max > 0 ? max : -Infinity))])
     .range([0, graphWidth]);
 
 var chart = d3.select(".chart")
@@ -181,12 +180,12 @@ function update(data) {
   enter_graph
     .append("text")
       .classed("number", true)
+      .classed("disabled", ƒ('disabled'))
       .style("fill-opacity", 0.0)
       .attr("x", function(d) { return text_pos(0) + (d.points < 0 ? -16 : 0); })
       .attr("y", barHeight / 2)
       .attr("dy", ".35em")
-      .attr("fill", "white")
-      .text(function(d) { return d.points; })
+      .text(ƒ('points'))
     .transition()
       .duration(500)
       .style("fill-opacity", 1.0)
@@ -217,6 +216,7 @@ function update(data) {
       .attr("x", 0)
       .attr("y", barHeight / 2)
       .attr("dy", ".35em")
+      .classed("disabled", ƒ('disabled'))
       .text(ƒ('number'));
 
   desc
@@ -233,6 +233,7 @@ function update(data) {
       .attr("x", 60)
       .attr("y", barHeight / 2)
       .attr("dy", ".35em")
+      .classed("disabled", ƒ('disabled'))
       .text(ƒ('name'));
 
   row.exit().remove();
