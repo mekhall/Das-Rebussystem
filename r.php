@@ -151,7 +151,7 @@ function setCursor() {
     }
     var id = getId(sTeam, sEvent);
     $(id).focus();
-    $(id).select();
+    setTimeout(function() { $(id)[0].select(); }, 5);
     lastTeam = sTeam;
     lastEvent = sEvent;
     lastBg = getColor(id);
@@ -190,28 +190,28 @@ $(document).ready(function () {
 
     $('.box').on('keydown', function (event) {
         var move = 0;
-        if (event.key == 'Left') {
+        if (event.which == 37 /* left */) {
             --sEvent;
             if (sEvent < 0) {
                 sEvent = 0;
             }
             move = 1;
         }
-        else if (event.key == 'Right') {
+        else if (event.which == 39 /* right */) {
             ++sEvent;
             if (sEvent >= maxEvent) {
                 sEvent = maxEvent - 1;
             }
             move = 1;
         }
-        else if (event.key == 'Down') {
+        else if (event.which == 40 /* down */) {
             ++sTeam;
             if (sTeam >= maxTeam) {
                 sTeam = maxTeam - 1;
             }
             move = 1;
         }
-        else if (event.key == 'Up') {
+        else if (event.which == 38 /* up */) {
             --sTeam;
             if (sTeam < 0) {
                 sTeam = 0;
