@@ -9,66 +9,16 @@ echo <<<EOT
 <head>
 <meta charset="utf-8">
 <title>Rebusrally rättning</title>
-<script src="mootools.js"></script>
+<style>
+.red { background-color: red }
+.white { background-color: white }
+.cyan { background-color: cyan }
+.green { background-color: green }
+</style>
+<script src="jquery-2.1.4.min.js"></script>
 <script>
-
-var sEvent = 0;
-var sTeam = 0;
-var lastData = '';
-
-function getId(team, event) {
-  return 't' + team + 'e' + event;
-}
-
-function setData(team, event, data) {
-    var id = getId(team, event);
-    var c;
-
-    data = String(data);
-    if (data == 'null') {
-        data = '';
-    }
-
-    if (team == sTeam && event == sEvent) {
-        c = 'cyan';
-        if (data != lastData) {
-            $('status').set('html',
-                            '<font color=red>WARNING: DB updated with value \''
-                            + data + '\'</font>');
-        }
-    }
-    else if (data == '' || $(id).get('value') != data) {
-        c = data == '' ? 'red' : 'green';
-        if (team == sTeam && event == sEvent) {
-            // Dont overwrite selected data
-        }
-        else {
-            $(id).set('value', data);
-        }
-    }
-    else {
-        c = 'white';
-    }
-
-    $(id).setStyle('background-color', c);
-}
-
-var updateRequest = new Request.JSON({
-    url: 'update.php',
-    method: 'get',
-    onSuccess: function(response) {
-        response.points.each(function(item, index) {
-            setData(index, response.event, item);
-        });
-    }
-});
-
-window.addEvent('domready', function() {
-    var lastBg = '';
-    var lastEvent = 0;
-    var lastTeam = 0;
-
 EOT;
+
     function fixteam($x) {
         return $GLOBALS['teams'][$x][0] . ': ' . $x;
     }
@@ -103,96 +53,165 @@ EOT;
     echo "\n";
     echo "    var maxEvent = ", count($GLOBALS['events']), ";\n";
     echo "    var maxTeam = ", count($GLOBALS['teams']), ";\n";
-echo <<<EOT
 
+echo <<<EOT
+var sEvent = 0;
+var sTeam = 0;
+var lastData = '';
+var lastBg = '';
+var lastEvent = 0;
+var lastTeam = 0;
+
+function getId(team, event) {
+    return '#t' + team + 'e' + event;
+}
+
+function getColor(e) {
+    return $(e).attr('class').replace('box', '').trim();
+}
+
+function setColor(e, color) {
+    $(e).removeClass().addClass("box " + color);
+}
+
+function scrollBarWidth() {
+  document.body.style.overflow = 'hidden';
+  var width = document.body.clientWidth;
+  document.body.style.overflow = 'scroll';
+  width -= document.body.clientWidth;
+  if (!width) width = document.body.offsetWidth - document.body.clientWidth;
+  document.body.style.overflow = '';
+  return width;
+}
+
+function setData(team, event, data) {
+    var id = getId(team, event);
+    var c;
+
+    data = String(data);
+    if (data == 'null') {
+        data = '';
+    }
+
+    if (team == sTeam && event == sEvent) {
+        c = 'cyan';
+        if (data != lastData) {
+            $('#status').html('<font color=red>WARNING: DB updated with value \''
+                              + data + '\'</font>');
+        }
+    }
+    else if (data == '' || $(id).val() != data) {
+        c = data == '' ? 'red' : 'green';
+        if (team == sTeam && event == sEvent) {
+            // Dont overwrite selected data
+        }
+        else {
+            $(id).val(data);
+        }
+    }
+    else {
+        c = 'white';
+    }
+
+    setColor(id, c);
+}
+
+function setCursor() {
+    var i = info[sEvent];
+    if (i.substring(0, 5) == 'EVAL:') {
+        i = eval(i.substring(5));
+    }
+    var max = '';
+    if (maxpoints[sEvent]) {
+        if (i != "&nbsp;") {
+            max = ', ';
+        }
+        max = max + 'max: ' + maxpoints[sEvent];
+    }
+    $('#team').html(teams[sTeam]);
+    $('#event').html(events[sEvent]);
+    $('#status').html(i + max);
+
+    if (lastBg != '') {
+        var lastid = getId(lastTeam, lastEvent);
+        var data = $(lastid).val();
+        if (data != '' && lastBg == 'red') {
+            lastBg = 'white';
+        }
+        else if (data == '') {
+            lastBg = 'red';
+        }
+        setColor(lastid, lastBg);
+        if (data != lastData) {
+            $.get('update.php',
+                  {team: lastTeam,
+                   event: lastEvent,
+                   data: data});
+        }
+    }
+    var id = getId(sTeam, sEvent);
+    $(id).focus();
+    $(id).select();
+    lastTeam = sTeam;
+    lastEvent = sEvent;
+    lastBg = getColor(id);
+    lastData = $(id).val();
+    setColor(id, 'cyan');
+}
+
+$(document).ready(function () {
     var updateEvent = 0;
 
-    this.setInterval(function () {
-        updateRequest.send('event=' + updateEvent);
+    setInterval(function () {
+        $.getJSON('update.php',
+                  {event: updateEvent},
+                  function(response) {
+                      response.points.forEach(function(item, index) {
+                          setData(index, response.event, item);
+                      });
+                  });
         ++updateEvent;
         if (updateEvent >= maxEvent) {
             updateEvent = 0;
         }
     }, 500);
 
-    function setCursor() {
-        var i = info[sEvent];
-        if (i.substring(0, 5) == 'EVAL:') {
-            i = eval(i.substring(5));
-        }
-        var max = '';
-        if (maxpoints[sEvent]) {
-            if (i != "&nbsp;") {
-                max = ', ';
-            }
-            max = max + 'max: ' + maxpoints[sEvent];
-        }
-        $('team').set('html', teams[sTeam]);
-        $('event').set('html', events[sEvent]);
-        $('status').set('html', i + max);
-
-        if (lastBg != '') {
-            var lastid = getId(lastTeam, lastEvent);
-            var data = $(lastid).get('value');
-            if (data != '' && lastBg == 'red') {
-                lastBg = 'white';
-            }
-            else if (data == '') {
-                lastBg = 'red';
-            }
-            $(lastid).setStyle('background-color', lastBg);
-            if (data != lastData) {
-                var setRequest = new Request.JSON({
-                    url: 'update.php',
-                    method: 'get'
-                });
-                setRequest.send('team=' + lastTeam + '&event=' + lastEvent + '&data=' + data);
-            }
-        }
-        var id = getId(sTeam, sEvent);
-        $(id).focus();
-        $(id).select();
-        lastTeam = sTeam;
-        lastEvent = sEvent;
-        lastBg = $(id).getStyle('background-color');
-        lastData = $(id).get('value');
-        $(id).setStyle('background-color', 'cyan');
-    }
-
     setCursor();
 
-    $$('.box').addEvent('click', function(event) {
-        event.stop();
-        var id = /t(\d+)e(\d+)/.exec(this.get('id'));
+    $('.filler').attr('height', scrollBarWidth());
+
+    $('.box').on('click', function (event) {
+        event.stopPropagation();
+        var id = /t(\d+)e(\d+)/.exec(event.target.id);
         sTeam = id[1];
         sEvent = id[2];
         setCursor();
     });
 
-    $$('.box').addEvent('keydown', function(event) {
+    $('.box').on('keydown', function (event) {
         var move = 0;
-        if (event.key == 'left') {
+        if (event.key == 'Left') {
             --sEvent;
             if (sEvent < 0) {
                 sEvent = 0;
             }
             move = 1;
         }
-        else if (event.key == 'right') {
+        else if (event.key == 'Right') {
             ++sEvent;
             if (sEvent >= maxEvent) {
                 sEvent = maxEvent - 1;
             }
             move = 1;
         }
-        else if (event.key == 'down') {
+        else if (event.key == 'Down') {
             ++sTeam;
             if (sTeam >= maxTeam) {
                 sTeam = maxTeam - 1;
             }
             move = 1;
         }
-        else if (event.key == 'up') {
+        else if (event.key == 'Up') {
             --sTeam;
             if (sTeam < 0) {
                 sTeam = 0;
@@ -200,37 +219,35 @@ echo <<<EOT
             move = 1;
         }
         if (move) {
-            event.stop();
+            event.stopPropagation();
             setCursor();
         }
     });
 });
 </script>
 </head>
+
+<div id=team></div><br><br>
+<div id=event></div><br><br>
+<div id=status></div>
+
+<div>
+<div style="display:inline-block; vertical-align: bottom; max-width: 150px; overflow:hidden; width:15%">
+<table cellpadding=2>
+
 EOT;
-
-echo '<div id=team></div><br><br>';
-echo '<div id=event></div><br><br>';
-echo '<div id=status></div>';
-
-echo '<table width=1100>';
-
-echo '<tr><td>';
-echo '<table cellpadding=2 width=100>';
-echo '<tr><td>&nbsp;</td></tr>';
 
 foreach ($GLOBALS['teams'] as $t => $v) {
     $ts = $v[0] . ': ' . $t;
     echo "<tr><td><input readonly type=text value=\"$ts\"></td></tr>";
 }
+echo '<tr><td class=filler></td></tr>';
 
 echo '</table>';
-echo '</td>';
+echo '</div>';
 
-echo '<td>';
-echo '<div style="overflow:auto; width:1000px">';
+echo '<div style="display:inline-block; overflow:auto; width:85%">';
 echo '<table cellpadding=2>';
-echo '<form action="foo.php" method=post>';
 
 echo '<tr>';
 $i = 0;
@@ -245,23 +262,21 @@ foreach ($GLOBALS['teams'] as $t => $v) {
     $enr = 0;
     foreach ($GLOBALS['events'] as $e => $ename) {
         $p = getPoints($tnr, $enr);
-        $style = '';
+        $color = 'white';
         if (is_null($p)) {
             $p = '';
-            $style = 'style="background-color:red"';
+            $color = 'red';
         }
-        echo "<td><input class=\"box\" id=\"t${tnr}e${enr}\" type=\"text\" maxlength=4 size=3 value=\"$p\" $style></td>\n";
+        echo "<td><input class=\"box ${color}\" id=t${tnr}e${enr} type=text maxlength=4 size=3 value=$p></td>\n";
         ++$enr;
     }
     echo "</tr>";
     ++$tnr;
 }
 
-echo '</form>';
 echo '</table>';
 echo '</div>';
-echo '</td></tr>';
-echo '</table>';
+echo '</div>';
 echo '</html>';
 
 ?>

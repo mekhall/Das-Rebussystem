@@ -13,10 +13,6 @@ class Slide
         return $this->title;
     }
 
-    function getMiddle() {
-        return 0;
-    }
-
     function getLines() {
         return 0;
     }
@@ -49,11 +45,7 @@ class PictureSlide extends Slide
     }
 
     function printHtml() {
-        echo "<br><center><img src=\"$this->picture\" $this->attr></center>\n";
-    }
-
-    function getMiddle() {
-        return 1;
+        echo "<br><img src=\"$this->picture\" $this->attr>\n";
     }
 }
 

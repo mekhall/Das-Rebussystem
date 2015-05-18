@@ -37,7 +37,9 @@ a {
 .rebustable {
     background-color: #aebddb;
     padding: 20px;
-    border: 0
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 .header {
     background-color: #aebddb;
@@ -136,4 +138,18 @@ a {
 }
 .maxline-text {
     fill: #000050;
+}
+
+.content {
+    margin-top: 20px;
+    text-align: center;
+}
+.headertitle {
+    float:left;
+}
+.headerlogo {
+    float:right;
+}
+.disabled {
+    fill: #505050;
 }

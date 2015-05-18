@@ -19,7 +19,7 @@ function dcopy($src, $ddir) {
 
 dcopy(NAME . ".css", $dir);
 dcopy("tratex_vit.ttf", $dir);
-dcopy("mootools.js", $dir);
+dcopy("jquery-2.1.4.min.js", $dir);
 dcopy("d3.v3.min.js", $dir);
 
 foreach (glob(PICTURE_PATH . "*.jpg") as $f) {

@@ -24,8 +24,8 @@ if (array_key_exists('static', $GLOBALS) == 0 && $check == 0) {
 <meta charset="utf-8">
 <title>Rebusrally <?php echo NAME ?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo NAME ?>.css">
-<script src="mootools.js"></script>
 <script src="d3.v3.min.js"></script>
+<script src="jquery-2.1.4.min.js"></script>
 <script>
 var maxLine = 0;
 var line = 0;
@@ -36,47 +36,22 @@ var check = 0;
 ?>
 check = 1;
 
-var updateRequest = new Request.JSON({
-    url: 'check.php',
-    method: 'get',
-    onSuccess: function(response) {
-        var parts = response[0].split(':');
-        var setline = "";
-        if (parts.length > 1) {
-          setline = "&setline=" + parts[1];
-        }
-
-        if (parts[0] != <?php echo $nr ?>) {
-            window.location = "present.php?check=1&nr=" + parts[0];
-            return;
-        }
-        if (parts[1] != line) {
-            window.location = "present.php?check=1&nr=" + parts[0] + setline;
-        }
-    }
-});
 <?php
     }
 ?>
 
-var lineRequest = new Request.JSON({
-    url: 'currentline.php',
-    method: 'get'
-});
-
-
-window.addEvent('domready', function() {
-    addEvent('keydown', function(event) {
-        if (event.key == 'left' || event.key == '!') {
+$(function() {
+    $('html').keydown(function(event) {
+        if (event.which == 37 /* left */ || event.which == 49 /* ! */) {
             window.location = "present.php?<?php echo $dec ?>";
         }
-        else if (event.key == 'right' || event.key == 'space' ||
-                 event.key == '"') {
+        else if (event.which == 39 /* right */ || event.which == 32 ||
+                 event.which == 50 /* " */) {
             next(<?php echo "$nr, $lines"; ?>);
         }
     });
 
-    $$('tr.header').addEvent('click', function(event) {
+    $('.header').click(function(event) {
         next(<?php echo "$nr, $lines"; ?>);
     });
 
@@ -87,8 +62,22 @@ window.addEvent('domready', function() {
 
     if ($check) {
 ?>
-    this.setInterval(function () {
-        updateRequest.send();
+    setInterval(function () {
+        $.getJSON('check.php', function (response, status) {
+            var parts = response[0].split(':');
+            var setline = "";
+            if (parts.length > 1) {
+              setline = "&setline=" + parts[1];
+            }
+
+            if (parts[0] != <?php echo $nr ?>) {
+                window.location = "present.php?check=1&nr=" + parts[0];
+                return;
+            }
+            if (setline && parts[1] != line) {
+                window.location = "present.php?check=1&nr=" + parts[0] + setline;
+            }
+        });
     }, 1000);
 <?php
     }
@@ -109,9 +98,9 @@ function next(nr, maxLine)
             window.location = "present.php?nr=" + (nr + 1);
         }
         else {
-            $$('div.rebus' + line).<?php echo $GLOBALS['rebus_tween'] ? 'tween' : 'setStyle' ?>('opacity', 1);
+            $('div.rebus' + line).<?php echo $GLOBALS['rebus_tween'] ? 'animate({ opacity: 1 }, 1000)' : 'css("opacity", 1)' ?>;
             if (!check) {
-              lineRequest.send('nr=' + nr + '&line=' + line);
+                $.get('currentline.php', {nr: nr, line: line});
             }
         }
     }
@@ -123,80 +112,55 @@ function next(nr, maxLine)
 </script>
 </head>
 <body>
-<table border=0 cellpadding=0 cellspacing=0 width="100%">
 
-<tr class=header>
-  <td class=header align=left>
-    <a class=rub1><?php echo $action->getTitle(); ?></a>&nbsp;
-  </td>
-<?php
-  if ($GLOBALS['display_logo']) {
-    $p = "logga";
-    if (checkPic($p)) {
-      echo "<td class=header align=right valign=top><img src=\"$p\" class=logo alt=logo></td>\n";
+<div class=header>
+  <div class=headertitle>
+    <a class=rub1><?php echo $action->getTitle(); ?></a>
+  </div>
+  <?php
+    if ($GLOBALS['display_logo']) {
+      $p = "logga";
+      if (checkPic($p)) {
+  ?>
+  <div class=headerlogo>
+    <img src="<?php echo $p ?>" class=logo alt=logo>
+  </div>
+  <?php
+      }
     }
-  }
-?>
-</tr>
+  ?>
+  </div>
+</div>
 
-<tr>
-  <td colspan=2 class=headerline></td>
-</tr>
+<div class=headerline></div>
 
 <?php
     if ($index_links) {
 ?>
 
-<tr>
-  <td align=center>
-    <table width="90%" border=0>
-      <tr>
-        <td align=right>
-          <a class=rub3 href=present.php?<?php echo $dec ?> >föregående</a>
-          <a> | </a>
-          <a href="#" onclick="next(<?php echo "$nr, $lines"; ?>)" class=rub3>nästa</a>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
+<div class=indexlinks>
+  <a class=rub3 href=present.php?<?php echo $dec ?> >föregående</a>
+  <a> | </a>
+  <a href="#" onclick="next(<?php echo "$nr, $lines"; ?>)" class=rub3>nästa</a>
+</div>
 
 <?php
     }
 
-    if ($action->getMiddle()) {
-        echo '<tr style="height:450px"><td colspan=2 align=center valign=top><table style="height:100%"><tr><td valign=middle>';
-    }
-    else {
-        echo '<tr style="height:450px"><td colspan=2 align=center valign=top><table cellpadding=10><tr><td>';
-    }
-
+    echo '<div class=content>';
     echo $action->printHtml();
-
-    echo '   </td></tr></table></td></tr>';
+    echo '</div>';
 
     if ($index_links) {
 ?>
 
-<tr>
-<td align=center>
-<table width="90%" border=0>
-  <tr>
-    <td align=right>
-      <a class=rub3 href=present.php?<?php echo $dec ?>>föregående</a>
-      <a> | </a>
-      <a href="#" onclick="next(<?php echo "$nr, $lines"; ?>)" class=rub3>nästa</a>
-    </td>
-  </tr>
-</table>
-</td>
-</tr>
+<div class=indexlinks>
+  <a class=rub3 href=present.php?<?php echo $dec ?>>föregående</a>
+  <a> | </a>
+  <a href="#" onclick="next(<?php echo "$nr, $lines"; ?>)" class=rub3>nästa</a>
+</div>
 
-<tr>
-<td align=center>
-<table width="90%">
-  <tr>
-    <td>
+<div class=alllinks>
 <?php
         for ($o = 0; $o < count($actions); ++$o) {
             if ($o == $nr) {
@@ -206,17 +170,11 @@ function next(nr, maxLine)
             }
         }
 ?>
-
-    </td>
-  </tr>
-</table>
-</td>
-</tr>
+</div>
 
 <?php
     }
 ?>
 
-</table>
 </body>
 </html>

@@ -26,19 +26,11 @@ a {
     text-decoration: none;
     color: #334450;
 }
-.tr_odd {
-    background-color: #303030;
-}
-.tr_even {
-    background-color: #404040;
-}
-.tr_odd td, .tr_even td {
-    padding-top: 4px;
-    padding-bottom: 4px;
-}
 .rebustable {
     padding: 20px;
-    border: 0
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 .header {
     background-color: #000000;
@@ -50,6 +42,17 @@ a {
     text-align: left;
     height: 80px
 }
+.content {
+    margin-top: 20px;
+    text-align: center;
+}
+.headertitle {
+    float:left;
+}
+.headerlogo {
+    float:right;
+}
+
 .headerline {
     background-color: #ffffff;
     height: 0px;
@@ -122,6 +125,9 @@ a {
 text {
     font: 16px sans-serif;
     fill: #f0f0f0;
+}
+.disabled {
+    fill: #505050;
 }
 .graph_odd {
     fill: #303030;
