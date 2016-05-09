@@ -1,0 +1,7 @@
+\rebus BÅROSTFÖRMÄN \av BasPer 2012
+\op B->F
+Fårost för män
+\op !
+Herrfeta
+\op F->B
+\ort HERRBETA

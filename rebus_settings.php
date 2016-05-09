@@ -1,7 +1,7 @@
 <?php
 
 // Current rally name
-define('NAME', '2014.09');
+define('NAME', '2016.05');
 
 define('SCREENWIDTH', 1024);
 
@@ -15,6 +15,6 @@ $rebus_split = 1;
 $display_logo = 1;
 
 // Animate rebus solution parts
-$rebus_tween = 1;
+$rebus_tween = 0;
 
 ?>

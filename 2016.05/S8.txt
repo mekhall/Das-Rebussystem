@@ -1,0 +1,7 @@
+\rebus OLLONOCHSKULOS \av Basper 2004
+\op S->R 
+Ollon och skulor 
+\op ! 
+Svinrätter 
+\op R->S 
+SVINSÄTTER 

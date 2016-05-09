@@ -1,0 +1,7 @@
+\rebus RIKLIGTREDFOSFOR \av Herman 2012
+\op R->M 
+Rikligt med fosfor 
+\op ! 
+Gott om P 
+\op M->R 
+\ort GOTTORP

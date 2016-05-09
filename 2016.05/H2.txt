@@ -1,0 +1,11 @@
+\rebus TENTROKISWAJ \av BasPer 2012
+\op <-> 
+JAWS I KORTNET 
+\op N->H 
+Jaws i korthet 
+\op ! 
+Haj dör 
+\op H->N 
+NAJDÖR 
+\op <-> 
+\ort RÖDJAN 

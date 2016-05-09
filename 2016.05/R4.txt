@@ -1,0 +1,7 @@
+\rebus SVENSKRÖDBROKIGUNTERVATTENSROBOT \av BasPer 2012
+\op T->D 
+Svensk rödbrokig undervattensrobot 
+\op ! 
+Kotorped 
+\op D->T 
+\ort KOTORPET 

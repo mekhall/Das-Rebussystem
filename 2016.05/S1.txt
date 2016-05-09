@@ -1,0 +1,9 @@
+\rebus AMNINGSPLAS \av BasPer 2012
+\op +T 
+Amningsplats 
+\op ! 
+Diruta 
+\op -T 
+DIRUA 
+\op i 
+RUDA 

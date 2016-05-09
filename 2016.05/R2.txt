@@ -1,0 +1,7 @@
+\rebus ARKISJANNE \av Dicken 2001
+\op +B 
+Barkis Janne 
+\op ! 
+Bröd Jan 
+\op -B 
+\ort RÖDJAN 

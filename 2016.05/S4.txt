@@ -1,0 +1,7 @@
+\rebus FYLLAJALLE \av Dicken 2000
+\op J->B 
+Fylla balle 
+\op ! 
+Berusa lem 
+\op B->J 
+JERUSALEM

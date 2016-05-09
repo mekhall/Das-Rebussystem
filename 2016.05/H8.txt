@@ -1,0 +1,7 @@
+\rebus SKATUNGE \av BasPer 2012
+\op A->I 
+Skitunge 
+\op ! 
+Glin 
+\op I->A 
+\ort GLAN
