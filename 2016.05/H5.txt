@@ -1,5 +1,9 @@
-\rebus C \av Sten-Johan 2009
-\op Periodiska systemet
-6
-\op Romerska siffror
-\ort VI
+\rebus PACKBING \av Sten-Johan 1999
+\op B->N
+Packning
+\op !
+O-Ring
+\op N->B
+ORIBG
+\op i
+\ort BORG

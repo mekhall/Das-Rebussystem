@@ -1,7 +1,13 @@
-\rebus ARKISJANNE \av Dicken 2001
-\op +B 
-Barkis Janne 
-\op ! 
-Bröd Jan 
-\op -B 
-\ort RÖDJAN 
+\rebus MARGALLELLARAPGIDISKIL \av Mårten 2016
+\op <->
+LIKSIDIGPARALLELLAGRAM
+\OP A->O 
+Liksidig parallellogram
+\op !
+ROMB 
+\op O->A
+RAMB
+\op <->
+BMAR
+\op om
+\ort BROMMA

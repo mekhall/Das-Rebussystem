@@ -1,3 +1,9 @@
-\rebus Fru Rovas bridgepartner \av BasPer 2004
-\op ! 
-\ort Herr Beta
+\rebus VÄTÄSJUTTON \av BasPer 1999
+\op Ä->E
+Väte sjutton
+\op ! (per.sys och nummer)
+1 17
+\op ! (nummer och per.sys)
+Elva N
+\op E->A
+\ort ÄLVAN

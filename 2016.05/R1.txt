@@ -1,5 +1,3 @@
-\rebus Ljudet av Jahn Teigen vid ESC 1983 \av Dicken 2012
+\rebus Ljudet av den tyska originalversionen av Göta Kanal \av SAS 2016
 \op !
-Teigen
-\op i
-\ort GETEN
+\ort Göta Kanal

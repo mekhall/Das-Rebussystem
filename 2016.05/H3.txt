@@ -1,7 +1,9 @@
-\rebus BÅROSTFÖRMÄN \av BasPer 2012
-\op B->F
-Fårost för män
+\rebus SATEN \av BasPer 1999
+\op A->E
+Satan
 \op !
-Herrfeta
-\op F->B
-\ort HERRBETA
+Fan
+\op E->A
+Fen
+\op !
+\ort ÄLVAN

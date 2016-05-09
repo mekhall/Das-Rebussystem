@@ -1,7 +1,10 @@
-\rebus RIKLIGTREDFOSFOR \av Herman 2012
-\op R->M 
-Rikligt med fosfor 
+\rebus GALTSTEUT \av BasPer 2016
+\op E->R
+Galtstrut
 \op ! 
-Gott om P 
-\op M->R 
-\ort GOTTORP
+Griskon
+\op R->E
+GEISKON
+GE i SKON
+\op i 
+SKOGEN

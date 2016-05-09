@@ -1,7 +1,7 @@
-\rebus SVENSKRÖDBROKIGUNTERVATTENSROBOT \av BasPer 2012
-\op T->D 
-Svensk rödbrokig undervattensrobot 
+\rebus GYMASKOFERMENTORN \av Herman 2016
+\op +P
+Gympaskofermentorn 
 \op ! 
-Kotorped 
-\op D->T 
-\ort KOTORPET 
+Påsen
+\op -P
+\ort ÅSEN

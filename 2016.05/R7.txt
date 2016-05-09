@@ -1,7 +1,10 @@
-\rebus SVARTROCKAREMMAN \av Dicken 2008
-\op +H 
-Svartrockarhemman
+\rebus TJUGALTHÄK \av Dicken 2002
+\op +R, +R
+Tjur Galt Härk
 \op ! 
-Gothtorp
-\op -H 
-GOTTORP 
+Ko Gris Ren
+\op -R, -R
+KOGISEN
+KOG i SEN
+\op i 
+SKOGEN

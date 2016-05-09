@@ -1,8 +1,13 @@
-\rebus ESSICA \av Dicken 1999
+\rebus MADRÖHLLITMOSP \av BasPer 2016
 \op <-> 
-ACISSE
-A Ciss E
-\op ! 
-A dur
+PSOMTILLHÖRDAM
+\op A->E
+P som tillhör dem 
+\ ! 
+Deras P
+\ E->A
+DARASP
+\op i
+S i DARAP
 \op <-> 
-RUDA 
+\ort PARADIS

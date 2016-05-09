@@ -1,7 +1,5 @@
-\bild R5.jpg \av BasPer 2004
+\bild R5.jpg \av BasPer 2016
 \op ! 
-BH 
-\op Periodiska systemet
-51 
-\op Romerska siffror 
-VI 
+VG
+\op ! rom+per.sys
+\ort BORG

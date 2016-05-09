@@ -1,7 +1,9 @@
-\rebus SKATUNGE \av BasPer 2012
-\op A->I 
-Skitunge 
-\op ! 
-Glin 
-\op I->A 
-\ort GLAN
+\rebus RPAUSN \av Funkan 1999
+\op !
+R Rast N
+RRA ST N
+\! i
+ST i RRAN
+Stirra N
+\!
+\ort GLON

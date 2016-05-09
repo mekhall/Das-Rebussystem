@@ -1,7 +1,7 @@
-\rebus ARBETSPPLATSE \av Herman 2012
-\op -P, +N
-Arbetsplatsen
+\rebus PÅKLYVARBOMEN \av Herman 2016
+\op +M
+På klyvarbommen
 \op !
-Kontoret
-\op +P, -N
-\ort KOTORPET
+Måsen
+\op -P
+\ort ÅSEN

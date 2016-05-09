@@ -1,11 +1,7 @@
-\rebus TENTROKISWAJ \av BasPer 2012
-\op <-> 
-JAWS I KORTNET 
-\op N->H 
-Jaws i korthet 
-\op ! 
-Haj dör 
-\op H->N 
-NAJDÖR 
-\op <-> 
-\ort RÖDJAN 
+\rebus ALSTRAGUTTORALABILLJUD \av Mårten 2016
+\OP O->U 
+Alstra gutturala billjud
+\op !
+Brumma
+\op U->O
+\ort BROMMA
