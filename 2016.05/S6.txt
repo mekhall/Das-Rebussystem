@@ -1,9 +1,7 @@
-\rebus KOPOR \av Herman 1999
+\rebus KNOTTENSOGSTUDERARKNOTTENSORSTUDERRKNOTT \av Basper 2016
+\op G->M, R->M, +A
+Knotten som studerar knotten som studerar knott
 \op ! 
-KOP ostdjur 
-\op +M 
-Kompostdjur 
-\op ! 
-Mask 
-\op -M 
-\ort ASK 
+Metamyggen 
+\op M->G, -A, M->R
+\ort GETRYGGEN

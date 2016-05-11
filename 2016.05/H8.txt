@@ -1,9 +1,8 @@
 \rebus RPAUSN \av Funkan 1999
 \op !
 R Rast N
-RRA ST N
-\! i
+\op i
 ST i RRAN
 Stirra N
-\!
+\op !
 \ort GLON

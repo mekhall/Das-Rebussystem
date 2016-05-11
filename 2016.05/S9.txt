@@ -1,9 +1,9 @@
-\rebus SATTETÄDERNAIKRISTIKROPP \av BasPer 2012
-\op +N 
-Satte tänderna i kristi kropp 
+\rebus POLITNARETSPIHREDNUTNREDOMO \av BasPer 2016
+\op <-> 
+Omodernt under hipsterantilop
 \op ! 
-Bet i herran 
-\op -N 
-BET i HERRA 
-\op i 
-HERRBETA
+Nedom Gnu
+\op om
+NEGNUD
+\op <->
+\ort DUNGEN

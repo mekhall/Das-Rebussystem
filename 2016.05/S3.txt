@@ -1,5 +1,6 @@
-\rebus CE(BEATRM) \av Sten-Johan 2012
-\op i 
-Beatrice(M)
-\op ! 
-ASK
+\rebus FISSAIVENEDIG \av BasPer 2016
+Fiss A i Venedig
+\op !
+Ters i östad
+\op i
+\ort ÖSTERSTAD

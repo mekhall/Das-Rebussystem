@@ -1,7 +1,8 @@
 \rebus RADONRUTIN \av Dicken 1999
-\! Rn vana
+\op ! 
+Rn vana
 \op i
 N i RVANA
 Nirvana
-\! 
+\op ! 
 \ort PARADIS

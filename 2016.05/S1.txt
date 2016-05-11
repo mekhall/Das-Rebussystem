@@ -1,9 +1,13 @@
-\rebus AMNINGSPLAS \av BasPer 2012
-\op +T 
-Amningsplats 
-\op ! 
-Diruta 
-\op -T 
-DIRUA 
-\op i 
-RUDA 
+\rebus 3224101 \av Herman 1999
+\op <->
+1014223
+\op ! (per.sys)
+Ne H Mo V
+\op <->
+VOMHEN
+\op  H->M
+Vommen
+\op !
+Komagen
+\op M->H
+\ort KOHAGEN

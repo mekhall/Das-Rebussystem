@@ -1,9 +1,9 @@
 \rebus 3MA78541L-13K \av Herman 2016
 \op om
 3K om MA78541L-13 
-\! 
+\op ! 
 3,78541l - 13 
-\! (mått och per.sys)
+\op ! (mått och per.sys)
 Gallon - Al
 \op ! 
-GLON
+\ort GLON

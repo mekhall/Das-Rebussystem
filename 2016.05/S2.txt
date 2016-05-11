@@ -1,7 +1,9 @@
-\rebus BENSRÄCKAREIVASSEN \av BasPer 2012
-\op +T 
-Bensträckare i vassen 
+\rebus 2KILLLNAD3KULORSVÅFFLA \av Herman 2016
+\op -L, +S
+2SKILLNAD3KULORSVÅFFLA
+\op ! (typ om)
+Skillnad mellan 2 och 3 kulors våffla 
 \op ! 
-Moses rast 
-\op -T 
-\ort MOSESRAS 
+Glasskula
+\op -S, -L
+\ort GLASKULLA 

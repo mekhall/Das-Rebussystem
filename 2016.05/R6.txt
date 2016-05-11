@@ -3,9 +3,9 @@
 PSOMTILLHÖRDAM
 \op A->E
 P som tillhör dem 
-\ ! 
+\op ! 
 Deras P
-\ E->A
+\op E->A
 DARASP
 \op i
 S i DARAP

@@ -1,7 +1,7 @@
-\rebus FYLLAJALLE \av Dicken 2000
-\op J->B 
-Fylla balle 
-\op ! 
-Berusa lem 
-\op B->J 
-JERUSALEM
+\rebus GEROMENHRILLOR \av BasPer 2000
+\op +R, H->B
+Ger ormen brillor
+\op !
+Kobragen 
+\op -R, B->H 
+\ort KOHAGEN 

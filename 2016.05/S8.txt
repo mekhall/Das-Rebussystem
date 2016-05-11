@@ -1,7 +1,9 @@
-\rebus OLLONOCHSKULOS \av Basper 2004
-\op S->R 
-Ollon och skulor 
-\op ! 
-Svinrätter 
-\op R->S 
-SVINSÄTTER 
+\rebus PÅSLÖSPIRR \av Herman 2002
+\op +A
+Påslös pirra
+\op !
+Påslös säckkärra
+\op !
+Kärra
+\op -A
+\ort KÄRR

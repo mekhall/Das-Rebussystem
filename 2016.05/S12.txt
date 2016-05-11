@@ -1,0 +1,9 @@
+\rebus SÄKERPÅNYTET \av Herman 2000
+\op -E
+Säker pånytt
+\op !
+Trygg igen
+\op i
+GETRYGGN
+\op +E
+\ort GETRYGGEN

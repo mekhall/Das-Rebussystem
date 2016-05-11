@@ -1,9 +1,10 @@
-\rebus ITSTK \av Herman 2004
-\op om 
-ITK om ST 
-\op T->N 
-Inkomst 
+\rebus GTLÖRDENOBANTLLIGE \av Dicken 2013
+\op i
+DENOBANTL i GTLÖRLIGE 
+Den obantligt lörlige 
+\op B->F, R->J
+Den ofantligt löjlige
 \op ! 
-Lön
-\op N->T 
-LÖT 
+Fjanten
+\op F->B, J->R
+\ort BRANTEN
