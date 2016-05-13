@@ -106,7 +106,7 @@ $parts = array(
     'Etapp 3' => array('R 3', 'P PISS', 'P ORAL', 'TP 3', 'FP 3'),
     'Totalt efter Etapp 3' => array('*sumcomp*', 'Totalt efter Etapp 2', 'Etapp 3'),
 
-    'Etapp 4' => array('R 4', 'P MUSK', 'TP 4', 'FP 4', 'Tid L'),
+    'Etapp 4' => array('R 4', '*picture*Musikkryss för medelålders män:kryss_hist.png', 'P MUSK', 'TP 4', 'FP 4', 'Tid L'),
     'Totalt efter Etapp 4' => array('*sumcomp*', 'Totalt efter Etapp 3', 'Etapp 4'),
 
     'Lunch' =>
@@ -161,25 +161,27 @@ $parts = array(
           'R 1', 'R 2', 'R 3', 'R 4',
           'R 5', 'R 6', 'R 7', 'R 8'),
 
+    'Stilpriset' => array('*sum*', 'Stil'),	 
+
     'Totalt' => array('*sum*', 'Totalt efter Etapp 7', 'Etapp 8')
     );
 
 $maxPoints =
   array(
-         'P ORAL' => 1227,
-         'P NORD' => 1227,
-         'P PORT' => 1227,
-         'P TYAR' => 1227,
-         'P SKÄG' => 1227,
-         'P PISS' => 1227,
-         'P MUSK' => 1227,
-         'P HPOT' => 1227,
-         'P GEOG' => 1227,
-         'P BAJS' => 1227,
-         'P TALL' => 1227,
-         'P KUNG' => 1227,
-         'P ZLAT' => 1227,
-         'P TYOR' => 1227
+         'P ORAL' => 19,
+         'P NORD' => 24,
+         'P PORT' => 20,
+         'P TYAR' => 18,
+         'P SKÄG' => 20,
+         'P PISS' => 21,
+         'P MUSK' => 51,
+         'P HPOT' => 24,
+         'P GEOG' => 21,
+         'P BAJS' => 20,
+         'P TALL' => 17,
+         'P KUNG' => 16,
+         'P ZLAT' => 15,
+         'P TYOR' => 18
          );
 
 $info =

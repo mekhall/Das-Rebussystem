@@ -1,4 +1,4 @@
-\rebus PPIRKITSIRKSPA \av ? 1999
+\rebus PPIRKITSIRKSPA \av Herman 1999
 \op <->
 APSKRISTIKRIPP
 \op I->O
