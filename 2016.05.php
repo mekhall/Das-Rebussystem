@@ -49,6 +49,7 @@ $events = array(
     'S 11' => 'Stjälp 11',
     'S 12' => 'Stjälp 12',
     'S 13' => 'Stjälp 13',
+    'SB' => 'Stjälp bonus',
 
     // Heldagspyssel
     'P ORAL' => 'Känn din oralkirurg',
@@ -117,7 +118,7 @@ $parts = array(
           'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7',
           'S 8', 'S 9', 'S 10', 'S 11', 'S 12', 'S 13', 
           array('*esum*', 'Stjälprebusar totalt', 'S 1', 'S 2', 'S 3', 'S 4', 'S 5',
-                'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11', 'S 12', 'S 13')),
+                'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11', 'S 12', 'S 13', 'SB')),
     'Totalt efter Lunch' => array('*sumcomp*', 'Totalt efter Etapp 4', 'Lunch'),
 
     'Etapp 5' => array('R 5', 'P TALL', 'TP 5', 'FP 5'),
