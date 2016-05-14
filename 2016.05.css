@@ -126,6 +126,10 @@ a {
 .chart text {
     font: 16px sans-serif;
 }
+
+.number {
+    fill: #ffffff;
+}
 .graph_odd {
     fill: #becdeb;
 }
