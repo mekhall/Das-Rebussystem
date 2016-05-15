@@ -112,7 +112,7 @@ $parts = array(
     'Totalt efter Etapp 4' => array('*sumcomp*', 'Totalt efter Etapp 3', 'Etapp 4'),
 
     'Lunch' =>
-    array('*picture*Lunch:lunch.jpg',
+    array('*picture*Lunch:BroLunch.jpg',
           'Stil',
           'P HPOT', 'P GEOG', 'P BAJS',
 	  '*picture*Rebuspysslet:länsbort.jpg',
@@ -125,7 +125,7 @@ $parts = array(
     'Etapp 5' => array('R 5', 'P TALL', 'TP 5', 'FP 5'),
     'Totalt efter Etapp 5' => array('*sumcomp*', 'Totalt efter Lunch', 'Etapp 5'),
 
-    'Etapp 6' => array('R 6', 'P KUNG', 'P NORD', 'TP 6', 'FP 6'),
+    'Etapp 6' => array('R 6', 'P KUNG', 'P NORD', 'TP 6', 'FP 6', '*picture*Före-Efter:Planket_borta_s6.jpg'),
     'Totalt efter Etapp 6' => array('*sumcomp*', 'Totalt efter Etapp 5', 'Etapp 6'),
 
     'Etapp 7' => array('R 7', 'P ZLAT', 'P PORT', 'TP 7', 'FP 7'),
