@@ -1,9 +1,9 @@
 \rebus SATEN \av BasPer 1999
-\op A->E
+\op E->A
 Satan
 \op !
 Fan
-\op E->A
+\op A->E
 Fen
 \op !
 \ort ÄLVAN

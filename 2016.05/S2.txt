@@ -5,5 +5,5 @@
 Skillnad mellan 2 och 3 kulors våffla 
 \op ! 
 Glasskula
-\op -S, -L
+\op -S, +L
 \ort GLASKULLA 

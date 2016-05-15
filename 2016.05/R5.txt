@@ -1,5 +1,5 @@
 \bild R5.jpg \av BasPer 2016
 \op ! 
-VG
-\op ! rom+per.sys
+5G
+\op ! (per.sys)
 \ort BORG

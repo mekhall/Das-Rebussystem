@@ -5,5 +5,5 @@ Väte sjutton
 1 17
 \op ! (nummer och per.sys)
 Elva N
-\op E->A
+\op E->Ä
 \ort ÄLVAN

@@ -3,5 +3,5 @@
 På klyvarbommen
 \op !
 Måsen
-\op -P
+\op -M
 \ort ÅSEN

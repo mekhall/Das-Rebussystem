@@ -18,10 +18,11 @@ $teams = array(
 	       '1 till 2 till'          => array(13,1),
 	       'I minsta laget'         => array(14,1),
 	       'Risk för Dåligt Väglag' => array(15,1),
-//	       'Tisdagsfikarna'         => array(16,0),
+//	       'Tisdagsfikarna'         => array(16,1),
 	       'Spårvägens övermän'     => array(17,1),
 	       'Pyjamasparty'           => array(18,1),
 	       'Webus Express'          => array(1337,1)
+//	       'Overflow'               => array(7337,1) 
 		);
 	       
 $events = array(
@@ -115,8 +116,8 @@ $parts = array(
           'Stil',
           'P HPOT', 'P GEOG', 'P BAJS',
 	  '*picture*Rebuspysslet:länsbort.jpg',
-          'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7', '*solution*S7TrialAndError',
-          'S 8', 'S 9', 'S 10', 'S 11', 'S 12', 'S 13', '*solution*S13Enar', '*solution*S13RRL', 
+          'S 1', 'S 2', 'S 3', 'S 4', 'S 5', 'S 6', 'S 7', '*solution*S7 Enar',
+          'S 8', 'S 9', 'S 10', 'S 11', 'S 12', 'S 13', '*solution*S13 T&E', '*solution*S13 RRL', 
           array('*esum*', 'Stjälprebusar totalt', 'S 1', 'S 2', 'S 3', 'S 4', 'S 5',
                 'S 6', 'S 7', 'S 8', 'S 9', 'S 10', 'S 11', 'S 12', 'S 13')),
     'Totalt efter Lunch' => array('*sumcomp*', 'Totalt efter Etapp 4', 'Lunch'),
