@@ -1,0 +1,7 @@
+\rebus ESKUNGENOCHPRÖDLUVAN
+\op e->a, -p
+ASKUNGENOCHRÖDLUVAN
+\op !
+SAGOR
+\op a->e, +p
+\ort SEGORP

@@ -1,0 +1,9 @@
+\rebus KLISTARA
+\op -a
+KLISTRA
+\op !
+LIMMA
+\op +a
+ALIMMA
+\op i
+\ort MALMA

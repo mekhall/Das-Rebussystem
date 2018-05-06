@@ -1,0 +1,9 @@
+\rebus OFLÄCKFRIBÄGARE
+\op -o
+FLÄCKFRIBÄGARE
+\op !
+RENMUGG
+\op +o
+RENOMUGG
+\op om
+\ort RUGGEN

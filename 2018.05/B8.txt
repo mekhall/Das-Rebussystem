@@ -1,0 +1,7 @@
+\rebus FÅNGASFISBPÅ
+\op b->k
+FÅNGASFISKPÅ
+\op !
+KROK
+\op k->b
+\ort BROK

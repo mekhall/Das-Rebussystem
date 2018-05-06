@@ -1,0 +1,7 @@
+\rebus GNAGAMEN
+\op m->r
+GNAGAREN
+\op !
+RÅTTAN
+\op r->m
+\ort MÅTTAN

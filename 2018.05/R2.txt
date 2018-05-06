@@ -1,0 +1,11 @@
+\rebus REVOKSDEMÖNSIGÄVSENAB
+\op <->
+BANESVÄGISNÖMEDSKOVER
+\op e->a, s->r, r->l
+BANARVÄGISNÖMEDSKOVEL
+\op !
+PLOGAR
+\op a->e, r->s, l->r
+PROGES
+\op <->
+\ort SEGORP

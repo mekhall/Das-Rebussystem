@@ -1,0 +1,11 @@
+\rebus _
+\op +x, +y, +z
+XYZ
+\op <->
+ZYX
+\op om
+ZXOMY
+\op -x, -y, -z
+OM
+\op <->
+\ort MO

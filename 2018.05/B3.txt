@@ -1,0 +1,7 @@
+\rebus BLEFFA
+\op e->u
+BLUFFA
+\op !
+LURA
+\op u->e
+\ort LERA

@@ -1,0 +1,9 @@
+\rebus SAMMÄTS
+\op <->
+STÄMMAS
+\op !
+RÖSTS
+\op i
+ÖSIRTS
+\op <->
+\ort STRISÖ

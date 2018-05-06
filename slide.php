@@ -188,6 +188,9 @@ class SolutionSlide extends Slide
         if ($type == 'R') {
             $this->title = "Rebus " . $nr;
         }
+        elseif ($type == 'B') {
+            $this->title = "Blåbärsrebus " . $nr;
+        }
         elseif ($type == 'H') {
             $this->title = "Hjälp " . $nr;
         }

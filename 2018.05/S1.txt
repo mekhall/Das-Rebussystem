@@ -1,0 +1,9 @@
+\rebus RPK
+\op om
+RKOMP
+\op <->
+PMOKR
+\op om
+PROMMOK
+\op <->
+\ort KOMMORP

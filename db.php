@@ -40,7 +40,7 @@ function getDb()
             echo("<p><font color=red>Database directory " . $dir . " not writable.</font></p>\n");
         }
         $db = new SQLite3(SQLITE_DB);
-        $db->busyTimeout(1000);
+        $db->busyTimeout(5000);
         $teamn = $db->querySingle("SELECT COUNT(*) FROM rebus");
         $e = $db->querySingle("SELECT * FROM rebus WHERE team=0", true);
         $eventn = count($e) - 1;
@@ -95,7 +95,7 @@ function setPoints($team, $event, $points)
 {
     $db = getDb();
 
-    if ($points == '') {
+    if ($points === '') {
         $points = 'NULL';
     }
 
@@ -162,4 +162,17 @@ function updateEventPoints(&$data, $event)
     }
 
 }
+
+function getDonePercentage() {
+    $db = new SQLite3(SQLITE_DB);
+    $db->busyTimeout(5000);
+
+    $nulls = 0;
+    for ($event = 0; $event < count($GLOBALS['events']); ++$event) {
+        $nulls += $db->querySingle("SELECT COUNT(*) FROM rebus WHERE event$event IS null");
+    }
+    $total = count($GLOBALS['teams']) * count($GLOBALS['events']);
+    return round((1 - $nulls / $total) * 100);
+}
+
 ?>

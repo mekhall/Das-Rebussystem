@@ -1,0 +1,13 @@
+\rebus RORAVÅRBBFF
+\op <->
+FFBBRÅVAROR
+\op i
+BIFFBRÅVAROR
+\op -b
+BIFFRÅVAROR
+\op !
+KOR
+\op +b
+KORB
+\op <->
+\ort BROK

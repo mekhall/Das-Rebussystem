@@ -10,10 +10,13 @@ function filldb()
 {
   for ($team = 0; $team < count($GLOBALS['teams']); ++$team) {
     for ($event = 0; $event < count($GLOBALS['events']); ++$event) {
-      setPoints($team, $event, rand(-20, 20));
+      $v = rand(-20, 20);
+      setPoints($team, $event, $v);
     }
   }
 }
+
+//filldb();
 
 foreach ($actions as $a) {
   if ($a->getTitle() == "Totalt") {

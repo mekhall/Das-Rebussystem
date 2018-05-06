@@ -1,0 +1,13 @@
+\rebus VARE.VUMSSKA
+\op i
+ARE.VUMSSKIVA
+\op a->t, +t
+TRE.VTUMSSKIVA
+\op !
+3.5TUMSSKIVA
+\op !
+DISKETT
+\op t->a, -t
+DISKEA
+\op i
+\ort SKEDA

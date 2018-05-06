@@ -53,6 +53,9 @@ foreach ($parts as $part => $data) {
                     $n = $matches[1];
                     $eventName = $events[$e];
                     array_push($actions, new SolutionSlide('R', $n));
+                    if (in_array($n, $GLOBALS['bluerebus'])) {
+                        array_push($actions, new SolutionSlide('B', $n));
+                    }
                     array_push($actions, new SolutionSlide('H', $n));
                     array_push($actions, new EventSlide($eventName, $e));
                 }

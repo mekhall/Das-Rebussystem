@@ -1,0 +1,7 @@
+\rebus ADDITIONSSYMBOERNA
+\op +l
+ADDITIONSSYMBOLERNA
+\op !
+PLUSSEN
+\op -l
+\ort PUSSEN

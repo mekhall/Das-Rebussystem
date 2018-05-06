@@ -1,0 +1,9 @@
+\rebus 9531953157916
+\op !
+F I K I P AU S
+\op i->a
+FIKAPAUS
+\op !
+RAST
+\op a->i
+\ort RIST

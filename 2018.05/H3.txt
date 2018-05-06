@@ -1,0 +1,9 @@
+\rebus ABOLURENA
+\op +s, +t
+ABSOLUTRENA
+\op !
+STERILA
+\op -s, -t
+ERILA
+\op i
+\ort LERA

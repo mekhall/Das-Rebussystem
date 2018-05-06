@@ -1,0 +1,15 @@
+\rebus MIGALOSSOLK
+\op i
+GALOMSSOLK
+\op <->
+KLOSSMOLAG
+\op m->b
+KLOSSBOLAG
+\op !
+BRIO
+\op b->m
+MRIO
+\op <->
+OIRM
+\op i
+\ort ROM

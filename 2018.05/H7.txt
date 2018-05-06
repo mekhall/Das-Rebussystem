@@ -1,0 +1,7 @@
+\rebus VALLEMTALAND
+\op m->t
+VALLETTALAND
+\op !
+MALTA
+\op t->m
+\ort MALMA

@@ -1,0 +1,17 @@
+\rebus MALOPAUMBL
+\op i
+OPAIMALUMBL
+\op om
+OPAILUMBLOMMA
+\op -l, -a
+OPIUMBLOMMA
+\op !
+VALLMO
+\op +l, +a
+VALLMOLA
+\op <->
+ALOMLLAV
+\op om
+ALLAVL
+\op <->
+\ort LVALLA

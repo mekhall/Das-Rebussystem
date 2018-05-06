@@ -1,0 +1,11 @@
+\rebus TSRUBDEM
+\op <->
+MEDBURST
+\op b->v
+MEDVURST
+\op !
+KORV
+\op v->b
+KORB
+\op <->
+\ort BROK

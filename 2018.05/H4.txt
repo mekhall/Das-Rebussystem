@@ -1,0 +1,7 @@
+\rebus DIMENSIONARNA
+\op a->e
+DIMENSIONERNA
+\op !
+MÅTTEN
+\op e->a
+\ort MÅTTAN

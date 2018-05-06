@@ -18,6 +18,7 @@ function getPoint($d)
 
 function getInfo($teamnr, $d) {
     $info = getTeamInfo($teamnr);
+    $info['number_class'] = "team" . $info['number'];
     $info['points'] = getPoint($d);
     $info['disabled'] = is_null($d);
     $info['index'] = $teamnr;
@@ -233,6 +234,7 @@ function update(data) {
       .attr("x", 60)
       .attr("y", barHeight / 2)
       .attr("dy", ".35em")
+      .attr("class", ƒ('number_class'))
       .classed("disabled", ƒ('disabled'))
       .text(ƒ('name'));
 

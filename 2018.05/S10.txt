@@ -1,0 +1,9 @@
+\rebus MUMJÖOMAUB
+\op om
+MUMJAUBÖ
+\op ö->ä
+MUMJAUBÄ
+\op !
+LÄTEN
+\op ä->ö
+\ort LÖTEN

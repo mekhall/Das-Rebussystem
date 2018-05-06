@@ -1,0 +1,9 @@
+\rebus NDOTORMNE
+\op i
+DOTORMINNE
+\op o->a
+DATORMINNE
+\op !
+RAM
+\op a->o
+\ort ROM

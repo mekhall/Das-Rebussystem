@@ -1,0 +1,9 @@
+\rebus MIAMAM
+\op i
+AMMAM
+\op <->
+MAMMA
+\op !
+MOR
+\op <->
+\ort ROM

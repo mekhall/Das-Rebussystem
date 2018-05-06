@@ -1,0 +1,11 @@
+\rebus NAARGROLESRPH
+\op <->
+HPRSELORGRAAN
+\op -a, -r, p->ö
+HÖRSELORGAN
+\op !
+ÖRON
+\op +a, +r, ö->p
+PRONRA
+\op <->
+\ort ARNORP
