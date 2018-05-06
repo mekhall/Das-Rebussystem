@@ -35,7 +35,13 @@ relativt självförklarande, men här är ändå en förklaring:
 
 * teams: En array som mappar lagnamn mot lagnummer och antal lagmedlemmar.
 Antal lagmedlemmar behöver endast sättas till rätt antal om man vill
-använda prickberäkning baserat på antal lagmedlemmar.
+använda prickberäkning baserat på antal lagmedlemmar. För att markera
+blåbärslag och småbil osv kan man använda syntaxen:
+
+'Lag namn' => array(<lag nummer>, <antal lagmedlemmar>, <flair>),
+
+Flair en bild som läggs framför lagnamnet i grafer, för att använda tex markera
+en småbil kan man skriva '<small>' och skapa en bild som heter small.png.
 
 * events: En ganska stor array som innehåller alla rebusar, pyssel och
 plock och övriga "grenar" som ger prickar, tex öppnade kuvert. 
@@ -139,10 +145,16 @@ stjälprebusarna och ett totalresult efter lunchen.
 Rebusar
 -------
 
-Rebusar ska ha filnamn `Rn.txt`, `Hn.txt` eller `Sn.txt` för vanliga rebusar,
-stjälprebusar och hjälprebusar, där n är numret på rebusen. För att göra
+Rebusar ska ha filnamn `Rn.txt`, `Hn.txt`, `Bn.txt` eller `Sn.txt` för vanliga rebusar,
+hjälprebusar, blåbärsrebusar eller stjälprebusar, där n är numret på rebusen. För att göra
 alternativlösningar kan man byta ut siffran mot valfri text och sedan använda
 t.ex. '*solution*S<text>' som beskrivs ovan.
+
+Blåbärs-rebusar visas bara om de är med i arrayen bluerebus. Exempel:
+
+$bluerebus = array(2, 3, 4, 6, 7, 8);
+
+Vill man inte ha några blåbärsrebusar gör man en tom array.
 
 I rebusfilerna kan man använda dessa taggar:
 
@@ -154,6 +166,8 @@ I rebusfilerna kan man använda dessa taggar:
     \op <rebus operation>
 
 Allt annat blir vanlig text.
+
+Det finns ett Python-script (check.py) för att kolla att rebusarna är korrekta.
 
 
 Rättning
@@ -179,8 +193,8 @@ ingen har matat in något i den cellen. Vitt betyder att fältet
 och du har fått det infört i ditt fält. Ajax!
 
 Datat skickas till databasen när man lämnar en cell. Data hämtas
-kontinuerligt från databasen, kolumn för kolumn. Tror det är någon
-sekund mellan kolumnuppdateringarna, så det tar några minuter att
+kontinuerligt från databasen, kolumn för kolumn. Det är en halv
+sekund mellan kolumnuppdateringarna, så det tar en stund att
 uppdatera hela matrisen.
 
 
@@ -205,11 +219,12 @@ Remote
 ------
 
 För att få upp presentationen på fler än en skärm samtidigt använder
-man inte VNC (som vi gjorde...). Däremot kör man lämpligtvis med det 
-nyutvecklade `remote.php`: sidan laddas på den eller de datorer som
+man inte VNC (som vi gjorde...). Däremot kör man lämpligtvis med remote.php`:
+sidan laddas på den eller de datorer som
 är kopplade till projektorer etc. Sedan kör man den "vanliga" `present.php`
 på en dator som då styr vad som visas på remote-datorerna.
 
+Det finns också ett script (stats.php) som visar hur många procent som är rättade.
 
 Övrigt
 ------
