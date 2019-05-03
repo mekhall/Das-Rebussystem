@@ -1,0 +1,7 @@
+\rebus BJÄCKE \av Herman
+\OP C->L
+Bjälke
+\op !
+Balk
+\op L->C
+\ort BACK

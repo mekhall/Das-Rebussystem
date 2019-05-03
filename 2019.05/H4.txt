@@ -1,0 +1,7 @@
+\rebus HAGMARKENGÖRHÄSTBARN \av BasPer
+\op G->F
+Hagmarken för hästbarn
+\op !
+Fölängen
+\op F->G
+\ort GÖLÄNGEN

@@ -1,0 +1,9 @@
+\rebus EDERIVATTEN \av Dicken
+\op +J
+Ejder i vatten 
+\op !
+And i sjö
+\op i 
+SJANDÖ
+\op -J
+\ort SANDÖ

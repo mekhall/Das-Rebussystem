@@ -1,0 +1,7 @@
+\rebus SNÖSKORPIN \av BasPer
+\op I->A
+Snöskorpan
+\op !
+Skaren
+\op A->I
+\ort SKIREN

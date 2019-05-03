@@ -1,0 +1,13 @@
+\rebus IKARSPANSINA \av BasPer
+\op <->
+ANISNAPSRAKI
+\op +S
+Anissnaps raki
+\op !
+Raki snaps
+\op i
+SNAPRAKS
+\op <->
+SKARPANS
+\op -S
+\ort SKARPAN

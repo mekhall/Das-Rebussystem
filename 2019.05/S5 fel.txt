@@ -1,0 +1,9 @@
+\rebus LITETSTJÄRTATTENDRAG \av Lagen med -1
+\op +V
+Litet stjärtvattendrag 
+\op !
+Rövgölen
+\op Men ett vattendrag har rinnande vatten.
+\op Och det står heller inte i bestämd form
+\op -V
+\ort RÖGÖLEN

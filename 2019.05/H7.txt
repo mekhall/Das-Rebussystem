@@ -1,0 +1,9 @@
+\rebus IBSINTVÄXKEN \av Herman
+\op I->A, K->T
+Absintväxten
+\op ! 
+Malörten
+\op T->K, A->I
+MILÖRKEN
+\op i 
+\ort L MÖRKEN

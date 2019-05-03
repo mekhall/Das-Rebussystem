@@ -1,0 +1,7 @@
+\rebus ROMENBETHOVE \av BasPer
+\op E->A, +E, +N
+Roman Beethoven
+\op !
+Tonsättare
+\op A->E, -E, -N
+\ort TOSÄTTER

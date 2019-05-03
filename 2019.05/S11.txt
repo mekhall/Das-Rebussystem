@@ -1,0 +1,9 @@
+\rebus VÄLHÄNGDPITEN \av BasPer
+\op +L
+Välhängd pilten
+\op !
+Mör killen
+\op -L
+MÖRKILEN
+\op i
+\ort L MÖRKEN

@@ -1,0 +1,7 @@
+\rebus BATPISTORIUS \av BasPer
+\op T->R
+Bar Pistorius
+\op ! 
+Nya vader
+\op R->T
+\ort NYA VADET

@@ -1,0 +1,9 @@
+\rebus CHARPEN \av Herman
+\op P->M 
+Charmen
+\op !
+Karisman
+\op M->P 
+KARISPAN
+\op i
+\ort SKARPAN

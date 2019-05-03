@@ -1,0 +1,9 @@
+\rebus GÖTENLÅNGLÅNGTIDEBOGN \av Herman
+\op i
+En lång lång tid i GÖTEBOGN
+\op +R
+En lång lång tid i Göteborg N
+\op !
+Görlänge N
+\op -R 
+\ort GÖLÄNGEN

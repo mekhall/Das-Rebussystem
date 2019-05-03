@@ -1,0 +1,9 @@
+\rebus GUDISTOLLETSSTRÅ \av BasPer
+\op O->A
+Gud i stallets strå
+\op ! 
+Allah i halm
+\op i
+HALLAHALM
+\op A->O
+\ort HALLAHOLM

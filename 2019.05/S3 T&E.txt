@@ -1,0 +1,16 @@
+\rebus IKARSPANSINA \av T&E
+\op <->
+ANISNAPSRAKI
+\op i
+SNAPSAN Raki
+\op N->R
+Snapsar Raki
+\op !
+Turk
+\op <->
+KRUT
+\op R->N
+Knut
+\op Många lag kom hit, men det finns inget KNUT på kartan
+\op T&E associerade (kanske lite onödigt fritt) till !
+\ort GAVEL

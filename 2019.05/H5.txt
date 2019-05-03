@@ -1,0 +1,7 @@
+\rebus MAMMASSUMPA \av Herman
+\op S->R
+Mammas rumpa
+\op !
+Mors ända
+\op R->S
+\ort MOSSÄNDA

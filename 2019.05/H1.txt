@@ -1,0 +1,7 @@
+\rebus PICKUPEM \av BasPer
+\op M->N
+Pickupen
+\op !
+Nålen
+\op N->M
+\ort MÅLEN

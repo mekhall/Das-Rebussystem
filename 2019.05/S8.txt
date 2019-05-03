@@ -1,0 +1,11 @@
+\rebus PARIJSODY \av Herman
+\op i
+JSOPARDY
+\op S->E
+Jeopardy
+\op !
+Frågelek
+\op om
+FÅGELEK om R
+\op E->S
+\ort FÅGELSK. OMR.

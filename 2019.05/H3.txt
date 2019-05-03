@@ -1,0 +1,7 @@
+\rebus DRICKACARLLBERGDILREKTURMLASKAN \av Herman
+\op L->S, -L, M->F
+Dricka Carlsberg direkt ur flaskan
+\op !
+Halsa Hof
+\op S->L, +L, F->M
+\ort HALLAHOLM

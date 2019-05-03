@@ -1,0 +1,9 @@
+\rebus FILASTIHÖVET \av BasPer
+\op Ö->A, I->U
+Fulast i havet
+\op ! 
+Marulken
+\op U->I, A->Ö
+MÖRILKEN
+\op i
+\ort L MÖRKEN

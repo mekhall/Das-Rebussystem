@@ -1,0 +1,9 @@
+\rebus LJOTGYNEN \av BasPer
+\op i
+GiLJOTYNEN
+\op Y->I
+Giljotinen
+\op !
+Bilan
+\op I->Y
+\ort BYLAN

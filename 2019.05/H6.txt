@@ -1,0 +1,7 @@
+\rebus JANATANSBROR \av Herman
+\op A->O
+Jonatans Bror
+\op !
+Skorpan
+\op O->A
+\ort SKARPAN

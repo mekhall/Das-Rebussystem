@@ -1,0 +1,9 @@
+\rebus KNÄBROSKSTALLOLESLÅRTILLBAKA \av BasPer
+\op L->N
+Knäbrosk Stallone slår tillbaka
+\op !
+Menisk Rambo
+\op i
+SKRAMMENBO
+\op N->L
+\ort SKRAMMELBO 

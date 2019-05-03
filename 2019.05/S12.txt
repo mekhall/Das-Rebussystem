@@ -1,0 +1,7 @@
+\rebus ÄRTERMEHFLÄSK \av Mårten
+\op H->D
+Ärter med fläsk
+\op !
+Torsdag
+\op D->H
+\ort TORSHAG
