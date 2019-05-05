@@ -34,7 +34,7 @@ foreach (glob(PICTURE_PATH . "*.gif") as $f) {
 
 chdir($dir);
 
-$GLOBALS['index_links'] = 0;
+$GLOBALS['index_links'] = 1;
 $GLOBALS['rebus_split'] = 0;
 
 $static = 1;
