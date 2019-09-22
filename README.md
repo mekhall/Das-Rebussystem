@@ -145,8 +145,8 @@ stjälprebusarna och ett totalresult efter lunchen.
 Rebusar
 -------
 
-Rebusar ska ha filnamn `Rn.txt`, `Hn.txt`, `Bn.txt` eller `Sn.txt` för vanliga rebusar,
-hjälprebusar, blåbärsrebusar eller stjälprebusar, där n är numret på rebusen. För att göra
+Rebusar ska ha filnamn `Rn.txt`, `Hn.txt`, `Bn.txt`, `Xn.txt` eller `Sn.txt` för vanliga rebusar,
+hjälprebusar, blåbärsrebusar, bonusrebusar eller stjälprebusar, där n är numret på rebusen. För att göra
 alternativlösningar kan man byta ut siffran mot valfri text och sedan använda
 t.ex. '*solution*S<text>' som beskrivs ovan.
 
@@ -219,12 +219,12 @@ Remote
 ------
 
 För att få upp presentationen på fler än en skärm samtidigt använder
-man inte VNC (som vi gjorde...). Däremot kör man lämpligtvis med remote.php`:
+man inte VNC (som vi gjorde...). Däremot kör man lämpligtvis med `remote.php`:
 sidan laddas på den eller de datorer som
 är kopplade till projektorer etc. Sedan kör man den "vanliga" `present.php`
 på en dator som då styr vad som visas på remote-datorerna.
 
-Det finns också ett script (stats.php) som visar hur många procent som är rättade.
+Det finns också ett script (`stats.php`) som visar hur många procent som är rättade.
 
 Övrigt
 ------

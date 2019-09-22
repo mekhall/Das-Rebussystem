@@ -27,6 +27,9 @@ $teams = array(
                'Flexbussen'               => array(9001, 1),
 		);
 	       
+// Blåbärsrebusar - för bakåtkompatibilitet
+$bluerebus = array();
+
 $events = array(
     // Rebusar
     'R 1' => 'Rebus 1',
