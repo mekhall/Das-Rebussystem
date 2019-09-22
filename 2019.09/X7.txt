@@ -1,0 +1,7 @@
+\rebus GRÖDALTERNATJV \av Markus
+\op Ö->A, J->I
+GRADALTERNATIV
+\op !
+RADIAN
+\op A->Ö, I->J
+\ort RÖDJAN

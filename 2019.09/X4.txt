@@ -1,0 +1,13 @@
+\rebus DDYNMPMUYRKS \av Markus
+\op <->
+SKRYUMPMNYDD
+\op om
+SKYDDOMRYUMPMN
+\op -Y, M->A
+SKYDD OM RUMPAN
+\op !
+BLÖJA
+\op +Y, A->M
+YBLÖJM
+\op <->
+\ort MJÖLBY

@@ -1,0 +1,13 @@
+\rebus PPEVLRÖFSTS \av Malin
+\op <->
+STSFÖRLVEPP
+\op i
+FÖRLISTCVEPP
+\op V->K
+FÖRLIST SKEPP
+\op !
+VRAK
+\op K->V
+VRAV
+\op <->
+\ort VARV

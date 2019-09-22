@@ -1,0 +1,9 @@
+\rebus ELSKAT \av Anna
+\op E->Ä
+ÄLSKAT
+\op !
+KÄRT
+\op Ä->E
+KERT
+\op i
+\ort RIKET

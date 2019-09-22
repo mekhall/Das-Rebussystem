@@ -1,0 +1,9 @@
+\rebus SKIKHÅL \av Harald
+\op K->T
+SKITHÅL
+\op !
+STOMI
+\op T->K
+SK OM I
+\op om
+\ort SIK

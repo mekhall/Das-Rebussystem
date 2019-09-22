@@ -1,0 +1,9 @@
+\rebus GRYAVERA \av Markus
+\op -Y
+GRAVERA
+\op !
+RISTA
+\op i
+STRA
+\op +Y
+\ort STYRA

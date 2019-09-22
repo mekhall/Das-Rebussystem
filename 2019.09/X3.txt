@@ -1,0 +1,13 @@
+\rebus ARÄÅVIN \av Malin
+\op <->
+NIVÅÄRA
+\op i
+VÅNÄRA
+\op Å->A
+VANÄRA
+\op !
+NESA
+\op A->Å
+NESÅ
+\op <->
+\ort ÅSEN

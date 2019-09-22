@@ -1,0 +1,7 @@
+\rebus SEJDERN \av Hanna
+\op N->L, -R
+SEJDEL
+\op !
+ÖLSTOP
+\op N->L, +R
+\ort ÖNSTORP

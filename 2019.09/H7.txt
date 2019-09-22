@@ -1,0 +1,11 @@
+\rebus SEDRÄTRÖRF \av Hanna
+\op <->
+FRÖRTÄRDES
+\op -R
+FÖRTÄRDES
+\op !
+ÅTS
+\op +R
+ÅRTS
+\op <->
+\ort STRÅ

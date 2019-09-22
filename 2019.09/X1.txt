@@ -1,0 +1,7 @@
+\rebus 16198421161 \av Anna
+16 19 8 42 116 1
+\op per.sys, rom
+S K O Mo Lv I
+SK OM OLVI
+\op om
+\ort SOLVIK

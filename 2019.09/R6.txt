@@ -1,0 +1,13 @@
+\rebus ASIDOK \av Malin
+\op <->
+KODISA
+\op i
+SKODA
+\op O->A
+SKADA
+\op !
+SÅRA
+\op A->O
+SÅRO
+\op <->
+\ort ORÅS

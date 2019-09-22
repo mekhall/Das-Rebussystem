@@ -1,0 +1,9 @@
+\rebus FIRAT \av Malin
+\op i
+RAFT
+\op +K
+KRAFT
+\op !
+STYRKA
+\op -K
+\ort STYRA

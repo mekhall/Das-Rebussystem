@@ -1,0 +1,9 @@
+\rebus SORILSKYDDET \av Hanna
+\op -r, -i
+SOLSKYDDET
+\op !
+MARKISEN
+\op +r, +i
+MARK I RISEN
+\op i
+\ort RISMARKEN

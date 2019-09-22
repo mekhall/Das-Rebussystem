@@ -1,0 +1,13 @@
+\rebus HLEDEMISTA \av Markus
+\op <->
+ATSIMEDELH
+\op i
+MATSEDELH
+\op H->N
+MATSEDELN
+\op !
+MENYN
+\op N->H
+MEHYN
+\op <->
+\ort NYHEM

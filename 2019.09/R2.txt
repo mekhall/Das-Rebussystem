@@ -1,0 +1,13 @@
+\rebus KOBSSIÖRRON \av Hanna
+\op <->
+NORRÖISSBOK
+\op i
+SNORRÖSBOK
+\op Ö->E
+SNORRES BOK
+\op !
+EDDAN
+\op E->Ö
+ÖDDAN
+\op <->
+\ort NADDÖ

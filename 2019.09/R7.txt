@@ -1,0 +1,11 @@
+\rebus TNÖKSSÖ \av Markus
+\op <->
+ÖSSKÖNT
+\op Ö->A
+ASSKÖNT
+\op !
+NAJS
+\op A->Ö
+NÖJS
+\op <->
+\ort SJÖN

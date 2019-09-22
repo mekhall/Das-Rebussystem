@@ -1,0 +1,9 @@
+\rebus SKIKHÅL
+\op +N
+SKINKHÅL
+\op !
+Donald Trump
+\op !
+AMERIKAN
+\op -N
+\ort AMERIKA

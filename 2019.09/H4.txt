@@ -1,0 +1,12 @@
+\rebus PPLATSOMSYKVRD \av Anna
+\op om
+PSYKVRDPLATS
+\op +å
+PSYKVÅRDPLATS
+\op !
+DÅRHUS
+\op -å
+DRHUS
+\op i
+R I DHUS
+\ort RIDHUS
