@@ -1,0 +1,4 @@
+\bild djungelboken.png
+\rebus Gamarna sjunger i djungelboken
+\op !
+\ort FÅGELSÅNGEN

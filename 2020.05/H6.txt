@@ -1,0 +1,9 @@
+\rebus VHOMIR
+\op om
+VIRH
+\op H->A
+VIRA
+\op !
+LINDA
+\op A->H
+\ort LINDH

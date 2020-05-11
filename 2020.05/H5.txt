@@ -1,0 +1,4 @@
+\bild H5.png
+\rebus Programledaren för Robinson håller upp en röst
+\op !
+\ort RÖSTEN

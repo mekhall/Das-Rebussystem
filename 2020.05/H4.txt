@@ -1,0 +1,9 @@
+\rebus LSGOTSKFAMJ
+\op i
+SGOTSKFAMILJ
+\op G->K
+SKOTSKFAMILJ
+\op !
+KLAN
+\op K->G
+\ort GLAN

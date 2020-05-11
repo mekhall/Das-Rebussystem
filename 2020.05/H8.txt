@@ -1,0 +1,9 @@
+\rebus KPAPALAND
+\op i
+PAPIKALAND
+\op +R
+PAPRIKALAND
+\op !
+UNGERN
+\op -R
+\ort UNGEN

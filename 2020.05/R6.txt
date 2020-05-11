@@ -1,0 +1,13 @@
+\rebus LEBADENVAPLYTKA
+\op <->
+AKTYLPAVNEDABEL
+\op i
+TYLPAVNEDIAKABEL
+\op N->M,-L
+TYPAVMEDIAKABEL
+\op !
+HDMI
+\op <->
+IMDH
+\op M->N,+L
+\ort LINDH

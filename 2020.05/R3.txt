@@ -1,0 +1,9 @@
+\rebus SKLRMAN
+\op i
+KLRISMAN
+\op L->A
+KARISMAN
+\op !
+AURAN
+\op A->L
+\ort LURAN

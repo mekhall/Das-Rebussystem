@@ -1,0 +1,9 @@
+\rebus MASENOMNSÅ
+\op om
+MANSÅSEN
+\op +P
+MANSPÅSEN
+\op !
+PUNGEN
+\op -P
+\ort UNGEN

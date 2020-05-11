@@ -1,0 +1,7 @@
+\rebus URFÅRELN
+\op R->G
+URFÅGELN
+\op !
+GÖKEN
+\op G->R
+\ort RÖKEN

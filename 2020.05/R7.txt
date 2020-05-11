@@ -1,0 +1,13 @@
+\rebus ERAKÖJTN
+\op <->
+NTJÖKARE
+\op i
+JÖKARINTE
+\op Ö->A
+JAKARINTE
+\op !
+NEKAR
+\op <->
+RAKEN
+\op A->Ö
+\ort RÖKEN

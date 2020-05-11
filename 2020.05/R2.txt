@@ -1,0 +1,9 @@
+\rebus RSNPERN
+\op i
+PIRSNERN
+\op R->L
+PILSNERN
+\op !
+ÖLEN
+\op L->R
+\ort ÖREN
