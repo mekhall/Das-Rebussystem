@@ -1,0 +1,11 @@
+\rebus ROPPARNAOMIDESISTÄD \av Fredrik/Maria
+\op om
+RIDESISTÄDOPPARNA
+\op i
+DESISTÄDROPPARNA
+\op Ä->A
+DE SISTA DROPPARNA
+\op !
+SLATTEN
+\op A->Ä
+\ort SLÄTTEN

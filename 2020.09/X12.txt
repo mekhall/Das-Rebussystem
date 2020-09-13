@@ -1,0 +1,11 @@
+\rebus ELTCL \av Henrik
+\op <->
+LCTLE
+\op i
+C TILL E
+\op !
+TERS
+\op <->
+SRET
+\op i
+\ort RISET

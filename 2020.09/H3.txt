@@ -1,0 +1,9 @@
+\rebus SÖTTSÖDIMOTRA \av Henrik
+\op i
+MOTSÖTTSÖDRA
+\op Ö->A
+MOTSATT SÖDRA
+\op !
+NORRA
+\op A->Ö
+\ort NORRÖ

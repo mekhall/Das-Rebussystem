@@ -1,0 +1,13 @@
+\rebus TREVJÖNA \av Henrik
+\op <->
+ANÖJVERT
+\op i
+ÖJVERIANT
+\op J->L,E->A
+ÖLVARIANT
+\op !
+ALE
+\op L->J,A->E
+EJE
+\op <->
+\ort EJE

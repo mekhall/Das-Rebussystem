@@ -1,0 +1,11 @@
+\rebus ENSOIODLIGIFÖRBEL \av Markus
+\op i
+ODLIGIFÖRENSOBEL
+\op i
+FÖRODLIGENSOBEL
+\op +M
+FÖRMODLIGEN SOBEL
+\op !
+NOGMÅRD
+\op -M
+\ort NOGÅRD

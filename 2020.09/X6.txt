@@ -1,0 +1,13 @@
+\rebus ENLEHTÅPEDATT \av Henrik
+\op <->
+TTADEPÅTHELNE
+\op i
+TITTADEPÅHELNE
+\op N->G
+TITTADEPÅHELGE
+\op !
+SÅGÄLG
+\op G->N
+SÅNÄLG
+\op <->
+\ort GLÄNÅS

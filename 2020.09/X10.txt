@@ -1,0 +1,7 @@
+\rebus TIA \av Henrik/Maria
+\op T->N
+NIA
+\op !
+NUNA
+\op N->T
+\ort TUNA

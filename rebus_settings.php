@@ -1,7 +1,7 @@
 <?php
 
 // Current rally name
-define('NAME', '2020.05');
+define('NAME', '2020.09');
 
 define('SCREENWIDTH', 1024);
 

@@ -1,0 +1,15 @@
+\rebus DNATGNÅLDTNIRMIDEMUJ \av Henrik
+\op <->
+JUMEDIMRINTDLÅNGTAND
+\op i
+MRINTDJUMEDLÅNGTAND
+\op +A,+R
+MARINT DJUR MED LÅNG TAND
+\op !
+NARVAL
+\op -A,-R
+NVAL
+\op <->
+LAVN
+\op i
+\ort VILAN

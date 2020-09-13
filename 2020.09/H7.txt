@@ -1,0 +1,11 @@
+\rebus ADDYRKÅEB \av Henrik
+\op <->
+BEÅKRYDDA
+\op Å->A
+BEAKRYDDA
+\op !
+DRAGON
+\op A->Å
+DRÅGON
+\op <->
+\ort NOGÅRD

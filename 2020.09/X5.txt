@@ -1,0 +1,11 @@
+\rebus FARBANOMSGURB \av Henrik/Maria
+\op om
+FARSGURBBAN
+\op -R,A->E
+FARSGUBBEN
+\op !
+STABBEN
+\op i
+ABBISTEN
+\op +R,E->A
+\ort RABBISTAN

@@ -1,0 +1,13 @@
+\rebus DUJLASÅPHCSP \av Henrik
+\op <->
+PSCHPÅSALJUD
+\op i
+CHIPSPÅSALJUD
+\op A->E
+CHIPSPÅSELJUD
+\op !
+PRASSEL
+\op <->
+LESSARP
+\op E->A
+\ort LASSARP

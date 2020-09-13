@@ -1,0 +1,7 @@
+\rebus SNOÄPVLE \av Henrik
+\op V->P
+SNO ÄPPLE
+\op !
+PALLA
+\op P->V
+\ort VALLA

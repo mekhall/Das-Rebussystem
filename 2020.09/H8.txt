@@ -1,0 +1,7 @@
+\rebus SANNKAKAN \av Henrik/Maria
+\op S->P
+PANNKAKAN
+\op !
+PLÄTTEN
+\op P->S
+\ort SLÄTTEN
