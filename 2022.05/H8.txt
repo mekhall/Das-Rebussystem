@@ -1,0 +1,9 @@
+\rebus DIXERINGEN
+\op i
+IXIDERINGEN
+\op i->o
+OXIDERINGEN
+\op !
+ROSTEN
+\op o->i
+\ort RISTEN

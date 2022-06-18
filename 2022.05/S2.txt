@@ -1,0 +1,11 @@
+\rebus ONÄRSTNLENSÄFF
+\op i
+LENSIONÄRSTNÄFF
+\op l->p, n->r
+PENSIONÄRSTRÄFF
+\op !
+PROMÖTE
+\op p->l, r->n
+LNOMÖTE
+\op om
+\ort LÖTEN

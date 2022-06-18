@@ -1,0 +1,9 @@
+\rebus ÄRMIKINISAR
+\op m->b
+ÄRBIKINISAR
+\op !
+DELADEOMBARHUD
+\op om
+DELADBARHUDE
+\op b->m
+\ort DELADMARHUDE

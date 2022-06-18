@@ -1,0 +1,9 @@
+\rebus GLÄDJIÖN
+\op +e
+GLÄDJEIÖN
+\op !
+LYCKAIHOLMEN
+\op -e
+LYCKAIHOLMN
+\op i
+\ort HOLMLYCKAN

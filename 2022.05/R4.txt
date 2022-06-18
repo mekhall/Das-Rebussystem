@@ -1,0 +1,15 @@
+\rebus DRSREVORNOKKSUJ
+\op i
+SREVORNOKKSIDRUJ
+\op <->
+JURDISKKONROVERS
+\op +t, +i
+JURIDISKKONTROVERS
+\op !
+TVIST
+\op -t, -i
+TVS
+\op <->
+SVT
+\op i
+\ort VIST

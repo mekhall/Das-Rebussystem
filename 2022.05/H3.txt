@@ -1,0 +1,11 @@
+\rebus ADIMARF
+\op <->
+FRAMIDA
+\op +s
+FRAMSIDA
+\op !
+AVERS
+\op <->
+SREVA
+\op -s
+\ort REVA

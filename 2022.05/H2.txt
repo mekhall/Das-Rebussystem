@@ -1,0 +1,11 @@
+\rebus APPILOK
+\op <->
+KOLIPPA
+\op -o
+KLIPPA
+\op !
+BERG
+\op +o
+OBERG
+\op <->
+\ort GREBO

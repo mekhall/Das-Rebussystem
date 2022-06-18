@@ -1,0 +1,11 @@
+\rebus NSROHFÖLLSBRON
+\op i
+ROHFÖLLSBRINSON
+\op i
+HFÖLLSIROBRINSON
+\op -f, -r
+HÖLLSIROBINSON
+\op !
+ÖRÅD
+\op +f, +r
+\ort FÖRRÅD

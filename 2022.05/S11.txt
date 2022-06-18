@@ -1,0 +1,15 @@
+\rebus LBWB
+\op +e
+ELBWB
+\op <->
+BWBLE
+\op i
+WIBBLE
+\op !
+ANNE
+\op -e
+ANN
+\op i
+NIAN
+\op <->
+\ort NAIN

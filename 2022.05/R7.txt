@@ -1,0 +1,9 @@
+\rebus 9111058952522
+\op <->
+22 52 59 8 50 11 19
+\op ! (per sys)
+TITEPROSNNAK
+\op i
+TEPROTSNNAK
+\op <->
+\ort KANNSTORPET

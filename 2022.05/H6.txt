@@ -1,0 +1,9 @@
+\rebus EDMIÄRTVÄDMYCKEBLAD
+\op i
+ÄRTVÄDMEDMYCKEBLAD
+\op v->r, +t
+ÄRTRÄDMEDMYCKETBLAD
+\op !
+LÖVRIKT
+\op r->v, -t
+\ort LÖVVIK

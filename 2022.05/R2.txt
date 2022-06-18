@@ -1,0 +1,13 @@
+\rebus VRATTALEHLFRÖF
+\op i
+LEHLIVRATTAFRÖF
+\op <->
+FÖRFATTARVILHEL
+\op +m
+FÖRFATTARVILHELM
+\op !
+MOBERG
+\op -m
+OBERG
+\op <->
+\ort GREBO

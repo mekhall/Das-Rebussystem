@@ -1,0 +1,13 @@
+\rebus MÄK
+\op -prickar
+MAK
+\op +t
+MAKT
+\op !
+STYRE
+\op -t
+SYRE
+\op !
+O
+\op +prickar
+\ort Ö

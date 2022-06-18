@@ -1,0 +1,11 @@
+\rebus GINDANSARMADAN
+\op i
+INDANSARMADIGAN
+\op +l
+LINDANSARMADIGAN
+\op !
+ELVIRA
+\op i
+RELVA
+\op -l
+\ort REVA

@@ -1,0 +1,9 @@
+\rebus STARSTADIRYRSLAND
+\op a->o, r->s
+STORSTADIRYSSLAND
+\op !
+MOSKVA
+\op o->a, s->r
+MARKVA
+\op i
+\ort VIMARKA

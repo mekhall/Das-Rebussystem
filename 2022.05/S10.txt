@@ -1,0 +1,13 @@
+\rebus AKRYNESNKNIKÄRT
+\op <->
+TRÄKINKNSENYRKA
+\op i
+NKNSENTRÄKYRKA
+\op +a, n->s
+SKANSENTRÄKYRKA
+\op !
+SEGLORA
+\op -a, s->n
+NEGLOR
+\op <->
+\ort ROLGEN

@@ -1,0 +1,7 @@
+\rebus FÅNLESINAGÅLNG
+\op -a, -n, -l
+FÅLESINGÅNG
+\op !
+HÄSTSPORT
+\op +a, +n, +l
+\ort HÄSTSPORTANL

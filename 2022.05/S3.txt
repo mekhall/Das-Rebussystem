@@ -1,0 +1,13 @@
+\rebus RLLANKRÄJTS
+\op i
+KIRLLANRÄJTS
+\op <->
+STJÄRNALLRIK
+\op +t
+STJÄRNTALLRIK
+\op !
+ASTROFAT
+\op -t
+ASROFAT
+\op <->
+\ort TAFORSA

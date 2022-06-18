@@ -1,0 +1,11 @@
+\rebus SSEBRETSULK
+\op <->
+KLUSTERBESS
+\op e->a, u->o, -s
+KLOSTERBAS
+\op !
+ABBOT
+\op a->e, o->u, +s
+EBBUTS
+\op <->
+\ort STUBBE

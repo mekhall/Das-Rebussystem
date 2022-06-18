@@ -1,0 +1,13 @@
+\rebus RSJAGKCAISAOM
+\op i->e
+RSJAGKCAESAOM
+\op +i
+RSJAGKICAESAOM
+\op i
+CAESARSJAGKOM
+\op !
+VENI
+\op e->i
+VINI
+\op -i
+\ort VIN

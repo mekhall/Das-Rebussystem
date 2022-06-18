@@ -1,0 +1,11 @@
+\rebus TÄRKDVARS
+\op i
+DITÄRKVARS
+\op om
+DITSOMÄRKVAR
+\op i->e
+DETSOMÄRKVAR
+\op !
+RESTEN
+\op e->i
+\ort RISTEN

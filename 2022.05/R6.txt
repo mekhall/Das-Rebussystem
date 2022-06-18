@@ -1,0 +1,7 @@
+\rebus OFOT61000
+\op +k
+KOFOT61000
+\op ! (rom)
+KLÖVVIK
+\op -k
+\ort LÖVVIK
