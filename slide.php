@@ -25,7 +25,7 @@ class PictureSlide extends Slide
 {
     var $picture;
 
-    function PictureSlide($t, $p) {
+    function __construct($t, $p) {
         $size = getimagesize($p);
 
         checkPic($p);
@@ -55,7 +55,7 @@ class EventSlide extends Slide
     var $event2;
     var $max;
 
-    function EventSlide($t, $e, $e2 = null, $max = 0, $sort = 0) {
+    function __construct($t, $e, $e2 = null, $max = 0, $sort = 0) {
         $this->title = $t;
         $this->event = $e;
         $this->event2 = $e2;
@@ -78,7 +78,7 @@ class SumSlide extends Slide
 {
     var $sum;
 
-    function SumSlide($t, $s) {
+    function __construct($t, $s) {
         $this->title = $t;
         if (!is_array($s)) {
             $this->sum = array($s);
@@ -106,7 +106,7 @@ class SumCompSlide extends Slide
 {
     var $sum;
 
-    function SumCompSlide($t, $s) {
+    function __construct($t, $s) {
         $this->title = $t;
         if (!is_array($s)) {
             $this->sum = array($s);
@@ -182,7 +182,7 @@ class SolutionSlide extends Slide
 
     var $file;
 
-    function SolutionSlide($type, $nr) {
+    function __construct($type, $nr) {
         $f = $type . $nr;
         $this->file = file(DATAROOT . '/' . NAME . '/' . $f . '.txt');
         if ($type == 'R') {

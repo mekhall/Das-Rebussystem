@@ -96,7 +96,7 @@ var x = d3.scale.linear()
     .domain([Math.min(0, d3.min(data, ƒ('points')),
                       d3.min(prevdata, ƒ('points')) || Infinity,
                       (max < 0 ? max : Infinity)),
-             Math.max(d3.max(data, ƒ('points')),
+             Math.max(0, d3.max(data, ƒ('points')),
                       d3.max(prevdata, ƒ('points')) || -Infinity,
                       (max > 0 ? max : -Infinity))])
     .range([0, graphWidth]);

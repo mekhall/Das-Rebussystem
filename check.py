@@ -166,7 +166,7 @@ def main():
                 check_comma(before, op, after, adds, subs, replaces)
     if back != 0 and back != 2:
         print("<->: *NOT OK*")
-    if adds != subs:
+    if adds.sort() != subs.sort():
         print("+-: *NOT OK*")
     for k in list(replaces.keys()):
         if replaces[k] not in replaces or replaces[replaces[k]] != k:
