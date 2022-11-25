@@ -1,0 +1,9 @@
+\rebus TTIRPERGGESSSLE
+\op i
+SITTIRPERGGESSLE
+\op i->e,-g
+SITTERPERGESSLE
+\op !
+VIDENSJÖ
+\op e->i,+g
+\ort VIDINGSJÖ

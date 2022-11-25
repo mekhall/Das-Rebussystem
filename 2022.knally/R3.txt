@@ -1,0 +1,9 @@
+\rebus ESTODR
+\op i
+STODIER
+\op o->u
+STUDIER
+\op !
+PLUGG
+\op u->o
+\ort PLOGG

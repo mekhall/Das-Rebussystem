@@ -1,0 +1,11 @@
+\rebus DÖRBSDRDAVLATTAN
+\op <->
+NATTALVADRDSBRÖD
+\op -l,-d,-a
+NATTVARDSBRÖD
+\op !
+OBLAT
+\op <->
+TALBO
+\op +l,+d,+a
+\ort TALLBODA
