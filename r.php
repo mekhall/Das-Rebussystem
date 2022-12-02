@@ -231,8 +231,8 @@ $(document).ready(function () {
 <div id=event></div><br><br>
 <div id=status></div>
 
-<div>
-<div style="display:inline-block; vertical-align: bottom; max-width: 150px; overflow:hidden; width:15%">
+<div style="margin-top:15px">
+<div style="display:inline-block; vertical-align: bottom; max-width: 150px; overflow:hidden; width:15%; margin-top: 12px;">
 <table cellpadding=2>
 
 EOT;
@@ -246,7 +246,7 @@ echo '<tr><td class=filler></td></tr>';
 echo '</table>';
 echo '</div>';
 
-echo '<div style="display:inline-block; overflow:auto; width:85%">';
+echo '<div style="display:inline-block; overflow:auto; width:85%; margin-top: -10px; position:absolute;">';
 echo '<table cellpadding=2>';
 
 echo '<tr>';
