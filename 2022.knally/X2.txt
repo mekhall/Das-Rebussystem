@@ -1,0 +1,8 @@
+\rebus T
+\op +e,+d
+TED
+\op !
+GÄRDESTAD
+\op -e,-d
+GÄRSTAD
+\ort GÄRSTAD

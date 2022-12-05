@@ -1,0 +1,13 @@
+\rebus SDATSÅPRAJRÖBDUVUH
+\op <->
+HUVUDBÖRJARPÅSTADS
+\op om
+HUVUDSTADSOMBÖRJARPÅ
+\op +z
+HUVUDSTADSOMBÖRJARPÅZ
+\op !
+ZAGREB
+\op <->
+BERGAZ
+\op -z
+\ort BERGA

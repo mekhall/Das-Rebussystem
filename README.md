@@ -3,6 +3,25 @@ Das Rebussystem, ett Hallonhack, baserat på BasPers perlhack från 1999
 
 Skapat av Trial and Error 2011
 
+Docker
+------------
+Om du vill slippa installera lika många beroenden kan du köra i Docker. Kräver dock exempelvis Docker Desktop.
+
+Kör då först följande i lämplig terminal bör att bygga en container, när du står i roten:
+
+```
+docker build -t rebusrally .
+```
+
+Därefter följande för att starta, mounta `C:\git\Das-Rebussystem` (ändra till din uppsättning) till containerns html-mapp, och mappa port 8080 till containerns 8080-mapp.
+
+``` 
+docker run -dp 8080:8080 -v C:\git\Das-Rebussystem\:/var/www/html rebusknally
+```
+
+Därefter går det att nå sidan på localhost:8080, eller från en annan dator på samma nätverk via serverns IP-adress.
+
+
 Installation
 ------------
 
@@ -214,6 +233,13 @@ För att generera en statisk presentation (ren html som inte behöver
 en databas eller php) använder man `static.php` från kommandoraden,
 och pekar ut en mapp där resultatet ska läggas.
 
+Om du kör sidan i Docker, kan du köra följande:
+
+```
+docker exec -it <container-id> /bin/sh
+```
+
+I shell kör du sedan `php static-php .` för att generera den statiska sidan, html-filerna hamnar i rotmappen.
 
 Remote
 ------

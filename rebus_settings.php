@@ -1,7 +1,7 @@
 <?php
 
 // Current rally name
-define('NAME', '2022.05');
+define('NAME', '2022.knally');
 
 define('SCREENWIDTH', 1024);
 
@@ -12,7 +12,7 @@ $index_links = 0;
 $rebus_split = 1;
 
 // Display logo in right corner, using file 'logga.gif'.
-$display_logo = 1;
+$display_logo = 0;
 
 // Animate rebus solution parts
 $rebus_tween = 0;

@@ -1,0 +1,9 @@
+\rebus LAJOTINERADE
+\op i
+AILJOTINERADE
+\op a->g
+GILJOTINERADE
+\op !
+HALSHÖGG
+\op g->a
+\ort HALSHÖGA

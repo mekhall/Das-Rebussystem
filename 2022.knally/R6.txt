@@ -1,0 +1,9 @@
+\rebus JANATSBROROMAN
+\op om
+JANATANSBROR
+\op a->o
+JONATANSBROR
+\op !
+SKORPAN
+\op o->a
+\ort SKARPAN

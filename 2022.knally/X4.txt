@@ -1,0 +1,9 @@
+\rebus TVETT
+\op -t
+VETT
+\op !
+SANS
+\op i
+ANISS
+\op +t
+\ort ANISST
