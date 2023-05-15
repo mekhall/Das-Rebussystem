@@ -3,6 +3,7 @@
 require_once 'chart.php';
 require_once 'db.php';
 require_once 'rebus_util.php';
+require_once 'rebus_settings.php';
 require_once 'rebus.php';
 
 class Slide
@@ -29,17 +30,25 @@ class PictureSlide extends Slide
         $size = getimagesize($p);
 
         checkPic($p);
+        $wlimit = SCREENWIDTH;
+        $hlimit = $wlimit * 0.5625; // 16:9 aspect ratio
         $this->title = $t;
         $this->picture = $p;
-        $this->attr = "height=400";
+        $this->attr ="";
 
         $width = $size[0];
         $height = $size[1];
+        if ($height > $hlimit) {
+            $this->attr = "height={$hlimit}";
+        }
+
         if ($width && $height) {
-            $scale = 400.0 / $height;
-            $width *= $scale;
-            if ($width > 800) {
-                $this->attr = "width=800";
+            if ($height > $hlimit) {
+                $scale = $hlimit / $height;
+                $width *= $scale;
+            }
+            if ($width > $wlimit) {
+                $this->attr = "width={$wlimit}";
             }
         }
     }
