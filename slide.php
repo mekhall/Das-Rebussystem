@@ -188,7 +188,7 @@ class SolutionSlide extends Slide
 
         $text = preg_replace('/\\\\rebus ([^\\\\]+)/i', '<span class=originalrebus>$1</span>', $text);
         $text = preg_replace('/\\\\ort (.+)/i', '<div class=rebusortDiv><span class=rebusort>$1</span></div>', $text);
-        $text = preg_replace('/\\\\(?:av|upphovsman) (.+)/i', '<span class=rebusmaker>($1)</span>', $text);
+        $text = preg_replace('/\\\\(?:av|upphovsman) (.+?)(\s*<|\s*$)/i', '<span class=rebusmaker>($1)</span>$2', $text);
         $text = preg_replace('/\\\w* /', '', $text);
 
         return $text;
