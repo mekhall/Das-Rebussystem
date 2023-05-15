@@ -1,0 +1,11 @@
+\rebus 6171172916101 \upphovsman Jansson
+\op <->
+10 16 19 27 117 16
+\op periodiska
+NE S K CO TS S
+\op gruppera
+NES KCOTS S
+\op om
+NESS OM KCOTS
+\op <->
+\ort STOCKMOSSEN

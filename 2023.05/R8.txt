@@ -1,0 +1,13 @@
+\rebus 35612594 \upphovsman Jonas
+\op <->
+49521653
+\op gruppera
+49 52 16 53
+\op periodiska
+IN TE S I
+\op gruppera
+INTE SI
+\op !
+SÅ
+\op <->
+\ort ÅS

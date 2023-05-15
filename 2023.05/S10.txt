@@ -1,0 +1,11 @@
+\rebus NHOLMENOMBOV \upphovsman Hendrix
+\op gruppera
+NHOLM EN OM BOV
+\op om
+NHOLM BOV EN
+\op i-utbrytning
+BOV I NHOLM EN
+\op samla ihop
+BOVINHOLMEN
+\op !
+\ort KOÖN

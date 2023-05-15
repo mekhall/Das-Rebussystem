@@ -1,0 +1,11 @@
+\rebus SÄGSMERTKVAROMDETTKÖ \upphovsman Jansson
+\op gruppera
+SÄGSME RTKVAR OM DETTKÖ
+\op om
+SÄGSME DETTKÖ RTKVAR
+\op ö->o
+SÄGS MED ETT KORT KVAR
+\op !
+UNO
+\op o->ö
+\ort UNÖ

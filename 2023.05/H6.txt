@@ -1,0 +1,11 @@
+\rebus STENUNDERBATERSFOT \upphovsman Hendrix
+\op gruppera
+STEN UNDERBATER SFOT
+\op i-utbrytning
+UNDERBATER I STENSFOT
+\op +t
+UNDER BATTERISTENS FOT
+\op !
+TRUMPEDAL
+\op -t
+\ort RUMPEDAL

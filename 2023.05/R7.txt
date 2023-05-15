@@ -1,0 +1,13 @@
+\rebus NKENSPURHTELEVÄST \upphovsman Stor-Glädje
+\op gruppera
+NKENSPURH TELEV ÄST
+\op i-utbrytning
+TELEV I NKENSPURHÄST
+\op u->a
+TELEVINKENS PARHÄST
+\op !
+ANITA
+\op i-inskrivning
+TANA
+\op a->u
+\ort TUNA

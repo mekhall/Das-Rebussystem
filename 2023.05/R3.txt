@@ -1,0 +1,15 @@
+\rebus TTUKDIKCÄLFRTYHG \upphovsman Blossing
+\op <->
+GHYTRFLÄCKIDKUTT
+\op gruppera
+GHYTR FLÄCK IDKUTT
+\op i-utbryt
+FLÄCK I GHYTRIDKUTT
+\op t->b u->a
+FLÄCKIG HYBRIDKATT
+\op !
+BENGAL
+\op b->t a->u
+TENGUL
+\op <->
+\ort LUGNET

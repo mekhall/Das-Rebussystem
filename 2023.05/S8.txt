@@ -1,0 +1,23 @@
+\rebus EMEMLEPSKCMOTKEFFIRB \upphovsman Stor-Glädje
+\op <->
+BRIFFEKTOMCKSPELMEME
+\op gruppera
+BRI FFEKT OM CKSPELMEME
+\op om
+BRI CKSPELMEME FFEKT
+\op m->d
+BRICKSPEL MED EFFEKT
+\op !
+DOMINO
+\op gruppera
+DOM I NO
+\op i-inskrivning
+NDOMO
+\op gruppera
+N D OM O
+\op om
+NOD
+\op d->m
+NOM
+\op <->
+\ort MON

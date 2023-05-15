@@ -1,0 +1,19 @@
+\rebus 100000000000000053684945 \upphovsman Stor-Glädje
+\op gruppera
+1000000000000000 53 68 49 45
+\op prefix + periodiska
+P I ER IN RH
+\op gruppera
+P I ERINR H
+\op i-inskrivning
+ERINRPH
+\op +a
+ERINRA PH
+\op !
+LIKNA LENA
+\op -a
+LIKNALEN
+\op gruppera
+L I KNAL EN
+\op i-inskrivning
+\ort KNALLEN
