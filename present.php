@@ -42,11 +42,12 @@ check = 1;
 
 $(function() {
     $('html').keydown(function(event) {
-        if (event.which == 37 /* left */ || event.which == 49 /* ! */) {
+        if (event.which == 37 /* left */ || event.which == 49 /* ! */ ||
+        event.which == 33 /* PageUp, useful for clickers */) {
             window.location = "present.php?<?php echo $dec ?>";
         }
         else if (event.which == 39 /* right */ || event.which == 32 ||
-                 event.which == 50 /* " */) {
+                 event.which == 50 /* " */ || event.which == 34 /* PageDown, useful for clickers */) {
             next(<?php echo "$nr, $lines"; ?>);
         }
     });
