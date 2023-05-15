@@ -3,6 +3,7 @@
 // Current rally name
 define('NAME', '2022.knally');
 
+// Affects chart width
 define('SCREENWIDTH', 1024);
 
 // Show links for every page in the presentation
