@@ -192,6 +192,7 @@ Vill man inte ha några blåbärsrebusar gör man en tom array.
 I rebusfilerna kan man använda dessa taggar:
 
     \bild <bild>
+    \orgbild <bild som inte skalas>
     \rebus <rebus start>
     \ort <rebussvar>
     \upphovsman <signatur>
