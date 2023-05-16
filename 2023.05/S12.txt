@@ -1,0 +1,11 @@
+\rebus ULVSANSVARTARVARULVSANSVAR \upphovsman Blossing
+\op +var
+VARULVSANSVARTARVARULVSANSVAR
+\op gruppera
+VARULV SANS VAR TAR VARULV SANS VAR
+\op typografi-franska
+ULV TAR ULV
+\op !
+VARGAVEL
+\op -var
+\ort GAVEL

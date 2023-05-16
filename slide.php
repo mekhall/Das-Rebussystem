@@ -3,6 +3,7 @@
 require_once 'chart.php';
 require_once 'db.php';
 require_once 'rebus_util.php';
+require_once 'rebus_settings.php';
 require_once 'rebus.php';
 
 class Slide
@@ -29,17 +30,25 @@ class PictureSlide extends Slide
         $size = getimagesize($p);
 
         checkPic($p);
+        $wlimit = SCREENWIDTH;
+        $hlimit = $wlimit * 0.5625; // 16:9 aspect ratio
         $this->title = $t;
         $this->picture = $p;
-        $this->attr = "height=400";
+        $this->attr ="";
 
         $width = $size[0];
         $height = $size[1];
+        if ($height > $hlimit) {
+            $this->attr = "height={$hlimit}";
+        }
+
         if ($width && $height) {
-            $scale = 400.0 / $height;
-            $width *= $scale;
-            if ($width > 800) {
-                $this->attr = "width=800";
+            if ($height > $hlimit) {
+                $scale = $hlimit / $height;
+                $width *= $scale;
+            }
+            if ($width > $wlimit) {
+                $this->attr = "width={$wlimit}";
             }
         }
     }
@@ -148,6 +157,7 @@ class SolutionSlide extends Slide
 {
     /* Rebusformat:
     \bild <bild>
+    \orgbild <bild som inte skalas>
     \rebus <rebus start>
     \ort <rebussvar>
     \upphovsman <signatur>
@@ -168,13 +178,17 @@ class SolutionSlide extends Slide
         $p = PICTURE_URL;
         $text = preg_replace('/\\\\bild (\S+)/i',
                              "<center><img src=\"$p/$1\" width=\"100%\" alt=\"$1\"></center>", $text, -1, $c);
+
+        $text = preg_replace('/\\\\orgbild (\S+)/i',
+                             "<center><img src=\"$p/$1\" alt=\"$1\"></center>", $text, -1, $c);
+
         if ($c > 0) {
             $break_line = "";
         }
 
         $text = preg_replace('/\\\\rebus ([^\\\\]+)/i', '<span class=originalrebus>$1</span>', $text);
         $text = preg_replace('/\\\\ort (.+)/i', '<div class=rebusortDiv><span class=rebusort>$1</span></div>', $text);
-        $text = preg_replace('/\\\\(?:av|upphovsman) (.+)/i', '<span class=rebusmaker>($1)</span>', $text);
+        $text = preg_replace('/\\\\(?:av|upphovsman) (.+?)(\s*<|\s*$)/i', '<span class=rebusmaker>($1)</span>$2', $text);
         $text = preg_replace('/\\\w* /', '', $text);
 
         return $text;

@@ -1,0 +1,11 @@
+\rebus AKAJNAMRAKVAERADDUR \upphovsman Blossing
+\op <->
+RUDDAREAVKARMANJAKA
+\op u->i
+RIDDARE AV KARMANJAKA
+\op !
+TENGIL
+\op i->u
+TENGUL
+\op <->
+\ort LUGNET

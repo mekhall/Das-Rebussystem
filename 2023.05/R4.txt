@@ -1,0 +1,15 @@
+\rebus LATTKIFÄRSPELOMGGÖRT \upphovsman Jonas
+\op gruppera
+LATTKIFÄR SPEL OM GGÖRT
+\op om
+LATTKIFÄR GGÖRT SPEL
+\op gruppera
+LATTK I FÄRGG ÖRTSPEL
+\op i-inskrivning
+FÄRGG LATTK ÖRTSPEL
+\op ö->o
+FÄRGGLATT KORTSPEL
+\op !
+UNO
+\op o->ö
+\ort UNÖ

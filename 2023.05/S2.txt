@@ -1,0 +1,11 @@
+\rebus HUNSCHVISGULARESJAN \upphovsman Hendrix
+\op gruppera
+HUNSCHVIS GUL ARESJAN
+\op i
+GUL I HUNSCHVISARESJAN
+\op h->p, -j
+GUL I PUNSCHVISA RESAN
+\op !
+PORSFÄRDEN
+\op p->h, +j
+\ort HORSFJÄRDEN

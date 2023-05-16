@@ -1,0 +1,19 @@
+\rebus TALEKAPPISTSBÅTTK \upphovsman Stor-Glädje
+\op gruppera
+TALE KAP PISTSBÅTTK
+\op i-utbrytning
+KAP I TALEPISTSBÅTTK
+\op gruppera
+KAPITALE PIS TSBÅTTK
+\op om
+KAPITALETSBÅTTK OM PIS
+\op -t
+KAPITALETS BÅTKOMPIS
+\op !
+STATEN
+\op gruppera
+S TA TEN
+\op om
+STEN OM TA
+\op +t
+\ort STENTOMTA

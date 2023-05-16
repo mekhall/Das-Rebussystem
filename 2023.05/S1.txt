@@ -1,0 +1,11 @@
+\rebus VIDFÅRMANSTRÄCKTKÖN \upphovsman Hendrix
+\op gruppera
+VID FÅRMAN STRÄCKTKÖN
+\op i-utbrytning
+FÅRMAN I VIDSTRÄCKTKÖN
+\op -n
+FÅR MAN I VIDSTRÄCKT KÖ
+\op !
+STÅ LÄNGE
+\op +n
+\ort STÅLÄNGEN

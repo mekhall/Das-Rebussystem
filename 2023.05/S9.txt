@@ -1,0 +1,15 @@
+\rebus GÖRSTJÄRTENÅORNAIRYDBERGST \upphovsman Blossing
+\op gruppera
+GÖRSTJÄR TEN ÅORNAIRYDBERGST
+\op om
+GÖRSTJÄRÅORNAIRYDBERGST OM TEN
+\op å->n
+GÖR STJÄRNORNA I RYDBERGS TOMTEN
+\op !
+GNISTRA
+\op gruppera
+GN I ST RA
+\op i-inskrivning
+ST GN RA
+\op n->å
+\ort ST. GÅRA

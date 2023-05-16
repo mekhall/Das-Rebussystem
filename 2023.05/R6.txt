@@ -1,0 +1,15 @@
+\rebus GNINTSÄPEBEDAPSAR \upphovsman Blossing
+\op <->
+RASPADEBEPÄSTNING
+\op p->f
+RASPADE BEFÄSTNING
+\op !
+FILADE MUR
+\op gruppera
+F I LADEMUR
+\op i-inskrivning
+LADE F MUR
+\op f->p
+LADEPMUR
+\op <->
+\ort RUMPEDAL

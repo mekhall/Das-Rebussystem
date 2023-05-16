@@ -13,13 +13,27 @@ Kör då först följande i lämplig terminal bör att bygga en container, när 
 docker build -t rebusrally .
 ```
 
-Därefter följande för att starta, mounta `C:\git\Das-Rebussystem` (ändra till din uppsättning) till containerns html-mapp, och mappa port 8080 till containerns 8080-mapp.
+Därefter följande för att starta, mounta `C:\github\Das-Rebussystem` (ändra till din uppsättning) till containerns html-mapp, och mappa port 8080 till containerns 8080-mapp.
 
 ``` 
-docker run -dp 8080:8080 -v C:\git\Das-Rebussystem\:/var/www/html rebusknally
+docker run -dp 8080:8080 -v C:\github\Das-Rebussystem\:/var/www/html rebusrally
 ```
 
 Därefter går det att nå sidan på localhost:8080, eller från en annan dator på samma nätverk via serverns IP-adress.
+
+På Docker i Windows kan det vara lite meckigt att få till skrivrättigheterna på mappen, då den mountade volymen ägs av 'root' istället för 'nobody'.
+Detta kan man lösa igenom att endast bygga första delen av docker containern:
+
+```
+docker build --target rebusrally_root -t rebusrally_root .
+```
+
+ med samma volymmount och logga in på terminalen och köra:
+```
+chown -R nobody:nobody var/www/html
+```
+
+Efter det så skall det gå utmärkt att köra den vanliga dockercontainern.
 
 
 Installation
@@ -178,6 +192,7 @@ Vill man inte ha några blåbärsrebusar gör man en tom array.
 I rebusfilerna kan man använda dessa taggar:
 
     \bild <bild>
+    \orgbild <bild som inte skalas>
     \rebus <rebus start>
     \ort <rebussvar>
     \upphovsman <signatur>

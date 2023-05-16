@@ -1,0 +1,7 @@
+\rebus FULLSMÄNDIGÅ \upphovsman Krille
+\op m->t å->a
+FULLSTÄNDIGA
+\op !
+TOTALA
+\op t->m a->å
+\ort TOMÅLA

@@ -1,0 +1,11 @@
+\rebus KASARENSTANNAM \upphovsman Blossing
+\op gruppera
+KASARENST ANN AM
+\op i-utbrytning
+ANN I KASARENSTAM
+\op a->ö
+ANNIKA SÖRENSTAM
+\op !
+GOLFBÖNA
+\op ö->a
+\ort GOLFBANA

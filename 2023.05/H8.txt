@@ -1,0 +1,11 @@
+\rebus MÅRTELOMENFÅ \upphovsman Stor-Glädje
+\op gruppera
+MÅRT EL OM ENFÅ
+\op om
+MÅRTENFÅEL
+\op +g
+MÅRTENFÅGEL
+\op !
+GÅS
+\op -g
+\ort ÅS
