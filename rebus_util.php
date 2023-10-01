@@ -21,6 +21,10 @@ function checkPic(&$name)
         $name = PICTURE_URL . $name . ".png";
         return 1;
     }
+    if (is_readable($pic . ".jfif")) {
+        $name = PICTURE_URL . $name . ".jfif";
+        return 1;
+    }
     return 0;
 }
 

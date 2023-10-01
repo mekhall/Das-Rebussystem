@@ -1,0 +1,13 @@
+\rebus ALTENREHIK
+\op <->
+KIHERNETLA
+\op (om)
+KILA OM HERNET
+\op e->ö
+KILA OM HÖRNET
+\op !
+DÖ
+\op ö->e
+DE
+\op <->
+\ort ED

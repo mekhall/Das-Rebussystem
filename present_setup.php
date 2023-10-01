@@ -73,6 +73,12 @@ foreach ($parts as $part => $data) {
                     array_push($actions, new SolutionSlide('X', $n));
                     array_push($actions, new EventSlide($eventName, $e));
                 }
+                elseif (preg_match('/^Y ([0-9]+)/', $e, $matches)) {
+                    // Rebusredovisning utom tävlan - har ingen poängpresentation
+                    $n = $matches[1];
+                    $eventName = $events[$e];
+                    array_push($actions, new SolutionSlide('Y', $n, $eventName));
+                }
                 elseif (preg_match('/^P (.*)/', $e, $matches)) {
                     // Pyssel
                     $n = $matches[1];

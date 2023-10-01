@@ -1,0 +1,13 @@
+\rebus VABTSSPORS
+\op <->
+SROPSSTBAV
+\op (i)
+B I SROPSSTAV
+\op r->k
+BISKOPSSTAV
+\op !
+KRÄKLA
+\op k->r
+RRÄKLA
+\op <->
+\ort ALKÄRR

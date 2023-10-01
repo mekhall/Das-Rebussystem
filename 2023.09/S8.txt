@@ -1,0 +1,7 @@
+\rebus OH
+\op <->
+HO
+\op !
+SÅ
+\op <->
+\ort ÅS

@@ -1,0 +1,11 @@
+\rebus NAXELKOBSNG
+\op (i)
+AXELKOBSN I NG
+\op b->r
+AXELKORSNING
+\op !
+ORIGO
+\op r->b
+OB I GO
+\op (i)
+\ort GOBO

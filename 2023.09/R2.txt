@@ -1,0 +1,11 @@
+\rebus NIVER
+\op <->
+REVIN
+\op e->a
+RAVIN
+\op !
+SÄNKA
+\op a->e
+SÄNKE
+\op <->
+\ort EKNÄS

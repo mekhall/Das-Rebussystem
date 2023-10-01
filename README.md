@@ -33,7 +33,13 @@ docker build --target rebusrally_root -t rebusrally_root .
 chown -R nobody:nobody var/www/html
 ```
 
-Efter det så skall det gå utmärkt att köra den vanliga dockercontainern.
+Efter det så skall det gå utmärkt att köra den vanliga dockercontainern. Börja med att titta så att rättningssidan laddar. Det kan vara bli fel vid installationen av PHP och Sqlite3.
+
+Felsökning
+----------
+Om förstasidan laddar men ingen av de andra sidorna så kan du öppna containern i Docker. Där finns en log du kan titta på. Om du får fel som säger att Sqlite3 inte kan laddas så kan det vara så att php har uppgraderat till en ny version utan att uppdatera vårt installationsscript. Uselt av dem.
+Öppna terminalfönstret och skriv 'php --version' och se vilken version som gäller.
+Om det är en nyare version än den som finns i Dockerfile så behöver du ändra på den raden som länkar in olika versioner av sqlite.
 
 
 Installation

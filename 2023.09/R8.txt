@@ -1,0 +1,11 @@
+\rebus ALPPETS
+\op <->
+STEPPLA
+\op e->a
+STAPPLA
+\op !
+RAGLA
+\op a->e
+REGLA
+\op <->
+\ort ALGER

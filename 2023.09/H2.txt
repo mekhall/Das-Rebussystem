@@ -1,0 +1,11 @@
+\rebus ETASDEN
+\op <->
+NEDSATE
+\op e->t
+NEDSATT
+\op !
+SÄNKT
+\op t->e
+SÄNKE
+\op <->
+\ort EKNÄS

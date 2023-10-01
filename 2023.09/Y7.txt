@@ -1,0 +1,11 @@
+\rebus EDNADÖTGALREVÖ
+\op <->
+ÖVERLAGTÖDANDE
+\op +d
+ÖVERLAGT DÖDANDE
+\op !
+MORD
+\op -d
+MOR
+\op <->
+\ort ROM

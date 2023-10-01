@@ -1,0 +1,13 @@
+\rebus RAKJMOTNYMSGRÄF
+\op <->
+FÄRGSMYNT OM JKAR
+\op (om)
+FÄRJKARGSMYNT
+\op g->l
+FÄRJKARLSMYNT
+\op !
+OBOL
+\op l->g
+OBOG
+\op <->
+\ort GOBO

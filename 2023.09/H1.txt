@@ -1,0 +1,7 @@
+\rebus GÖRNABRÖD
+\op -n
+GÖRABRÖD
+\op !
+BAKA
+\op +n
+\ort BANKA

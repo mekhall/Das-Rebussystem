@@ -1,0 +1,15 @@
+\rebus TTT \av Viktat Projektivt Rum
+\op <->
+TTT
+\op +x
+TTTX
+\op (om)
+TXOMTT
+\op -x
+TOM TT
+\op !
+TOM ÖL
+\op !
+LIK
+\op <->
+\ort KIL

@@ -1,0 +1,7 @@
+\rebus STENNBJÖRN
+\op (i)
+TENN I SBJÖRN
+\op =
+TENNISBJÖRN
+\op !
+\ort BORG

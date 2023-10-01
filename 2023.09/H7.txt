@@ -1,0 +1,11 @@
+\rebus VÄLDIGTNERSONOMVIKTIG
+\op =
+VÄLDIGTNERSON OM VIKTIG
+\op (om)
+VÄLDIGTVIKTIGNERSON
+\op n->p
+VÄLDIGT VIKTIG PERSON
+\op !
+VIP
+\op p->n
+\ort VIN

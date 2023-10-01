@@ -1,0 +1,7 @@
+\rebus 605331
+\op =
+60 53 3 1
+\op per sys
+Nd I Li H
+\op (i)
+\ort LINDH

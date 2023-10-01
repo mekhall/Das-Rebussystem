@@ -1,0 +1,13 @@
+\rebus KNÄPPIMAGEN
+\op =
+KNÄPPI MAGEN
+\op i
+MAGKNÄPPEN
+\op ä->a
+MAGKNAPPEN
+\op !
+NAVELN
+\op a->ä
+NÄVELN
+\op i
+\ort LINÄVEN

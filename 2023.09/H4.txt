@@ -1,0 +1,9 @@
+\rebus 81158
+\op <->
+85118
+\op =
+8 5 118
+\op per sys
+O B Og
+\op <->
+\ort GOBO

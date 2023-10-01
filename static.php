@@ -31,6 +31,9 @@ foreach (glob(PICTURE_PATH . "*.png") as $f) {
 foreach (glob(PICTURE_PATH . "*.gif") as $f) {
   dcopy($f, $dir);
 }
+foreach (glob(PICTURE_PATH . "*.jfif") as $f) {
+  dcopy($f, $dir);
+}
 
 chdir($dir);
 

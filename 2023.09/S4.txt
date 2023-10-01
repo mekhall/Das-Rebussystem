@@ -1,0 +1,11 @@
+\rebus SNOELKUBVITISOP
+\op <->
+POSITIV BUKLEONS
+\op b->n, -s
+POSITIV NUKLEON
+\op !
+PROTON
+\op <->
+NOTORP
+\op n->b, +s
+\ort BOSTORP

@@ -1,0 +1,11 @@
+\rebus PKOLAPEN
+\op (i)
+KOLA I PPEN
+\op +v
+KOLAVIPPEN
+\op !
+AVLIDA
+\op -v
+ALIDA
+\op (i)
+\ort DALA

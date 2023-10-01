@@ -1,0 +1,11 @@
+\rebus POTISENOMKETN
+\op =
+POTISEN OM KETN
+\op (om)
+PKETNOTISEN
+\op +a
+PAKETNOTISEN
+\op !
+AVIN
+\op -a
+\ort VIN

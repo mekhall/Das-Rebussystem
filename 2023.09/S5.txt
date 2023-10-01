@@ -1,0 +1,11 @@
+\rebus RIBINA
+\op =
+R I BINA
+\op -i
+BRINA
+\op b->g
+GRINA
+\op !
+GRÅTA
+\op g->b
+\ort BRÅTA

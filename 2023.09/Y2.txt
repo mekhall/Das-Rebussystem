@@ -1,0 +1,9 @@
+\rebus OMOMMÖOMK
+\op (om)
+OMKOMMÖ
+\op ö->a
+OMKOMMA
+\op !
+KOLA
+\op a->ö
+\ort KOLÖ

@@ -196,7 +196,7 @@ class SolutionSlide extends Slide
 
     var $file;
 
-    function __construct($type, $nr) {
+    function __construct($type, $nr, $title = 'Ytterligare rebus') {
         $f = $type . $nr;
         $this->file = file(DATAROOT . '/' . NAME . '/' . $f . '.txt');
         if ($type == 'R') {
@@ -213,6 +213,9 @@ class SolutionSlide extends Slide
         }
         elseif ($type == 'X') {
             $this->title = "Bonus " . $nr;
+        }
+        elseif ($type == 'Y') {
+            $this->title = $title;
         }
         else {
             echo "ERROR: Bad rebus type '$type'<br>";

@@ -1,0 +1,9 @@
+\rebus LOSISTAVPLUTSAN
+\op (i)
+SISTAV I LOPLUTSAN
+\op u->a, a ->e
+SISTA VILOPLATSEN
+\op !
+GRAVEN
+\op a->u, e->a
+\ort GRUVAN

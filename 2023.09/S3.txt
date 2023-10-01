@@ -1,0 +1,11 @@
+\rebus VITMASSMASSIV
+\op (i)
+MASS I VITMASSIV
+\op -i
+MASSIVT MASSIV
+\op !
+STOR ALP
+\op +i
+STOR I ALP
+\op (i)
+\ort ALSTORP

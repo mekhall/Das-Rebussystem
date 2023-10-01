@@ -1,0 +1,7 @@
+\rebus TTT
+\op (+i)
+TITT
+\op !
+VISIT
+\op (-i)
+\ort VIST

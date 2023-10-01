@@ -1,0 +1,13 @@
+\rebus 10188213
+\op <->
+3 1 28 8 101
+\op per sys
+Li H Ni O Md
+\op =
+L I HNIOMD
+\op (i)
+HNIL OM D
+\op (om)
+HDNIL
+\op <->
+\ort LINDH
