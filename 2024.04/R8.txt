@@ -1,0 +1,7 @@
+\rebus ENTUSÖASMEGx2 \upphovsman Jonas Lindh
+\op Ö->I, G->N
+ENTUSIASMENx2
+\op !
+IVERN IVERN
+\op I->Ö, N->G
+\ort ÖVERGIVERN

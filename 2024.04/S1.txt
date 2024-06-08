@@ -1,0 +1,13 @@
+\rebus RGYTRAKSFOJTDF \upphovsman Malin Lindh
+\op (i)
+GYTRAKSFOJTD I RF
+\op <->
+FRIDTJOFSKARTYG
+\op K->F
+FRIDTJOFSFARTYG
+\op !
+FRAM
+\op F->K
+KRAM
+\op <->
+\ort MARK

@@ -1,0 +1,11 @@
+\rebus ANDESLEDHORNSISKRUTTDJUR \upphovsman Malin Lindh
+\op (i)
+SKRUTTANDESLEDHORNSDJUR
+\op E->I, -R
+SKUTTANDE SLIDHORNSDJUR
+\op !
+ANTILOP
+\op I->E, +R
+ANTELORP
+\op (i)
+\ort ELIANTORP

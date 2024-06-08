@@ -1,0 +1,7 @@
+\rebus SANSLIP \upphovsman Jonas Lindh
+\op S->K, -P
+KANSLI
+\op !
+KONTOR
+\op K->S, +P
+\ort SONTORP

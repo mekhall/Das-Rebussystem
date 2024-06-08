@@ -1,0 +1,9 @@
+\rebus SWEAAIL-ER \upphovsman Malin Lindh
+\op (i)
+L- SWEAA ER
+\op A->T
+L-SWEATER
+\op !
+STOR TRÖJA
+\op T->A
+\ort STORA RÖJA

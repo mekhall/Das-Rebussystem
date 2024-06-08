@@ -1,0 +1,9 @@
+\rebus GNMAFMON \upphovsman Jonas Lindh
+\op <->
+NOMFAMNG
+\op i
+OMFAMN I NG
+\op !
+KRAM
+\op <->
+\ort MARK

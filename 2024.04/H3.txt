@@ -1,0 +1,11 @@
+\rebus TORON&TORLÅKSITATOPVAPARÖR \upphovsman Jonas Lindh
+\op <->
+RÖRAPAVPOTATISKÅLROT&NOROT
+\op -P, N->M
+RÖRA AV POTATIS KÅLROT & MOROT
+\op !
+ROTMOS
+\op +P, M->N
+PROTNOS
+\op <->
+\ort SONTORP

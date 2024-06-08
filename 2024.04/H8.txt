@@ -1,0 +1,11 @@
+\rebus LÄRDOMMNA \upphovsman Marcus Eriksson
+\op =
+LÄRD OM MNA
+\op (om)
+LÄR MNA D
+\op -R
+LÄMNAD
+\op !
+ÖVERGIVEN
+\op +R
+\ort ÖVERGIVERN

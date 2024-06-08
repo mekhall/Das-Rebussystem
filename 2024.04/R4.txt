@@ -1,0 +1,9 @@
+\rebus SLINGJORQUG \upphovsman Malin Lindh
+\op (i)
+GJORQU I SLING
+\op +D, +E
+GJORDE QUISLING
+\op !
+FÖRRÅDDE
+\op -D, -E
+\ort FÖRRÅD
