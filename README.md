@@ -35,6 +35,17 @@ chown -R nobody:nobody var/www/html
 
 Efter det så skall det gå utmärkt att köra den vanliga dockercontainern. Börja med att titta så att rättningssidan laddar. Det kan vara bli fel vid installationen av PHP och Sqlite3.
 
+**ALTERNATIV:** Docker Compose
+
+Det går också att använda compose.yaml-filen för att köra appen direkt utan att bygga någon docker image. (Även detta kräver docker desktop eller motsvarande.) Denna tar hand om att mappa volymer och portar.
+
+Inställningar för nginx-servern som används finns i `default.conf`.
+
+Kör då endast:
+```
+docker compose up
+```
+
 Felsökning
 ----------
 Om förstasidan laddar men ingen av de andra sidorna så kan du öppna containern i Docker. Där finns en log du kan titta på. Om du får fel som säger att Sqlite3 inte kan laddas så kan det vara så att php har uppgraderat till en ny version utan att uppdatera vårt installationsscript. Uselt av dem.
@@ -260,7 +271,7 @@ Om du kör sidan i Docker, kan du köra följande:
 docker exec -it <container-id> /bin/sh
 ```
 
-I shell kör du sedan `php static-php .` för att generera den statiska sidan, html-filerna hamnar i rotmappen.
+I shell kör du sedan `php static.php .` för att generera den statiska sidan, html-filerna hamnar i rotmappen.
 
 Remote
 ------

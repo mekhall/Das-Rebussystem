@@ -214,7 +214,7 @@ function update(data) {
 
   desc
     .append("text")
-      .attr("x", 0)
+      .attr("x", 5)
       .attr("y", barHeight / 2)
       .attr("dy", ".35em")
       .classed("disabled", ƒ('disabled'))
