@@ -1,0 +1,11 @@
+\rebus MKEXTITEXEMPEL \upphovsman Karl Södrén
+\op -K
+MEXTITEXEMPEL
+\op (i)
+TEX MEXT EMPEL
+\op =
+TEXMEXTEMPEL
+\op !
+SANTA MARIA KYRKA
+\op +K
+\ort SANKTA MARIA KYRKA

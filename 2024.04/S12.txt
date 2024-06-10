@@ -1,0 +1,7 @@
+\orgbild a-dur.png \upphovsman Johannes Isaksson
+\op <->
+\orgbild a-dur_rättvänd.png
+\op !
+A-DUR
+\op <->
+\ort RUDA

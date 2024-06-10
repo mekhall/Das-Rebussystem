@@ -1,0 +1,7 @@
+\rebus MORBATJOVSFRYPIRÖG \upphovsman Jonas Lindh
+\op M->G, Ö->O, +S
+GORBATJOVS FRYSPIROG
+\op !
+GORBYS
+\op G->M, O->Ö, -S
+\ort MÖRBY

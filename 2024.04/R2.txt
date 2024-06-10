@@ -1,0 +1,13 @@
+\rebus NAKITKARPTTÅM \upphovsman Johannes Isaksson
+\op <->
+MÅTTPRAKTIKAN
+\op (i)
+PRAKTIK I MÅTTAN
+\op -M
+PRAKTIK I ÅTTAN
+\op !
+PRAO
+\op +M
+PRAOM
+\op <->
+\ort MOARP

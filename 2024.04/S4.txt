@@ -1,0 +1,9 @@
+\rebus RETÖRIMISDEN \upphovsman Karl Södrén
+\op (i)
+IMISD I RETÖR EN
+\op +K, M->B
+IBISDIREKTÖREN
+\op !
+STORKBOSSEN
+\op -K, B->M
+\ort STORMOSSEN

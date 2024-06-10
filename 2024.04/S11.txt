@@ -1,0 +1,11 @@
+\rebus OCKLILBE \upphovsman Johannes Isaksson
+\op (i)
+LB OCKL E
+\op (i)
+L I LBOCKE
+\op +L, +N
+LILLBOCKEN
+\op !
+KILLINGEN
+\op -L, -N
+\ort KILINGE

@@ -1,0 +1,9 @@
+\rebus TORPFÖRDOMIGOTLE \upphovsman Jonas Lindh
+\op (om)
+TORPFÖR IGOTLE D
+\op (i)
+GOT TORPFÖR LED
+\op =
+GOTTORPFÖRLED
+\op !
+\ort HOLSTEIN

@@ -1,0 +1,9 @@
+\rebus HÄLLSUPPISPÅH1 \upphovsman Jonas Lindh
+\op (i)
+S HÄLLSUPP PÅH1
+\op H->T
+STÄLLS UPP PÅ H1
+\op !
+TORNET
+\op T->H
+\ort HORNET

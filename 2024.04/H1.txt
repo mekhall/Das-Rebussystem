@@ -1,0 +1,10 @@
+\rebus MEDELPOUNKTEN \upphovsman Jonas Lindh, Malin Lindh
+\op -O
+MEDELPUNKTEN
+\op !
+MITTEN
+\op +O
+OMITTEN
+\op (i)
+T OM TEN
+\ort TOMTEN

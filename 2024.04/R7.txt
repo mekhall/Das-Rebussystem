@@ -1,0 +1,11 @@
+\rebus GOYLE \upphovsman Karl Södrén
+\op <->
+ELYOG
+\op +E, -Y
+ELOGE
+\op !
+BERÖM
+\op -E, +Y
+YBRÖM
+\op <->
+\ort MÖRBY

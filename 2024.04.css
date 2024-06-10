@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "TratexVit";
+  src: url("tratex_vit.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TratexSvart";
+  src: url("tratex_svart.ttf") format("truetype");
+}
+
+body {
+    background-color: lightgray;
+    font-family: Arial;
+    font-size: 12px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+td {
+    font-size: 18px;
+}
+a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #334450;
+}
+.rebustable {
+    padding: 20px;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header {
+    background-color: antiquewhite;
+    padding-left: 70px;
+    padding-right: 70px;
+    height: 105px;
+    border-bottom: solid crimson;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content {
+    margin-top: 20px;
+    text-align: center;
+}
+.headerline {
+    background-color: #ffffff;
+    height: 0px;
+}
+.rub1 {
+    font-family: 'Arial Black';
+    font-size: 24px;
+    color: black;
+}
+.rub2 {
+    color: #5384e5;
+}
+.rub3 {
+    color: #ffffff;
+}
+.rub4 {
+    font-size: 10px;
+}
+.rub5 {
+    font-size: 10px;
+    color: #ffffff
+}
+.rebustext {
+    font-family: 'Verdana';
+    font-size: xx-large;
+    text-align: left;
+    overflow-wrap: break-word;
+    max-width: 1000px;
+}
+.orginalrebus {
+    font-family: Arial Black;
+    line-height: 70%;
+}
+.rebusortDiv {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+.rebusortVarning {
+    font-family: TratexSvart, 'Arial Black';
+    color: #000000;
+    border:4px solid #c8002d;
+    margin:4px 0 4px 0;
+    padding: 5px 20px 5px 20px;
+    text-align:center;
+    background-color: #f4cd24;
+}
+.rebusort {
+    font-family: TratexVit, 'Arial Black';
+    color: #ffffff;
+    border:4px solid #ffffff;
+    margin:4px 0 4px 0;
+    padding: 5px 20px 5px 20px;
+    text-align:center;
+    background-color: #03326b;
+    letter-spacing:4px;
+}
+.rebusop {
+    font-size: x-large;
+    text-align: center;
+    margin: 2px 0 2px 0;
+}
+.rebusmaker {
+    font-size: small;
+    font-style: italic;
+}
+.logo {
+    vertical-align: middle;
+    float: right;
+}
+.graph_bar {
+    fill: forestgreen;
+}
+text {
+    font: 16px sans-serif;
+    fill: #f0f0f0;
+}
+.graph_odd {
+    fill: #525252;
+}
+.graph_even {
+    fill: #404040;
+}
+.maxline {
+    stroke: antiquewhite;
+    stroke-width: 2px;
+}
+.maxline-text {
+    fill: antiquewhite;
+}
+.team10 {
+    transform: translate(6px) scale(0.9, 1);
+}

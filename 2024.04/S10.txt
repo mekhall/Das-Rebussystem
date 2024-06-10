@@ -1,0 +1,11 @@
+\rebus TARKRU \upphovsman Karl Södrén
+\op <->
+URKRAT
+\op +O
+URKROAT
+\op !
+PROTOSLAV
+\op -O
+PROTSLAV
+\op <->
+\ort VALSTORP

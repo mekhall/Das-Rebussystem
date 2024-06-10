@@ -1,0 +1,7 @@
+\rebus FOLINTAFARTSPÄRRSARNA \upphovsman Jonas Lindh
+\op -O, -S
+FLINTAFARTSPÄRRARNA
+\op !
+STENBROMSARNA
+\op +O, +S
+\ort STENBROMOSSARNA

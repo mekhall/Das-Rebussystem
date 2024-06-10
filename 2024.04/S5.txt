@@ -1,0 +1,7 @@
+\rebus ORDPSÄTTMANICKEN \upphovsman Malin Lindh
+\op S->L, +J
+JORDPLÄTTMANICKEN
+\op !
+LANDMOJÄNGEN
+\op L->S, -J
+\ort SANDMOÄNGEN
