@@ -25,7 +25,7 @@ if (array_key_exists('static', $GLOBALS) == 0 && $check == 0) {
 <title>Rebusrally <?php echo NAME ?></title>
 <link rel="stylesheet" type="text/css" href="<?php echo NAME ?>.css">
 <script src="d3.v3.min.js"></script>
-<script src="jquery-2.1.4.min.js"></script>
+<script src="jquery-4.0.0.min.js"></script>
 <script>
 var maxLine = 0;
 var line = 0;

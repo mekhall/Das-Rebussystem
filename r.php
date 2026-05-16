@@ -15,7 +15,7 @@ echo <<<EOT
 .cyan { background-color: cyan }
 .green { background-color: green }
 </style>
-<script src="jquery-2.1.4.min.js"></script>
+<script src="jquery-4.0.0.min.js"></script>
 <script>
 EOT;
 

@@ -9,7 +9,7 @@ require_once 'db.php';
 <meta charset="utf-8">
 <title>Rebusrally status</title>
 <link rel="stylesheet" type="text/css" href="<?php echo NAME ?>.css">
-<script src="jquery-2.1.4.min.js"></script>
+<script src="jquery-4.0.0.min.js"></script>
 <script>
   function update() {
         $.getJSON('update.php',
