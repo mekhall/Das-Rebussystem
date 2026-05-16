@@ -117,7 +117,7 @@ $parts = array(
 
     'Etapp 2' => array('R 2', 'P OAT', 
       '*picture*Rebusrallylimerick:limerick.jpg', // Explicit, så den hamnar innan limerickarna
-        '*solution*L3', '*solution*L2', '*solution*L1', 
+        //'*solution*L3', '*solution*L2', '*solution*L1',
         'P LIM', 'TP 2', 'FP 2'),
     'Totalt efter Etapp 2' => array('*sumcomp*', 'Etapp 1', 'Etapp 2'),
 
@@ -183,7 +183,7 @@ $parts = array(
           'ÖppPlk', 'StjPlk'),
 
     // Pysselpriset
-    '*picture*Pysselpriset:pysselpris.jpg',
+    '*picture*Pysselpriset:Pysselpris.jpg',
     'Pyssel totalt' =>
     array('*sum*',
       'P MUS',

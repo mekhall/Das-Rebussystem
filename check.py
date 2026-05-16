@@ -90,19 +90,21 @@ def replace_list(list, f, t):
 
 
 def check_comma(before, op, after, adds, subs, replaces):
-    ops = re.split('\s*,\s*', op)
+    ops = re.split(r'\s*,\s*', op)
     add = []
     sub = []
     replace = {}
     for o in ops:
         o = o.lower()
-        str = ""
         if o[0] == '+':
             add.append(o[1])
         elif o[0] == '-':
             sub.append(o[1])
-        else:
+        elif re.match(r'\w->\w', o):
             replace[o[0]] = o[3]
+        else:
+            print('*UNKNOWN OPERATION*:', o)
+            return
 
     _after = [after]
     _before = [before]
@@ -113,7 +115,8 @@ def check_comma(before, op, after, adds, subs, replaces):
     for f, t in replace.items():
         _before = replace_list(_before, f, t)
 
-    ok = len([a_b for a_b in product(_after, _before) if a_b[0].lower() == a_b[1].lower()]) > 0
+    ok = len([a_b for a_b in product(_after, _before)
+              if a_b[0].lower() == a_b[1].lower()]) > 0
     for a in add:
         print(' +' + a + ':')
     for s in sub:
@@ -130,14 +133,17 @@ def check_assoc(before, after):
     print("  !: {} -> {}".format(before, after))
 
 
-def main():
+def check(filename):
     lines = []
-    with open(sys.argv[1]) as f:
+    with open(filename) as f:
         for line in f:
             l = line
             l = l.replace('\\rebus', '')
             l = l.replace('\\ort', '')
+            l = re.sub(r'\\upphovsman .*', '', l)
             l = re.sub(r'\\av .*', '', l)
+            l = re.sub(r'\\orgbild .*', '', l)
+            l = re.sub(r'\\bild .*', '', l)
             l = l.strip()
             lines.append(l)
 
@@ -146,21 +152,23 @@ def main():
     subs = []
     replaces = {}
     for i in range(0, len(lines)):
-        if lines[i].startswith('\op'):
+        if lines[i].startswith('\\op'):
             op = lines[i]
-            op = op.replace('\op', '')
+            op = op.replace('\\op', '')
             op = re.sub(r'\(.*\)', '', op)
             op = op.strip()
             before = lines[i - 1]
+            before = re.sub(r'\s+', '', before)
             after = lines[i + 1]
+            after = re.sub(r'\s+', '', after)
             if op == "<->":
                 check_back(before, after)
                 back += 1
-            elif op == "!":
+            elif op == "!" or op == "gruppera":
                 check_assoc(before, after)
-            elif op == "i":
+            elif op == "i" or op == "i-inskrivning" or op == "i-utbrytning":
                 check_i(before, after)
-            elif op == "om":
+            elif op == "om" or op == "om-skrivning":
                 check_om(before, after)
             else:
                 check_comma(before, op, after, adds, subs, replaces)
@@ -171,6 +179,13 @@ def main():
     for k in list(replaces.keys()):
         if replaces[k] not in replaces or replaces[replaces[k]] != k:
             print("->: *NOT OK*")
+
+
+def main():
+    for arg in sys.argv[1:]:
+        print(arg)
+        check(arg)
+        print()
 
 
 if __name__ == "__main__":
