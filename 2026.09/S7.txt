@@ -1,0 +1,9 @@
+\rebus FLAKTOMGINARE
+\op om
+FGINARELAKT
+\op G->L
+FLINAR ELAKT
+\op !
+HÅNLER
+\op L->G
+\ort HÅNGER

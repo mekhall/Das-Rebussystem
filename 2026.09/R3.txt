@@ -1,0 +1,9 @@
+\rebus DISNEDGAKVARATE
+\op i
+SNEDGAKVADRATE
+\op -G, +R
+SNEDAKVADRATER
+\op !
+ROMBER
+\op +G, -R
+\ort OMBERG

@@ -1,0 +1,10 @@
+\rebus FÖREGERUTÄXLINGMÄLS
+FÖRE GERUTÄXLING MÄLS
+\op om-utbrytning
+FÖRE MÄLS OM GERUTÄXLING
+\op Ä->Å, +V
+FÖREMÅL SOM GER UTVÄXLING
+\op !
+HÄVSTÅNG
+\op -V, Å->Ä
+\ort HÄSTÄNG

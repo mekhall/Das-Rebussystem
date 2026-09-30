@@ -1,0 +1,9 @@
+\rebus LE-41
+\op <->
+14-EL
+\op per sys
+KISEL-EL
+\op minus
+KIS
+\op <->
+\ort SIK

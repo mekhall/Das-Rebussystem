@@ -1,0 +1,9 @@
+\rebus RÅDJURSTÅVN
+\op -V
+RÅDJURSTÅN
+\op !
+KLÖVEN
+\op +V
+KLÖVVEN
+\op i-utbrytning
+\ort LÖVVIKEN

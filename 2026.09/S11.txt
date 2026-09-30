@@ -1,0 +1,11 @@
+\rebus SNALUNMA
+\op <->
+AMNULANS
+\op N->B
+AMBULANS
+\op !
+NÖDBIL
+\op B->N
+NÖDNIL
+\op <->
+\ort LINDÖN
