@@ -1,0 +1,7 @@
+\rebus EFTERBANTERPILJÄR
+\op T->D, -P
+EFTER BANDERILJÄR
+\op !
+PIKADOR
+\op D->T, +P
+\ort PIKATORP

@@ -1,0 +1,11 @@
+\rebus NEGOMLO
+\op <->
+OLMOGEN
+\op -L
+OMOGEN
+\op !
+NAIV
+\op <->
+VIAN
+\op +L
+\ort VILAN

@@ -1,0 +1,11 @@
+\rebus ETTFUVTARENBLÅSTPÅHOPPNÄRD
+\op om-utbrytning
+ETTFUVT PÅHOPPNÄRD OM ARENBLÅST
+\op V->L
+ETT FULT PÅHOPP NÄR DOMAREN BLÅST
+\op !
+EN EFTERSLÄNG
+\op L->V
+EN EFTER SVÄNG
+\op efter
+\ort SVÄNGEN

@@ -1,5 +1,4 @@
 <?php
-//TODO: fixa loggan
 require_once 'slide.php';
 
 $teams = array(
@@ -106,7 +105,6 @@ $events = array(
     'FP 8' => 'Fotoplock 8',
 );
 
-# TODO: Har detta kvar att fylla i, samt bilder och färger
 $parts = array(
     '*picture*Rebusrally April 2024:rally-2024-title-card.png',
 
@@ -212,7 +210,6 @@ $parts = array(
     '*picture*Grattis Blodbussen!:trophy.jpg',
     );
 
-// TODO: Dessa är mestadels i ordning, men behöver ses över igen.
 $maxPoints = array(
     'P APR' => 23,
     'P DEF' => 22,

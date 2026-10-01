@@ -1,0 +1,7 @@
+\rebus FÖRBEÖKARENSÖVERNATTNINH
+\op +S, H->G
+FÖR BESÖKARENS ÖVERNATTNING
+\op !
+GÄSTSÄNG
+\op -S, G->H
+\ort HÄSTÄNG

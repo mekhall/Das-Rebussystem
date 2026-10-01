@@ -1,0 +1,7 @@
+\rebus OOOOOOOOOOOOOOOOOBOY
+\op B->O, Y->O
+OOOOOOOOOOOOOOOOOOOO
+\op räkna
+TJUGO O
+\op O->B, O->Y
+\ort TJUGBY

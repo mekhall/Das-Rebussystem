@@ -1,0 +1,7 @@
+\rebus KLASSIKERDSSIMOT
+\op D->N, +R
+KLASSIKERNS SIMORT
+\op !
+VANSBRO
+\op N->D, -R
+\ort VADSBO

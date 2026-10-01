@@ -1,0 +1,11 @@
+\rebus AKCALFRETSO
+\op <->
+OSTERFLACKA
+\op +P, A->I
+POSTERFLICKA
+\op !
+PINUPPA
+\op <->
+APPUNIP
+\op -P, I->A
+\ort APPUNA

@@ -1,0 +1,6 @@
+\rebus 50505010^-10M7
+50 50 50 10^-10M 7
+\op romerska, enhet, per sys
+LLL Å N
+\op i-utbrytning
+\ort LILLÅN
