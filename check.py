@@ -3,6 +3,7 @@
 import sys
 import re
 from itertools import product
+from collections import defaultdict
 
 
 def print_status(desc, before, after, ok):
@@ -11,7 +12,7 @@ def print_status(desc, before, after, ok):
 
 
 def check_back(before, after):
-    ok = after == before[::-1]
+    ok = after.lower() == before.lower()[::-1]
     print_status('<->', before, after, ok)
 
 
@@ -26,9 +27,9 @@ def check_remove_i(before, after):
         last = i + 1
         p1 = before[:i]
         p2 = before[i + 1:]
-        for l in range(1, len(p2)):
-            p2a = p2[:l]
-            p2b = p2[l:]
+        for li in range(1, len(p2)):
+            p2a = p2[:li]
+            p2b = p2[li:]
             _test = p2a + p1 + p2b
             if _test == after:
                 test = p2a + ' ' + p1 + ' ' + p2b
@@ -54,9 +55,9 @@ def check_remove_om(before, after):
         last = i + 1
         p1 = before[:i]
         p2 = before[i + 2:]
-        for l in range(1, len(p1)):
-            p1a = p1[:l]
-            p1b = p1[l:]
+        for li in range(1, len(p1)):
+            p1a = p1[:li]
+            p1b = p1[li:]
             _test = p1a + p2 + p1b
             if _test == after:
                 test = p1a + ' ' + p2 + ' ' + p1b
@@ -74,18 +75,18 @@ def check_om(before, after):
 def replace_all(string, letter, rep):
     res = []
     s = list(string.lower())
-    for l in range(0, len(s)):
-        if s[l] == letter:
+    for li in range(0, len(s)):
+        if s[li] == letter:
             s1 = s[:]
-            s1[l] = rep
+            s1[li] = rep
             res.append(''.join(s1))
     return res
 
 
 def replace_list(list, f, t):
     n = []
-    for l in list:
-        n.extend(replace_all(l, f, t))
+    for li in list:
+        n.extend(replace_all(li, f, t))
     return n
 
 
@@ -93,7 +94,7 @@ def check_comma(before, op, after, adds, subs, replaces):
     ops = re.split(r'\s*,\s*', op)
     add = []
     sub = []
-    replace = {}
+    replace = defaultdict(list)
     for o in ops:
         o = o.lower()
         if o[0] == '+':
@@ -101,9 +102,9 @@ def check_comma(before, op, after, adds, subs, replaces):
         elif o[0] == '-':
             sub.append(o[1])
         elif re.match(r'\w->\w', o):
-            replace[o[0]] = o[3]
+            replace[o[0]].append(o[3])
         else:
-            print('*UNKNOWN OPERATION*:', o)
+            print('  ?:', o)
             return
 
     _after = [after]
@@ -113,7 +114,8 @@ def check_comma(before, op, after, adds, subs, replaces):
     for a in add:
         _after = replace_list(_after, a, '')
     for f, t in replace.items():
-        _before = replace_list(_before, f, t)
+        for t1 in t:
+            _before = replace_list(_before, f, t1)
 
     ok = len([a_b for a_b in product(_after, _before)
               if a_b[0].lower() == a_b[1].lower()]) > 0
@@ -122,7 +124,8 @@ def check_comma(before, op, after, adds, subs, replaces):
     for s in sub:
         print(' -' + s + ':')
     for a, b in replace.items():
-        print(a + '>' + b + ':')
+        for b1 in b:
+            print(a + '>' + b1 + ':')
     print_status('   ', before, after, ok)
     adds.extend(add)
     subs.extend(sub)
@@ -137,15 +140,15 @@ def check(filename):
     lines = []
     with open(filename) as f:
         for line in f:
-            l = line
-            l = l.replace('\\rebus', '')
-            l = l.replace('\\ort', '')
-            l = re.sub(r'\\upphovsman .*', '', l)
-            l = re.sub(r'\\av .*', '', l)
-            l = re.sub(r'\\orgbild .*', '', l)
-            l = re.sub(r'\\bild .*', '', l)
-            l = l.strip()
-            lines.append(l)
+            li = line
+            li = li.replace('\\rebus', '')
+            li = li.replace('\\ort', '')
+            li = re.sub(r'\\upphovsman .*', '', li)
+            li = re.sub(r'\\av .*', '', li)
+            li = re.sub(r'\\orgbild .*', '', li)
+            li = re.sub(r'\\bild .*', '', li)
+            li = li.strip()
+            lines.append(li)
 
     back = 0
     adds = []
@@ -177,8 +180,9 @@ def check(filename):
     if adds.sort() != subs.sort():
         print("+-: *NOT OK*")
     for k in list(replaces.keys()):
-        if replaces[k] not in replaces or replaces[replaces[k]] != k:
-            print("->: *NOT OK*")
+        for to in replaces[k]:
+            if to not in replaces or k not in replaces[to]:
+                print("->: *NOT OK*")
 
 
 def main():
