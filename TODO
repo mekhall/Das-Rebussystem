@@ -1,18 +1,18 @@
 Viktig skit:
-Lägg till felkontroller och skriv felmeddelanden
+LÃ¤gg till felkontroller och skriv felmeddelanden
 sanity-check:
-  alla grenar med i presentationen exakt en gång
-  inga poäng över max
-  inga negativa på grenar som bara positiva, och tvärtom
-  kolla att rebusoperationer görs rätt (speciellt <->...)
-Lägg till meddelanden när databasen utökas eller minskas på grund av ändringar i uppsättningen
-gör <shortname>.php-filerna enklare att förstå och sätta upp
-se till att positionen på lagnamn i r.php matchar prickraderna
+  alla grenar med i presentationen exakt en gÃ¥ng
+  inga poÃ¤ng Ã¶ver max
+  inga negativa pÃ¥ grenar som bara positiva, och tvÃ¤rtom
+  kolla att rebusoperationer gÃ¶rs rÃ¤tt (speciellt <->...)
+LÃ¤gg till meddelanden nÃ¤r databasen utÃ¶kas eller minskas pÃ¥ grund av Ã¤ndringar i uppsÃ¤ttningen
+gÃ¶r <shortname>.php-filerna enklare att fÃ¶rstÃ¥ och sÃ¤tta upp
+se till att positionen pÃ¥ lagnamn i r.php matchar prickraderna
 
 Mindre akut:
 bli av med 1,2,3,4.gif
 slide-effekter?
-fyll i öppnat kuvär automatiskt om man fyller i stjälprebusar osv
+fyll i Ã¶ppnat kuvÃ¤r automatiskt om man fyller i stjÃ¤lprebusar osv
 animation av sorterade listor
-färgkod på olika lag och staplarna
+fÃ¤rgkod pÃ¥ olika lag och staplarna
 snyggare grafer, animationer?
