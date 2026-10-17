@@ -1,3 +1,4 @@
+# For advanced docker setup as per README.docker.md
 FROM trafex/php-nginx:latest AS rebusrally_root
 
 USER root

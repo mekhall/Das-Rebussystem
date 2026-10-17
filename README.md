@@ -116,6 +116,10 @@ Detta verkade nog mycket mer komplicerat än det är, utgå från en gammal
 fil så går det lätt. Använd webserverns log för att hitta eventuella
 syntaxproblem.
 
+Mappen "Prisbilder" innehåller bilder av de flesta av prispokalerna, som man kan använda i sina presentationer om man vill. Tack till Ibsens Kusiner för majoriteten av bilderna.
+
+Mappen "Flairs" innehåller de olika bilder som brukar användas som flairs i presentationerna.
+
 Här är ett utdrag från ht2011.php:
 
     ...
@@ -266,3 +270,9 @@ genom att sätta `index_links` till 1.
 
 Det mesta av det grafiska går att justera med css. Just nu är det
 en css-mall som heter `<rallynamn>.css`.
+
+Om css:en inte räcker till kan man styra vissa basvärden i layouten med dessa variabler, som man kan deklarera i '[dittrally].php'.
+
+$flair_width = 45;
+$team_name_width = 70;
+$text_percentage = 0.31;

@@ -46,6 +46,11 @@ function chart($data, $sort = 0, $prev_data = null, $max = 0)
         }
     }
 
+    // Override these variables in YYYY.MM.php if desired
+    $flair_width = isset($GLOBALS["flair_width"]) ? $GLOBALS["flair_width"] : 30;
+    $team_name_width = isset($GLOBALS["team_name_width"]) ? $GLOBALS["team_name_width"] : 60;
+    $text_percentage = isset($GLOBALS["text_percentage"]) ? $GLOBALS["text_percentage"] : 0.31;
+
     echo "<svg class='chart'></svg>\n";
     echo "<script>\n";
     echo "var data = " . json_encode($json) . ";\n";
@@ -53,10 +58,13 @@ function chart($data, $sort = 0, $prev_data = null, $max = 0)
     echo "var sort = " . $sort . ";\n";
     echo "var max = " . $max . ";\n";
     echo "var screenWidth = " . SCREENWIDTH . ";\n";
+    echo "var flairWidth = " . $flair_width . ";\n";
+    echo "var teamNameWidth = " . $team_name_width . ";\n";
+    echo "var textPercentage = " . $text_percentage . ";\n";
     echo <<<JAVASCRIPT
 
-var graphWidth = screenWidth * 0.70;
-var textWidth = screenWidth * 0.30;
+var graphWidth = screenWidth * (1 - textPercentage);
+var textWidth = screenWidth * textPercentage;
 var barHeight = 30;
 var width = graphWidth + textWidth;
 var height = barHeight * data.length;
@@ -222,7 +230,7 @@ function update(data) {
 
   desc
     .append("image")
-      .attr("x", 30)
+      .attr("x", flairWidth)
       .attr("y", 0)
       .attr("width", 20)
       .attr("height", barHeight)
@@ -231,7 +239,7 @@ function update(data) {
 
   desc
     .append("text")
-      .attr("x", 60)
+      .attr("x", teamNameWidth)
       .attr("y", barHeight / 2)
       .attr("dy", ".35em")
       .attr("class", ƒ('number_class'))

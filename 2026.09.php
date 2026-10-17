@@ -2,6 +2,10 @@
 
 require_once 'slide.php';
 
+$flair_width = 45;
+$team_name_width = 70;
+$text_percentage = 0.31;
+
 $teams = array(
   // Name => (number, number of members, flair)
   // Available flairs: <small>, <blue>, <smallblue>, <free>, <legends>
