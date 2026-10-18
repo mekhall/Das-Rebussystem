@@ -1,0 +1,5 @@
+# For use with the provided docker compose file
+FROM php:8.0.30-fpm-alpine
+
+# Install python so the rebus checker script (check.py) can be run inside the container
+RUN apk --no-cache add --update --no-cache python3 && ln -sf python3 /usr/bin/python

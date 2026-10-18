@@ -22,17 +22,10 @@ dcopy("tratex_vit.ttf", $dir);
 dcopy("jquery-4.0.0.min.js", $dir);
 dcopy("d3.v3.min.js", $dir);
 
-foreach (glob(PICTURE_PATH . "*.jpg") as $f) {
-  dcopy($f, $dir);
-}
-foreach (glob(PICTURE_PATH . "*.png") as $f) {
-  dcopy($f, $dir);
-}
-foreach (glob(PICTURE_PATH . "*.gif") as $f) {
-  dcopy($f, $dir);
-}
-foreach (glob(PICTURE_PATH . "*.jfif") as $f) {
-  dcopy($f, $dir);
+foreach(["jpg", "jpeg", "png", "gif", "jfif", "webp"] as $file_ending) {
+  foreach (glob(PICTURE_PATH . "*." . $file_ending) as $f) {
+    dcopy($f, $dir);
+  }
 }
 
 chdir($dir);

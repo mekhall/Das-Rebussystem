@@ -7,6 +7,8 @@ services:
       - .:/var/www/html
       - ./default.conf:/etc/nginx/conf.d/default.conf
   php-fpm:
-    image: php:8.0.30-fpm-alpine
+    build: 
+      context: .
+      dockerfile: Dockerfile-compose
     volumes:
       - .:/var/www/html

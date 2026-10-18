@@ -9,22 +9,14 @@ function checkPic(&$name)
         $name = PICTURE_URL . $name;
         return 1;
     }
-    if (is_readable($pic . ".jpg")) {
-        $name = PICTURE_URL . $name . ".jpg";
-        return 1;
+
+    foreach(['', ".jpg", ".jpeg", ".png", ".gif", ".jfif", ".webp"] as $file_type) {
+        if (is_readable($pic . $file_type)) {
+            $name = PICTURE_URL . $name . $file_type;
+            return 1;
+        }
     }
-    if (is_readable($pic . ".gif")) {
-        $name = PICTURE_URL . $name . ".gif";
-        return 1;
-    }
-    if (is_readable($pic . ".png")) {
-        $name = PICTURE_URL . $name . ".png";
-        return 1;
-    }
-    if (is_readable($pic . ".jfif")) {
-        $name = PICTURE_URL . $name . ".jfif";
-        return 1;
-    }
+
     return 0;
 }
 
