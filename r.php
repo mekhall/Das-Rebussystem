@@ -267,7 +267,7 @@ foreach ($GLOBALS['teams'] as $t => $v) {
             $p = '';
             $color = 'red';
         }
-        echo "<td><input class=\"box ${color}\" id=t${tnr}e${enr} type=text maxlength=4 size=3 value=$p></td>\n";
+        echo "<td><input class=\"box {$color}\" id=t{$tnr}e{$enr} type=text maxlength=4 size=3 value=$p></td>\n";
         ++$enr;
     }
     echo "</tr>";

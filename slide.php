@@ -25,6 +25,8 @@ class Slide
 class PictureSlide extends Slide
 {
     var $picture;
+    var $title;
+    var $attr;
 
     function __construct($t, $p) {
         $size = getimagesize($p);
@@ -34,7 +36,7 @@ class PictureSlide extends Slide
         $hlimit = $wlimit * 0.5625; // 16:9 aspect ratio
         $this->title = $t;
         $this->picture = $p;
-        $this->attr ="";
+        $this->attr = "";
 
         $width = $size[0];
         $height = $size[1];
@@ -63,6 +65,7 @@ class EventSlide extends Slide
     var $event;
     var $event2;
     var $max;
+    var $sort;
 
     function __construct($t, $e, $e2 = null, $max = 0, $sort = 0) {
         $this->title = $t;
